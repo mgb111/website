@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majorbeam</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        .project-image {
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+
+        .use-case-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(12px);
+            text-align: center;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .use-case-icon {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1.5rem;
+            color: #4f46e5;
+            display: inline-block;
+        }
+
+        .use-case-title {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #003366;
+        }
+
+        .use-case-description {
+            display: none;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003366;
+            margin-right: 1rem;
+        }
+
+        /* Replaced @apply with actual Tailwind classes */
+        .primary-button {
+            background-color: #003366;
+            /* bg-blue */
+            color: white;
+            padding-left: 1.5rem;
+            /* px-6 */
+            padding-right: 1.5rem;
+            padding-top: 0.75rem;
+            /* py-3 */
+            padding-bottom: 0.75rem;
+            border-radius: 0.75rem;
+            /* rounded-xl */
+            transition-property: all;
+            transition-duration: 300ms;
+        }
+
+        .primary-button:hover {
+            background-color: #002244;
+            /* hover:bg-darkBlue */
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            /* text-3xl */
+            font-weight: 600;
+            /* font-semibold */
+            margin-bottom: 2.5rem;
+            /* mb-10 */
+            text-align: center;
+            color: #003366;
+            /* text-blue */
+        }
+
+        .section-padding {
+            padding-top: 4rem;
+            /* py-16 */
+            padding-bottom: 4rem;
+            padding-left: 1.5rem;
+            /* px-6 */
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding-left: 5rem;
+                /* md:px-20 */
+                padding-right: 5rem;
+            }
+        }
+
+        .card {
+            background-color: #f8f0e3;
+            /* bg-cream */
+            padding: 1.5rem;
+            /* p-6 */
+            border-radius: 1rem;
+            /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* shadow-lg */
+        }
+
+        .text-cream {
+            color: #f8f0e3;
+        }
+
+        .bg-darkBlue {
+            background-color: #002244;
+        }
+
+        .text-darkCream {
+            color: #f0e0c7;
+        }
+
+        .bg-lightCream {
+            background-color: #f5e5d1;
+        }
+
+        .header-bg {
+            background-color: #003366;
+        }
+
+        .white-text {
+            color: white;
+        }
+
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .project-card {
+            width: 300px;
+            background-color: #f8f0e3;
+            padding: 20px;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1em;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="bg-cream text-blue font-sans">
+    <header class="header-bg p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="logo">Majorbeam</span>
+                <h1 class="text-xl font-bold white-text"></h1>
+            </div>
+            <nav class="space-x-4">
+                <a href="#about" class="hover:text-darkCream transition duration-300 white-text">About</a>
+                <a href="#services" class="hover:text-darkCream transition duration-300 white-text">Services</a>
+                <a href="#projects" class="hover:text-darkCream transition duration-300 white-text">Projects</a>
+                <a href="#clients" class="hover:text-darkCream transition duration-300 white-text">Clients</a>
+                <a href="#blog" class="hover:text-darkCream transition duration-300 white-text">Blog</a>
+                <a href="#contact" class="hover:text-darkCream transition duration-300 white-text">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="min-h-screen flex items-center justify-center text-center">
+            <div class="bg-black bg-opacity-60 p-10 rounded-xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Majorbeam</h1>
+                <p class="text-lg md:text-xl mb-6 text-white">Creating Immersive Experiences for a Better Future</p>
+                <a href="#projects" class="primary-button">Explore Our Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding bg-cream">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="section-title">About Us</h2>
+                <p class="text-lg text-darkBlue text-center">We are a team of passionate immersive creators, working at the
+                    forefront of XR (VR/AR) and AI technology. We design and produce cutting-edge immersive experiences,
+                    including virtual walkthroughs, 360° video journeys, and AR/VR demonstrations, to help businesses and
+                    organizations communicate their value and connect with their audiences in new and engaging ways.</p>
+            </div>
+        </section>
+
+        <section id="services" class="section-padding">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title">Our Services</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue">VR/AR Development</h3>
+                        <p class="text-darkBlue">We create custom VR and AR applications for training, marketing, and
+                            education.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue">360° Video Production</h3>
+                        <p class="text-darkBlue">We produce immersive 360° videos for storytelling and virtual tours.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-2xl font-semibold mb-4 text-blue">AI-Powered Experiences</h3>
+                        <p class="text-darkBlue">We integrate AI to create intelligent and interactive immersive
+                            experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="section-padding bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title">Industry Use Cases</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="use-case-card">
+                        <i class="fas fa-graduation-cap use-case-icon"></i>
+                        <h3 class="use-case-title">XR Training</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-rocket use-case-icon"></i>
+                        <h3 class="use-case-title">AR Promotional Experiences</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-home use-case-icon"></i>
+                        <h3 class="use-case-title">VR Walkthroughs</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-video use-case-icon"></i>
+                        <h3 class="use-case-title">360° Storytelling Videos</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-tshirt use-case-icon"></i>
+                        <h3 class="use-case-title">AR Try-Ons</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-brain use-case-icon"></i>
+                        <h3 class="use-case-title">AI Projects</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-tools use-case-icon"></i>
+                        <h3 class="use-case-title">Virtual Prototyping</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-shopping-cart use-case-icon"></i>
+                        <h3 class="use-case-title">Immersive Commerce</h3>
+                    </div>
+                    <div class="use-case-card">
+                        <i class="fas fa-hands-helping use-case-icon"></i>
+                        <h3 class="use-case-title">Remote Collaboration</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-padding">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="project-section">
+                    <div class="project-card">
+                        <a href="https://www.youtube.com/watch?v=YOUR_AQUACULTURE_VIDEO_ID" target="_blank" rel="noopener">
+                            <img src="placeholder-image-1.jpg" alt="VR Safety Training Demo: Aquaculture in India in VR 360 | MPEDA"
+                                class="w-full h-64 object-cover rounded project-image">
+                        </a>
+                        <h3 class="text-xl font-semibold mt-4 text-blue">VR Walkthrough: Aquaculture in India in VR 360 |
+                            MPEDA</h3>
+                        <p class="text-darkBlue mt-2">A VR walkthrough experience for India's shrimp farming sector.
+                            Created
+                            for the Marine Products Export Development Authority (MPEDA), this immersive demo offers a
+                            ground-level perspective of aquaculture operations.</p>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://www.youtube.com/watch?v=YOUR_TELANGANA_VIDEO_ID" target="_blank" rel="noopener">
+                            <img src="placeholder-image-2.jpg"
+                                alt="Immersive VR Showroom: World Economic Forum - Invest in Telangana | 360 video"
+                                class="w-full h-64 object-cover rounded project-image">
+                        </a>
+                        <h3 class="text-xl font-semibold mt-4 text-blue">Immersive VR Showroom: World Economic Forum -
+                            Invest in
+                            Telangana | 360 video</h3>
+                        <p class="text-darkBlue mt-2">A captivating VR showroom experience showcasing Telangana as a
+                            premier
+                            investment destination. Developed for the Government of Telangana and presented at the World
+                            Economic Forum.</p>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://www.youtube.com/watch?v=YOUR_GREENKO_VIDEO_ID" target="_blank" rel="noopener">
+                            <img src="placeholder-image-3.jpg"
+                                alt="AI-Driven XR Assistant: Greenko - world's largest integrated renewable energy storage project"
+                                class="w-full h-64 object-cover rounded project-image">
+                        </a>
+                        <h3 class="text-xl font-semibold mt-4 text-blue">AI-Driven XR Assistant: Greenko - World's Largest
+                            Integrated
+                            Renewable Energy Storage Project</h3>
+                        <p class="text-darkBlue mt-2">A 360° aerial tour of Greenko's ambitious 5,230 MW Integrated Renewable
+                            Energy Storage Project (IRESP) in Kurnool, Andhra Pradesh. Combines solar, wind, and pumped storage
+                            to create a first-of-its-kind facility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="section-padding bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title">Our Clients</h2>
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div class="text-darkBlue">
+                        <p class="mt-2">Client 1</p>
+                    </div>
+                    <div class="text-darkBlue">
+                        <p class="mt-2">Client 2</p>
+                    </div>
+                    <div class="text-darkBlue">
+                        <p class="mt-2">Client 3</p>
+                    </div>
+                    <div class="text-darkBlue">
+                        <p class="mt-2">Client 4</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section-padding">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="section-title">Latest from Our Blog</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Case Study: AI-Driven Soft Skills Training in XR</h3>
+                        <p class="text-darkBlue">Explores how immersive XR and AI avatars enhance communication skills
+                            training in corporate environments.</p>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Whitepaper: Future of Immersive Learning in India</h3>
+                        <p class="text-darkBlue">Analyzes the emerging landscape of immersive education with scalable AR/VR
+                            solutions tailored for Indian learners.</p>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Blog: How AI Avatars are Revolutionizing B2B Sales
+                            Demos</h3>
+                        <p class="text-darkBlue">Breaks down the impact of intelligent avatars in transforming how companies
+                            showcase their products through XR presentations.</p>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Blog: Designing for WebAR - Best Practices &
+                            Pitfalls</h3>
+                        <p class="text-darkBlue">A practical guide for creators building lightweight WebAR experiences that
+                            load fast and work across devices.</p>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Blog: How to Pitch XR Services as a Solo
+                            Strategist</h3>
+                        <p class="text-darkBlue">Tips on packaging and presenting your XR offerings without a large team,
+                            including how to speak the language of ROI.</p>
+                    </div>
+                    <div class="bg-cream p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-blue">Case Study: WebAR Campaign for Sustainable Fashion
+                            Brand</h3>
+                        <p class="text-darkBlue">Demonstrates how a small brand used marker-based WebAR to turn packaging
+                            into interactive storytelling touchpoints.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-semibold mb-6 text-center text-blue">Contact Us</h2>
+                <form class="max-w-2xl mx-auto space-y-4 contact-form" id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                        class="w-full p-3 rounded bg-lightCream text-blue" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email"
+                        class="w-full p-3 rounded bg-lightCream text-blue" required>
+                    <textarea rows="4" id="message" name="message" placeholder="Your Message"
+                        class="w-full p-3 rounded bg-lightCream text-blue" required></textarea>
+                    <button type="submit"
+                        class="bg-blue hover:bg-darkBlue px-6 py-3 rounded-xl transition duration-300 w-full text-white">Send
+                        Message</button>
+                </form>
+                <div id="form-message" class="mt-4 text-center text-blue"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-6 bg-darkBlue border-t border-blue text-center text-cream">
+        <div class="mb-3">
+            <a href="https://www.linkedin.com/in/immersivecontentstrategist"
+                class="mx-2 hover:text-white transition duration-300" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/xrcontentcraft" class="mx-2 hover:text-white transition duration-300"
+                target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/xrcontentcraft" class="mx-2 hover:text-white transition duration-300"
+                target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/xrcontentcraft" class="mx-2 hover:text-white transition duration-300"
+                target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2025 Majorbeam | Built with ❤️ | <a href="mailto:immersivecontentcraft@gmail.com"
+                class="hover:text-white transition duration-300">immersivecontentcraft@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+
+                    if (name === '' || email === '' || message === '') {
+                        formMessage.textContent = 'Please fill in all fields.';
+                        formMessage.style.color = 'red';
+                        return;
+                    }
+
+                    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}$/;
+                    if (!emailRegex.test(email)) {
+                        formMessage.textContent = 'Please enter a valid email address.';
+                        formMessage.style.color = 'red';
+                        return;
+                    }
+
+                    formMessage.textContent = 'Sending message...';
+                    formMessage.style.color = 'yellow';
+
+                    setTimeout(() => {
+                        formMessage.textContent = 'Message sent successfully!';
+                        formMessage.style.color = 'green';
+                        contactForm.reset();
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
