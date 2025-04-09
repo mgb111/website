@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Majorbeam - Immersive XR & AI Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="/api/placeholder/48/48" alt="Majorbeam Logo" class="mr-3 h-12 w-12 rounded-full">
+                    <span class="text-2xl font-bold text-white">Majorbeam</span>
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <nav id="navigation" class="hidden w-full md:flex md:w-auto md:space-x-6 mt-4 md:mt-0">
+                <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Home</a>
+                <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About</a>
+                <a href="services.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Services</a>
+                <a href="portfolio.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Portfolio</a>
+                <a href="blog.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Blog</a>
+                <a href="contact.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero relative flex items-center justify-center h-screen bg-cover bg-center text-center" style="background-image: url('/api/placeholder/1920/1080')">
+            <div class="absolute inset-0 bg-blue-900 bg-opacity-70"></div>
+            <div class="relative z-10 max-w-3xl px-6 py-12 bg-blue-900 bg-opacity-80 backdrop-filter backdrop-blur-lg rounded-xl border border-blue-800 shadow-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">Majorbeam</h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">Creating Immersive Experiences for a Better Future</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="portfolio.html" class="btn-primary">
+                        <i class="fas fa-eye mr-2"></i>Explore Our Work
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        <i class="fas fa-envelope mr-2"></i>Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Welcome to Majorbeam</h2>
+                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">We design and produce cutting-edge immersive experiences, 
+                    including virtual walkthroughs, 360° video journeys, and AR/VR demonstrations, 
+                    to help businesses and organizations communicate their value in new and engaging ways.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="feature-card">
+                        <div class="mb-6 text-center">
+                            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-900">
+                                <i class="fas fa-vr-cardboard text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-900">VR/AR Development</h3>
+                        <p class="text-blue-800">Custom virtual and augmented reality applications for training, marketing, and education.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="mb-6 text-center">
+                            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-900">
+                                <i class="fas fa-video text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-900">360° Video Production</h3>
+                        <p class="text-blue-800">Immersive 360° videos for storytelling, virtual tours, and engaging presentations.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="mb-6 text-center">
+                            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-900">
+                                <i class="fas fa-brain text-3xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-blue-900">AI-Powered Experiences</h3>
+                        <p class="text-blue-800">Intelligent and interactive immersive experiences enhanced with artificial intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 bg-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">Discover our latest work delivering immersive solutions across industries</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="project-card group">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="/api/placeholder/600/350" alt="VR Safety Training" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
+                                <a href="portfolio.html" class="btn-primary-sm">View Project</a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-900">VR Safety Training: Aquaculture in India</h3>
+                        <p class="text-blue-800">A VR walkthrough experience for India's shrimp farming sector, offering a ground-level perspective of aquaculture operations.</p>
+                    </div>
+                    
+                    <div class="project-card group">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="/api/placeholder/600/350" alt="VR Showroom" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
+                                <a href="portfolio.html" class="btn-primary-sm">View Project</a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-900">VR Showroom: Invest in Telangana</h3>
+                        <p class="text-blue-800">A captivating VR showroom experience showcasing Telangana as a premier investment destination presented at the World Economic Forum.</p>
+                    </div>
+                    
+                    <div class="project-card group">
+                        <div class="relative overflow-hidden rounded-xl mb-4">
+                            <img src="/api/placeholder/600/350" alt="AI-Driven XR Assistant" class="w-full h-64 object-cover transition duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
+                                <a href="portfolio.html" class="btn-primary-sm">View Project</a>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-900">AI-Driven XR: Renewable Energy Project</h3>
+                        <p class="text-blue-800">A 360° aerial tour of Greenko's 5,230 MW Integrated Renewable Energy Storage Project in Andhra Pradesh.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="portfolio.html" class="btn-outline">
+                        <i class="fas fa-th mr-2"></i>View All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Industry Applications</h2>
+                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">Our immersive solutions serve diverse industries with tailored XR experiences</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">XR Training</h3>
+                        <p>Immersive training simulations for workforce skill development and safety procedures</p>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-rocket text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">AR Promotional Experiences</h3>
+                        <p>Interactive AR campaigns that transform marketing materials into engaging experiences</p>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-home text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">VR Walkthroughs</h3>
+                        <p>Virtual property tours and architectural visualizations for real estate and construction</p>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-shopping-cart text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Immersive Commerce</h3>
+                        <p>Virtual try-on experiences and product visualizations for retail and e-commerce</p>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-video text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">360° Storytelling</h3>
+                        <p>Immersive narrative experiences for entertainment, education, and brand storytelling</p>
+                    </div>
+                    
+                    <div class="industry-card">
+                        <div class="icon-container">
+                            <i class="fas fa-hands-helping text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Remote Collaboration</h3>
+                        <p>Virtual meeting spaces and collaborative environments for distributed teams</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="services.html" class="btn-outline">
+                        <i class="fas fa-info-circle mr-2"></i>Learn More About Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 bg-blue-900 text-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-white">What Our Clients Say</h2>
+                    <p class="text-lg text-blue-100 max-w-3xl mx-auto">Hear from organizations that have transformed their operations with our immersive solutions</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="testimonial-card">
+                        <div class="mb-4 flex justify-center">
+                            <i class="fas fa-quote-left text-blue-300 text-4xl"></i>
+                        </div>
+                        <p class="text-lg text-blue-100 mb-6">Majorbeam's VR training solution reduced our onboarding time by 40% while improving retention rates. Their team understood our complex requirements and delivered an intuitive, effective solution.</p>
+                        <div class="flex items-center justify-center">
+                            <img src="/api/placeholder/64/64" alt="Client" class="h-16 w-16 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Sarah Johnson</h4>
+                                <p class="text-blue-300">Director of Training, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="mb-4 flex justify-center">
+                            <i class="fas fa-quote-left text-blue-300 text-4xl"></i>
+                        </div>
+                        <p class="text-lg text-blue-100 mb-6">The AR promotional campaign Majorbeam created for our product launch generated 3x more engagement than traditional marketing approaches. The results exceeded our expectations.</p>
+                        <div class="flex items-center justify-center">
+                            <img src="/api/placeholder/64/64" alt="Client" class="h-16 w-16 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold">Michael Chen</h4>
+                                <p class="text-blue-300">CMO, InnovateBrand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6 bg-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Latest from Our Blog</h2>
+                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">Insights and expertise from our immersive technology specialists</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="blog-card">
+                        <a href="blog-post.html" class="block">
+                            <img src="/api/placeholder/600/350" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm text-blue-600 mb-3">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>April 2, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3 text-blue-900">AI-Driven Soft Skills Training in XR</h3>
+                                <p class="text-blue-800 mb-4">Explores how immersive XR and AI avatars enhance communication skills training in corporate environments.</p>
+                                <div class="flex items-center text-blue-600 font-medium">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <a href="blog-post.html" class="block">
+                            <img src="/api/placeholder/600/350" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm text-blue-600 mb-3">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>March 28, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3 text-blue-900">The Future of Immersive Learning</h3>
+                                <p class="text-blue-800 mb-4">Analyzes the emerging landscape of immersive education with scalable AR/VR solutions tailored for learners.</p>
+                                <div class="flex items-center text-blue-600 font-medium">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="blog-card">
+                        <a href="blog-post.html" class="block">
+                            <img src="/api/placeholder/600/350" alt="Blog Post" class="w-full h-48 object-cover rounded-t-xl">
+                            <div class="p-6">
+                                <div class="flex items-center text-sm text-blue-600 mb-3">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>March 21, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3 text-blue-900">WebAR for Sustainable Brands</h3>
+                                <p class="text-blue-800 mb-4">Demonstrates how a small brand used marker-based WebAR to turn packaging into interactive storytelling touchpoints.</p>
+                                <div class="flex items-center text-blue-600 font-medium">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="blog.html" class="btn-outline">
+                        <i class="fas fa-book-open mr-2"></i>View All Articles
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section py-24 px-6 bg-cover bg-center relative" style="background-image: url('/api/placeholder/1920/600')">
+            <div class="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
+            <div class="max-w-4xl mx-auto relative z-10 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Create Immersive Experiences?</h2>
+                <p class="text-xl text-blue-100 mb-8">Let's discuss how our XR and AI solutions can transform your business</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="btn-primary">
+                        <i class="fas fa-envelope mr-2"></i>Contact Us
+                    </a>
+                    <a href="services.html" class="btn-secondary">
+                        <i class="fas fa-info-circle mr-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-blue-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 py-16">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="/api/placeholder/48/48" alt="Majorbeam Logo" class="mr-3 h-12 w-12 rounded-full">
+                        <span class="text-2xl font-bold text-white">Majorbeam</span>
+                    </div>
+                    <p class="mb-6">Creating immersive experiences at the intersection of XR and AI technology to transform how businesses connect with their audiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-300 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-blue-300 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-white transition duration-300">VR/AR Development</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">360° Video Production</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">AI-Powered Experiences</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">XR Training Solutions</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Immersive Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-300"></i>
+                            <span>123 Innovation Street, Tech Hub, Hyderabad, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-300"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-300"></i>
+                            <span>info@majorbeam.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="py-6 border-t border-blue-800 text-center">
+                <p>© 2025 Majorbeam. All rights reserved. | Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navigation = document.getElementById('navigation');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                navigation.classList.toggle('hidden');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!navigation.contains(event.target) && !mobileMenuButton.contains(event.target) && !navigation.classList.contains('hidden')) {
+                    navigation.classList.add('hidden');
+                }
+            });
+            
+            // Scroll animation for links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Responsive resizing
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    navigation.classList.remove('hidden');
+                } else {
+                    navigation.classList.add('hidden');
+                }
+            });
+            
+            // Initialize if desktop
+            if (window.innerWidth >= 768) {
+                navigation.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
