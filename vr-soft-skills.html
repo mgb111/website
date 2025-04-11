@@ -1,92 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Why VR is the Future of Soft Skills Training | Major Beam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why VR is the Future of Soft Skills Training - Major Beam</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+
+<body class="bg-gray-50 font-sans">
 
   <!-- Header -->
-  <header class="bg-blue-900 p-4 shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+  <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
       <a href="index.html" class="flex items-center">
-        <img src="logo.png.jfif" alt="Major Beam Logo" class="mr-3 h-10 w-10 rounded-full" />
-        <span class="text-xl font-bold text-white">Major Beam</span>
+        <img src="logo.png.jfif" alt="Major Beam Logo" class="mr-3 h-12 w-12 rounded-full" />
+        <span class="text-2xl font-bold text-white">Major Beam</span>
       </a>
-      <nav class="space-x-4">
-        <a href="about.html" class="text-white hover:text-blue-200">About</a>
-        <a href="services.html" class="text-white hover:text-blue-200">Services</a>
-        <a href="portfolio.html" class="text-white hover:text-blue-200">Portfolio</a>
-        <a href="blog.html" class="text-white hover:text-blue-200">Blog</a>
-        <a href="contact.html" class="text-white hover:text-blue-200">Contact</a>
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <nav id="navigation" class="hidden w-full md:flex md:w-auto md:space-x-6 mt-4 md:mt-0">
+        <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Home</a>
+        <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">About</a>
+        <a href="services.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Services</a>
+        <a href="portfolio.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Portfolio</a>
+        <a href="blog.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Blog</a>
+        <a href="contact.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-4xl mx-auto px-6 py-16">
-    <h1 class="text-4xl font-bold text-blue-900 mb-6">Why VR is the Future of Soft Skills Training</h1>
-    <p class="text-sm text-gray-500 mb-10">Posted on April 1, 2025</p>
+  <!-- Article Header -->
+  <section class="bg-blue-900 text-white py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Why VR is the Future of Soft Skills Training</h1>
+      <p class="text-blue-200 text-sm">Published on April 10, 2025 · Immersive Learning</p>
+    </div>
+  </section>
 
-    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/34086/images/iigbaSqTSCQn1YUokIQI_iStock-1154963750.jpg" alt="VR Training" class="rounded-xl shadow mb-10 w-full object-cover">
+  <!-- Blog Content -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/blogs/34086/images/iigbaSqTSCQn1YUokIQI_iStock-1154963750.jpg" alt="VR Training" class="rounded-lg mb-8 shadow-md w-full object-cover">
 
-    <div class="space-y-6 text-lg">
-      <p>There’s a quiet shift happening in the way we prepare people for the real world of work—and it has nothing to do with resumes or technical upskilling.</p>
+      <p class="text-lg text-gray-700 mb-6">
+        In today’s fast-evolving workplaces, technical skills aren’t enough. The ability to communicate, collaborate, empathize, and lead—commonly known as soft skills—are what truly define high-performing teams. But teaching these skills has always been difficult, relying on roleplay and subjective evaluations.
+      </p>
 
-      <p>In boardrooms, classrooms, and virtual meetings across the globe, leaders are realizing that soft skills—communication, empathy, negotiation, active listening—are no longer “nice to have.” They’re mission-critical. And traditional training methods? They’re just not cutting it anymore.</p>
+      <h2 class="text-2xl font-semibold text-blue-900 mb-4">Enter Virtual Reality (VR)</h2>
+      <p class="text-gray-700 mb-6">
+        VR soft skills training allows learners to immerse themselves in realistic scenarios where they can practice emotional intelligence, negotiation, conflict resolution, and leadership without real-world consequences. It’s scalable, measurable, and deeply effective.
+      </p>
 
-      <p><strong>Enter Virtual Reality.</strong></p>
-
-      <p>As someone who's spent nearly a decade working in XR (extended reality), I’ve seen firsthand how immersive technologies can transform how we teach, learn, and ultimately relate to each other. VR isn’t just a tool for gaming or simulation anymore. It's a gateway into emotionally resonant, psychologically safe, deeply human learning experiences.</p>
-
-      <p>And when it comes to soft skills, that makes all the difference.</p>
-
-      <h2 class="text-2xl font-semibold text-blue-800 mt-10">Soft Skills Are the New Power Skills</h2>
-      <p>Let’s reframe this first. "Soft" skills are misnamed. They are anything but soft. In fact, in high-stakes environments—from crisis response teams to executive leadership—they’re often the hardest skills to develop. That’s why forward-thinking organizations are rebranding them as “power skills.”</p>
-
-      <p>These aren’t things you can master by reading a slide deck or watching a roleplay video. They’re behavioral, contextual, and highly personal. You have to experience them. That’s where VR excels.</p>
-
-      <h2 class="text-2xl font-semibold text-blue-800 mt-10">Why VR Works So Well for Soft Skills</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Immersion builds empathy:</strong> You’re not watching a conversation—you’re in it. VR puts you in someone else’s shoes, literally and emotionally.</li>
-        <li><strong>Safe failure, real growth:</strong> You can make mistakes in VR without real-world consequences. That psychological safety accelerates learning.</li>
-        <li><strong>Consistent, scalable, repeatable:</strong> Unlike human-led workshops, VR scenarios are standardized and can be repeated anytime, anywhere.</li>
+      <h2 class="text-2xl font-semibold text-blue-900 mb-4">Why It's More Effective Than Traditional Methods</h2>
+      <ul class="list-disc list-inside text-gray-700 mb-6 space-y-2">
+        <li><strong>Emotional Engagement:</strong> VR triggers real emotional responses, leading to deeper learning.</li>
+        <li><strong>Repetition without Judgement:</strong> Learners can repeat scenarios until confident, without embarrassment.</li>
+        <li><strong>Safe Space:</strong> Mistakes in VR don’t harm reputations—they build skills.</li>
+        <li><strong>Data & Feedback:</strong> AI-driven VR training can analyze eye contact, tone of voice, response timing, and more.</li>
       </ul>
 
-      <h2 class="text-2xl font-semibold text-blue-800 mt-10">Real Use Cases Already in Action</h2>
-      <p>Companies like Walmart, PwC, and Accenture are using VR to teach leadership, conflict resolution, and inclusive communication. Soft skills are no longer abstract concepts—they’re being practiced, felt, and improved upon in controlled virtual environments.</p>
+      <h2 class="text-2xl font-semibold text-blue-900 mb-4">What This Means for L&D Leaders</h2>
+      <p class="text-gray-700 mb-6">
+        With headsets becoming more affordable and accessible, and platforms offering no-code customization, there’s no reason for L&D teams to delay integrating immersive tech. Training programs can now be customized to role, region, and language—while reducing costs and boosting retention.
+      </p>
 
-      <h2 class="text-2xl font-semibold text-blue-800 mt-10">What This Means for the Future</h2>
-      <p>In the next few years, we’ll see soft skills VR training become part of mainstream onboarding and leadership development programs. As AI handles more of the technical work, human interaction becomes even more valuable. The ability to connect, collaborate, and lead will set professionals apart.</p>
+      <h2 class="text-2xl font-semibold text-blue-900 mb-4">The Road Ahead</h2>
+      <p class="text-gray-700 mb-6">
+        At Major Beam, we’ve helped teams build confidence in high-stakes conversations—from healthcare to hospitality. The results? Faster onboarding, reduced turnover, and employees who feel more prepared to lead.
+      </p>
 
-      <p>And the organizations who invest in this kind of immersive learning? They won’t just have better communicators. They’ll have more emotionally intelligent, adaptable, and confident people—ready for whatever the future of work holds.</p>
-
-      <blockquote class="border-l-4 border-blue-500 pl-4 italic text-blue-900 mt-10">
-        “Now is the time to rethink how we teach soft skills. And VR is the key to unlocking that future.”
-      </blockquote>
+      <p class="text-lg font-semibold text-blue-900 mt-10">Want to bring immersive soft skills training to your organization?</p>
+      <a href="contact.html" class="inline-block mt-4 bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">Talk to Us</a>
     </div>
-
-    <div class="mt-12">
-      <a href="blog.html" class="inline-block bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-700 transition">← Back to Blog</a>
-    </div>
-  </main>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-blue-100 text-center py-6">
-    <p>© 2025 Major Beam. All rights reserved.</p>
-    <div class="mt-2 text-sm space-x-4">
-      <a href="privacy.html" class="hover:underline">Privacy Policy</a>
-      <a href="terms.html" class="hover:underline">Terms of Service</a>
+  <footer class="bg-blue-900 text-blue-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 py-16">
+        <div>
+          <div class="flex items-center mb-6">
+            <img src="logo.png.jfif" alt="Major Beam Logo" class="mr-3 h-12 w-12 rounded-full" />
+            <span class="text-2xl font-bold text-white">Major Beam</span>
+          </div>
+          <p class="mb-6">Creating immersive experiences at the intersection of XR and AI technology to transform how businesses connect with their audiences.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white">Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-white">Portfolio</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6 text-white">Our Services</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="hover:text-white">VR/AR Development</a></li>
+            <li><a href="services.html" class="hover:text-white">360° Video Production</a></li>
+            <li><a href="services.html" class="hover:text-white">AI Experiences</a></li>
+            <li><a href="services.html" class="hover:text-white">XR Training</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-300"></i>123 Innovation Street, Hyderabad</li>
+            <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i>+91 98765 43210</li>
+            <li class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-300"></i>info@MajorBeam.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="py-6 border-t border-blue-800 text-center">
+        <p>© 2025 Major Beam. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <!-- Mobile Nav Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const navigation = document.getElementById('navigation');
+
+      mobileMenuButton.addEventListener('click', function () {
+        navigation.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+          navigation.classList.add('hidden');
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          navigation.classList.remove('hidden');
+        } else {
+          navigation.classList.add('hidden');
+        }
+      });
+
+      if (window.innerWidth >= 768) {
+        navigation.classList.remove('hidden');
+      }
+    });
+  </script>
+
 </body>
+
 </html>
