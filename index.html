@@ -278,81 +278,46 @@
           </div>
         </section>
 
-        <section class="py-20 px-6 bg-blue-50">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">Latest from Our Blog</h2>
-                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">Insights and expertise from our immersive technology specialists</p>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="blog-card">
-                        <a href="blog-post.html" class="block">
-                            <!-- AI Soft Skills Training image -->
-                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=350" alt="AI Soft Skills Training" class="w-full h-48 object-cover rounded-t-xl">
-                            <div class="p-6">
-                                <div class="flex items-center text-sm text-blue-600 mb-3">
-                                    <i class="far fa-calendar-alt mr-2"></i>
-                                    <span>April 2, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-3 text-blue-900">AI-Driven Soft Skills Training in XR</h3>
-                                <p class="text-blue-800 mb-4">Explores how immersive XR and AI avatars enhance communication skills training in corporate environments.</p>
-                                <div class="flex items-center text-blue-600 font-medium">
-                                    <span>Read More</span>
-                                    <i class="fas fa-arrow-right ml-2"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="blog-card">
-                        <a href="blog-post.html" class="block">
-                            <!-- Immersive Learning image -->
-                            <img src="https://cdn.elearningindustry.com/wp-content/uploads/2020/07/immersive-learning-the-future-of-elearning.jpg" alt="Immersive Learning" class="w-full h-48 object-cover rounded-t-xl">
-                            <div class="p-6">
-                                <div class="flex items-center text-sm text-blue-600 mb-3">
-                                    <i class="far fa-calendar-alt mr-2"></i>
-                                    <span>March 28, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-3 text-blue-900">The Future of Immersive Learning</h3>
-                                <p class="text-blue-800 mb-4">Analyzes the emerging landscape of immersive education with scalable AR/VR solutions tailored for learners.</p>
-                                <div class="flex items-center text-blue-600 font-medium">
-                                    <span>Read More</span>
-                                    <i class="fas fa-arrow-right ml-2"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="blog-card">
-                        <a href="blog-post.html" class="block">
-                            <!-- WebAR image -->
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=350" alt="WebAR for Brands" class="w-full h-48 object-cover rounded-t-xl">
-                            <div class="p-6">
-                                <div class="flex items-center text-sm text-blue-600 mb-3">
-                                    <i class="far fa-calendar-alt mr-2"></i>
-                                    <span>March 21, 2025</span>
-                                </div>
-                                <h3 class="text-xl font-semibold mb-3 text-blue-900">WebAR for Sustainable Brands</h3>
-                                <p class="text-blue-800 mb-4">Demonstrates how a small brand used marker-based WebAR to turn packaging into interactive storytelling touchpoints.</p>
-                                <div class="flex items-center text-blue-600 font-medium">
-                                    <span>Read More</span>
-                                    <i class="fas fa-arrow-right ml-2"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="blog.html" class="btn-outline">
-                        <i class="fas fa-book-open mr-2"></i>View All Articles
-                    </a>
-                </div>
-            </div>
-        </section>
+        
+<section class="py-20 px-6 bg-blue-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="section-title">Latest from Our Blog</h2>
+      <p class="text-lg text-blue-800 max-w-3xl mx-auto">Insights and expertise from our immersive technology specialists</p>
+    </div>
 
-        <section class="cta-section py-24 px-6 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')">
+    <div id="blog-posts-container" class="grid md:grid-cols-3 gap-8">
+      <!-- Blog posts will be dynamically loaded here -->
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="blog.html" class="btn-outline">
+        <i class="fas fa-book-open mr-2"></i>View All Articles
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+fetch('blog.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const blogPosts = doc.querySelectorAll('.blog-post');
+    const container = document.getElementById('blog-posts-container');
+    blogPosts.forEach((post, index) => {
+      if (index < 3) container.appendChild(post.cloneNode(true));
+    });
+  })
+  .catch(error => {
+    document.getElementById('blog-posts-container').innerHTML =
+      '<p class="text-red-500">Unable to load blog posts at the moment. Please try again later.</p>';
+    console.error('Error loading blog posts:', error);
+  });
+</script>
+
+<section class="cta-section py-24 px-6 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')">
             <div class="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
             <div class="max-w-4xl mx-auto relative z-10 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Create Immersive Experiences?</h2>
