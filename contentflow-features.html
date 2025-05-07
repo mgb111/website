@@ -4,170 +4,245 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unlock Seamless Content Strategy with ContentFlow - Major Beam</title>
+    <title>Content Strategy Generator - AI-Powered Content Planning</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        /* You can add any minor custom styles here if needed, but Tailwind should cover most */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-color: #1e3a8a; /* A deep blue, similar to blue-900 but specific */
+        }
+        .feature-icon {
+            color: #1e3a8a; /* Primary theme color for icons */
+        }
+        .cta-button-primary {
+            background-color: #2563eb; /* Brighter blue for CTA */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button-primary:hover {
+            background-color: #1d4ed8;
+        }
+        .header-bg {
+            background-color: #1e3a8a; /* Consistent header background */
+        }
+        .footer-bg {
+            background-color: #1e3a8a; /* Consistent footer background */
+        }
+        .section-title {
+            color: #1e3a8a;
+        }
+        .feature-card-bg {
+            background-color: #f9fafb; /* Slightly off-white for cards */
+        }
+    </style>
 </head>
 
-<body class="bg-white text-blue-900 font-sans">
+<body class="bg-white text-gray-800">
 
-    <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-md">
+    <header class="header-bg p-4 sticky top-0 z-50 shadow-md">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center">
-                <img src="logo.png.jfif" alt="Major Beam Logo" class="mr-3 h-12 w-12 rounded-full" />
-                <span class="text-2xl font-bold text-white">Major Beam</span>
+            <a href="#" class="flex items-center">
+                <img src="YOUR_APP_LOGO.png" alt="App Logo" class="mr-3 h-10 w-10 rounded-md" />
+                <span class="text-2xl font-bold text-white">Content Strategy Generator</span>
             </a>
             <nav class="hidden md:flex space-x-6">
-                <a href="index.html" class="text-white hover:text-blue-200">Home</a>
-                <a href="about.html" class="text-white hover:text-blue-200">About</a>
-                <a href="services.html" class="text-white hover:text-blue-200">Services</a>
-                <a href="portfolio.html" class="text-white hover:text-blue-200">Portfolio</a>
-                <a href="blog.html" class="text-white hover:text-blue-200">Blog</a>
-                <a href="contact.html" class="text-white hover:text-blue-200">Contact</a>
+                <a href="#" class="text-white hover:text-blue-200 font-semibold">Home</a>
+                <a href="#features" class="text-white hover:text-blue-200">Features</a>
+                <a href="index.html" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">
+                    Launch App
+                </a>
             </nav>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <section class="bg-blue-900 text-white py-20 px-6 text-center">
+    <section class="hero-section text-white py-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Stop Guessing, Start Strategizing.</h1>
+            <p class="text-xl text-blue-200 mb-8">AI-Powered Content Strategy & Generation in Minutes. Transform your content workflow, from planning to creation, and achieve your marketing goals faster.</p>
+            <a href="index.html" class="cta-button-primary text-white font-bold py-3 px-8 rounded-lg text-lg shadow-lg">
+                Generate Your First Strategy FREE
+            </a>
+            <p class="mt-4 text-sm text-blue-300">No credit card required to get started!</p>
+        </div>
+    </section>
+
+    <main id="features" class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold section-title">The Ultimate Toolkit for Content Dominance</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Our AI-driven platform provides everything you need to plan, create, and analyze your content strategy effectively.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-sitemap text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">AI Strategy Blueprint</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Input your business details, goals, and audience. Our AI crafts a complete strategy including Content Pillars, Audience Personas, Keyword Research, a 30-Day Themed Calendar (with holiday considerations!), and Competitor Insights.
+                </p>
+            </div>
+
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-pencil-alt text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Instant Content Creation</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Never face writer's block again. Generate engaging drafts for blog posts, social media, emails, video scripts, and more, all tailored to your strategy, chosen topic, and tone.
+                </p>
+            </div>
+
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-chart-line text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Actionable Analytics</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Uncover content gaps, assess SEO potential for your topics, and optimize your content distribution. Make informed decisions to maximize your content's reach and impact.
+                </p>
+            </div>
+
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-user-cog text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Deeply Personalized</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Strategies aren't generic. Get plans tailored to your specific industry, niche, business type, target audience, brand voice, and even your country for local relevance.
+                </p>
+            </div>
+
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-desktop text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Intuitive Interface</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    A clean, tab-based design makes it easy to navigate. Input your details, view your strategy, generate content, and check analytics—all seamlessly.
+                </p>
+            </div>
+
+            <div class="feature-card-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6 feature-icon">
+                    <i class="fas fa-shield-alt text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-900">Secure & Reliable</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Powered by Firebase authentication, your account and strategic data are kept safe and private. Focus on creating great content with peace of mind.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-gray-50 py-16 md:py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold section-title mb-12">Get Your Winning Strategy in 3 Simple Steps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <div class="p-6">
+                    <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6 feature-icon mx-auto">
+                        <span class="text-3xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Input Your Details</h3>
+                    <p class="text-gray-600">Tell our AI about your business, goals, audience, and preferred monthly theme & country.</p>
+                </div>
+                <div class="p-6">
+                     <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6 feature-icon mx-auto">
+                        <span class="text-3xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Receive AI Strategy</h3>
+                    <p class="text-gray-600">Get a complete, actionable content strategy in minutes, including a 30-day calendar.</p>
+                </div>
+                <div class="p-6">
+                     <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6 feature-icon mx-auto">
+                        <span class="text-3xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Generate & Analyze</h3>
+                    <p class="text-gray-600">Create content drafts instantly and use analytics to refine your approach for maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section text-white py-20 px-6 text-center">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl font-bold mb-4">Supercharge Your Content with ContentFlow</h1>
-            <p class="text-lg text-blue-200">Plan, create, and analyze your content strategy like never before. Seamlessly integrated tools to elevate your brand's voice.</p>
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full mt-6 inline-block">
-                Start Your Free Trial
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Elevate Your Content Game?</h2>
+            <p class="text-xl text-blue-200 mb-8">Stop the content chaos. Start building a strategy that drives results. Your audience is waiting.</p>
+            <a href="index.html" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-gray-100 transition-colors duration-300">
+                Launch the App & Get Started
             </a>
         </div>
     </section>
 
-    <main class="max-w-4xl mx-auto px-6 py-20 space-y-12">
 
-        <section class="py-8">
-            <h2 class="text-3xl font-bold mb-6 text-center">Key Features of ContentFlow</h2>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Intelligent Content Calendar</h3>
-                    <p class="leading-relaxed">Visualize your content schedule with an intuitive drag-and-drop calendar. Plan posts across multiple platforms, set reminders, and ensure a consistent flow of content.</p>
-                    <ul class="list-disc pl-5 mt-3">
-                        <li>Effortlessly schedule posts for various channels.</li>
-                        <li>Collaborate with your team on content timelines.</li>
-                        <li>Get automated reminders for upcoming deadlines.</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="calendar-mockup.png" alt="Content Calendar Mockup" class="rounded-lg shadow-md" />
-                    </div>
-            </div>
-        </section>
-
-        <section class="py-8">
-            <div class="grid md:grid-cols-2 gap-10 md:grid-flow-row-dense">
-                <div class="md:order-2">
-                    <h3 class="text-xl font-semibold mb-2">AI-Powered Content Ideas & Optimization</h3>
-                    <p class="leading-relaxed">Struggling with writer's block? Our AI-powered tool generates content ideas based on trending topics and your audience insights. Optimize your existing content for better SEO and engagement.</p>
-                    <ul class="list-disc pl-5 mt-3">
-                        <li>Discover relevant content topics with AI suggestions.</li>
-                        <li>Optimize headlines and body text for SEO.</li>
-                        <li>Analyze content performance and identify areas for improvement.</li>
-                    </ul>
-                </div>
-                <div class="md:order-1">
-                    <img src="ai-ideas-mockup.png" alt="AI Content Ideas Mockup" class="rounded-lg shadow-md" />
-                    </div>
-            </div>
-        </section>
-
-        <section class="py-8">
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Seamless Team Collaboration</h3>
-                    <p class="leading-relaxed">Work together efficiently with built-in collaboration features. Assign roles, provide feedback, and streamline your content creation process from ideation to publishing.</p>
-                    <ul class="list-disc pl-5 mt-3">
-                        <li>Assign tasks and manage team member access.</li>
-                        <li>Provide direct feedback on content drafts.</li>
-                        <li>Maintain version history and track changes.</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="collaboration-mockup.png" alt="Team Collaboration Mockup" class="rounded-lg shadow-md" />
-                    </div>
-            </div>
-        </section>
-
-        <section class="py-8">
-            <div class="grid md:grid-cols-2 gap-10 md:grid-flow-row-dense">
-                <div class="md:order-2">
-                    <h3 class="text-xl font-semibold mb-2">In-Depth Analytics & Reporting</h3>
-                    <p class="leading-relaxed">Track the performance of your content across all channels. Gain valuable insights into audience engagement, reach, and conversions to refine your strategy and maximize impact.</p>
-                    <ul class="list-disc pl-5 mt-3">
-                        <li>Visualize key content metrics with insightful dashboards.</li>
-                        <li>Generate custom reports to track specific KPIs.</li>
-                        <li>Understand audience behavior and optimize for better results.</li>
-                    </ul>
-                </div>
-                <div class="md:order-1">
-                    <img src="analytics-mockup.png" alt="Analytics Dashboard Mockup" class="rounded-lg shadow-md" />
-                    </div>
-            </div>
-        </section>
-
-        <div class="bg-blue-100 p-6 rounded-lg mt-12 text-center">
-            <h3 class="text-xl font-semibold mb-2">Ready to Transform Your Content Strategy?</h3>
-            <p>Join thousands of marketers who are already using ContentFlow to streamline their workflows and achieve better results.</p>
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full mt-4 inline-block">
-                Start Your Free Trial Today
-            </a>
-        </div>
-
-        <p class="text-sm text-blue-600 mt-8 text-center">Explore the powerful features of ContentFlow.</p>
-    </main>
-
-    <footer class="bg-blue-900 text-blue-100">
+    <footer class="footer-bg text-blue-100">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 py-16">
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="logo.png.jfif" alt="Major Beam Logo" class="mr-3 h-12 w-12 rounded-full" />
-                        <span class="text-2xl font-bold text-white">Major Beam</span>
+                         <img src="YOUR_APP_LOGO.png" alt="App Logo" class="mr-3 h-10 w-10 rounded-md" />
+                        <span class="text-xl font-bold text-white">Content Strategy Generator</span>
                     </div>
-                    <p class="mb-6">This page showcases the features of ContentFlow, a content strategy application developed with cutting-edge technology to empower content creators.</p>
+                    <p class="mb-6 text-sm">AI-powered planning and content creation for impactful marketing.</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-white">Services</a></li>
-                        <li><a href="portfolio.html" class="hover:text-white">Portfolio</a></li>
-                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white">Home (Features)</a></li>
+                        <li><a href="index.html" class="hover:text-white">Launch App</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy (Placeholder)</a></li>
+                         <li><a href="#" class="hover:text-white">Terms of Service (Placeholder)</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-6 text-white">Our Services</h4>
-                    <ul class="space-y-3">
-                        <li><a href="services.html" class="hover:text-white">Web Application Development</a></li>
-                        <li><a href="services.html" class="hover:text-white">SaaS Solutions</a></li>
-                        <li><a href="services.html" class="hover:text-white">UI/UX Design</a></li>
-                        <li><a href="services.html" class="hover:text-white">Digital Marketing</a></li>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact (Example)</h4>
+                     <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> support@yourdomain.com</li>
+                        <li><i class="fas fa-info-circle mr-2"></i> Help & FAQ (Placeholder)</li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-300"></i>123 Innovation Street, Hyderabad</li>
-                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i>+91 98765 43210</li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-300"></i>info@MajorBeam.com</li>
-                    </ul>
+                 <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Follow Us (Example)</h4>
+                     <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                     </div>
                 </div>
             </div>
-            <div class="py-6 border-t border-blue-800 text-center">
-                <p>© 2025 Major Beam. All rights reserved.</p>
+            <div class="py-6 border-t border-blue-700 text-center">
+                <p class="text-sm">&copy; 2024-2025 Content Strategy Generator. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    <script>
+        // Basic mobile menu toggle (optional)
+        // You might need a more robust solution depending on complexity
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.querySelector('nav.hidden'); // Adjust if your nav structure is different
 
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex'); // Assuming flex for column layout on mobile
+                mobileMenu.classList.toggle('flex-col'); // For vertical stacking
+                mobileMenu.classList.toggle('absolute'); // For positioning
+                mobileMenu.classList.toggle('top-16'); // Adjust based on header height
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-blue-900'); // Match header
+                mobileMenu.classList.toggle('p-4');
+            });
+        }
+    </script>
 </body>
-
 </html>
