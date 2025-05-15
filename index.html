@@ -162,14 +162,19 @@
             <p class="text-lg text-blue-800 max-w-2xl mx-auto">Discover AI-powered tools designed to enhance your workflows and experiences.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="project-card group bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl transition">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10"> {/* Ensured grid-cols-1 for mobile, md:grid-cols-3 for medium+ */}
+            <div class="project-card group bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl transition md:col-start-2"> {/* Added md:col-start-2 */}
                 <div class="relative overflow-hidden rounded-xl mb-4">
-                    <img src="composia.jpg" alt="Composia Logo" class="w-full h-64 object-contain transition duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
+                    <a href="composia.html" target="_blank" rel="noopener noreferrer" class="block"> {/* Image now a link block */}
+                        <img src="composia.jpg" alt="Composia Logo" class="w-full h-64 object-contain transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
+                            <span class="btn-primary-sm">Learn More</span> {/* Changed <a> to <span> as parent is <a> now, or keep as <a> if preferred */}
                         </div>
+                    </a>
                 </div>
-                <h3 class="text-xl font-semibold text-blue-900 mb-2">Composia</h3>
+                <h3 class="text-xl font-semibold text-blue-900 mb-2">
+                    <a href="composia.html" target="_blank" rel="noopener noreferrer" class="hover:underline">Composia</a>
+                </h3>
                 <p class="text-blue-800">An innovative AI application designed to streamline and enhance creative processes.</p>
             </div>
 
