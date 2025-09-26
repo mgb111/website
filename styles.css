@@ -32,7 +32,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #063C3D; /* Dark Teal */
+    background-color: #063C3D; /* Primary Dark Teal Background */
+    color: #ffffff; /* Default text on dark */
     line-height: 1.6;
 }
 
@@ -121,7 +122,7 @@ body {
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #063C3D; /* Dark Teal */
+    color: #ffffff; /* White on dark */
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -278,6 +279,30 @@ body {
     background-position: center;
     color: white;
 }
+
+/* Secondary lighter teal background utility */
+.bg-teal-secondary { background-color: #0A5758 !important; }
+
+/* Minimalist motion hovers */
+.hover-rise {
+    transition: transform 250ms ease, box-shadow 300ms ease;
+}
+.hover-rise:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+.hover-underline {
+    position: relative;
+}
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 0; height: 2px;
+    background: #7fffd4;
+    transition: width 250ms ease;
+}
+.hover-underline:hover::after { width: 100%; }
 
 /* ==========================================================================
    7. Media Queries
