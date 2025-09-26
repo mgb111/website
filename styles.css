@@ -238,7 +238,7 @@ body {
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     background-color: #ffffff; /* White */
-    color: #0f4c5c; /* Dark Teal */
+    color: #063C3D; /* Dark Teal */
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -256,7 +256,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #0f4c5c; /* Dark Teal */
+    color: #063C3D; /* Dark Teal */
 }
 
 /* ==========================================================================
