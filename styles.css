@@ -380,6 +380,7 @@ body {
 .text-blue-800 { color: #0f4c5c !important; }
 .text-blue-700 { color: #0f4c5c !important; }
 .text-blue-600 { color: #0f4c5c !important; }
+.text-blue-500 { color: #0f4c5c !important; }
 .text-blue-300 { color: #7fffd4 !important; }
 .text-blue-200 { color: #aaffe7 !important; }
 .text-blue-100 { color: #ccffee !important; }
@@ -387,6 +388,9 @@ body {
 /* Borders */
 .border-blue-800 { border-color: #0c3c49 !important; }
 .border-blue-100 { border-color: #ccffee !important; }
+.border-blue-200 { border-color: #aaffe7 !important; }
+.border-blue-300 { border-color: #7fffd4 !important; }
+.border-blue-500 { border-color: #0f4c5c !important; }
 
 /* Buttons and links hover shades mapped via existing component classes */
 
@@ -403,3 +407,7 @@ body {
 
 /* Neutralize red utilities used (e.g., heart icon) */
 .text-red-500 { color: #7fffd4 !important; }
+
+/* Map various tag badge utilities to aquamarine/teal */
+.bg-red-100, .bg-green-100, .bg-yellow-100, .bg-purple-100, .bg-pink-100, .bg-indigo-100 { background-color: #e6fff6 !important; }
+.text-red-800, .text-green-800, .text-yellow-800, .text-purple-800, .text-pink-800, .text-indigo-800 { color: #0f4c5c !important; }
