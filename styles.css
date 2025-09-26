@@ -128,6 +128,12 @@ body {
     display: inline-block;
 }
 
+/* Contextual overrides: readable titles on light backgrounds */
+.bg-white .section-title,
+.bg-blue-50 .section-title {
+    color: #000000; /* Black on light */
+}
+
 .section-title::after {
     content: '';
     position: absolute;
