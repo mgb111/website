@@ -366,11 +366,11 @@ body {
 
 /* Minimalist motion hovers */
 .hover-rise {
-    transition: transform 250ms ease, box-shadow 300ms ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hover-rise:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 .hover-underline {
     position: relative;
@@ -378,10 +378,13 @@ body {
 .hover-underline::after {
     content: '';
     position: absolute;
-    left: 0; bottom: -2px;
-    width: 0; height: 2px;
-    background: #7fffd4;
-    transition: width 250ms ease;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #7fffd4 0%, #00ffcc 100%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
 }
 .hover-underline:hover::after { width: 100%; }
 
