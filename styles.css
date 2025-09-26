@@ -134,6 +134,23 @@ body {
     color: #000000; /* Black on light */
 }
 
+/* Ensure readable body/headings on light sections */
+.bg-white .text-blue-900, .bg-blue-50 .text-blue-900 { color: #000000 !important; }
+.bg-white .text-blue-800, .bg-blue-50 .text-blue-800 { color: #111111 !important; }
+.bg-white .text-blue-700, .bg-blue-50 .text-blue-700 { color: #222222 !important; }
+
+/* Contextual overrides: readable text on dark backgrounds */
+.bg-blue-900 .text-blue-900,
+.bg-blue-900 .text-blue-800,
+.bg-blue-900 .text-blue-700 {
+    color: #ffffff !important;
+}
+.bg-teal-secondary .text-blue-900,
+.bg-teal-secondary .text-blue-800,
+.bg-teal-secondary .text-blue-700 {
+    color: #ffffff !important;
+}
+
 .section-title::after {
     content: '';
     position: absolute;
