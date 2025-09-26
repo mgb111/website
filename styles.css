@@ -32,7 +32,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #1e3a8a;
+    color: #0f4c5c; /* Dark Teal */
     line-height: 1.6;
 }
 
@@ -43,7 +43,7 @@ body {
 .btn-primary {
     display: inline-flex;
     align-items: center;
-    background-color: #1e3a8a;
+    background-color: #0f4c5c; /* Dark Teal */
     color: white;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
@@ -53,15 +53,15 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #1e40af;
+    background-color: #0c3c49; /* Darker Teal */
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+    box-shadow: 0 4px 12px rgba(15, 76, 92, 0.2);
 }
 
 .btn-primary-sm {
     display: inline-flex;
     align-items: center;
-    background-color: #1e3a8a;
+    background-color: #0f4c5c; /* Dark Teal */
     color: white;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -71,7 +71,7 @@ body {
 }
 
 .btn-primary-sm:hover {
-    background-color: #1e40af;
+    background-color: #0c3c49; /* Darker Teal */
 }
 
 .btn-secondary {
@@ -98,8 +98,8 @@ body {
     display: inline-flex;
     align-items: center;
     background-color: transparent;
-    border: 2px solid #1e3a8a;
-    color: #1e3a8a;
+    border: 2px solid #0f4c5c; /* Dark Teal */
+    color: #0f4c5c; /* Dark Teal */
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -108,10 +108,10 @@ body {
 }
 
 .btn-outline:hover {
-    background-color: #1e3a8a;
+    background-color: #0f4c5c; /* Dark Teal */
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    box-shadow: 0 4px 12px rgba(15, 76, 92, 0.15);
 }
 
 /* ==========================================================================
@@ -121,7 +121,7 @@ body {
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #1e3a8a;
+    color: #0f4c5c; /* Dark Teal */
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -135,7 +135,7 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #3b82f6;
+    background-color: #7fffd4; /* Aquamarine */
     border-radius: 2px;
 }
 
@@ -191,8 +191,8 @@ body {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: #dbeafe;
-    color: #1e3a8a;
+    background-color: #e6fff6; /* Light Aquamarine */
+    color: #0f4c5c; /* Dark Teal */
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }
@@ -237,8 +237,8 @@ body {
     padding: 1rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
-    background-color: #f9fafb;
-    color: #1e3a8a;
+    background-color: #ffffff; /* White */
+    color: #0f4c5c; /* Dark Teal */
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -247,16 +247,16 @@ body {
 .contact-form textarea:focus,
 .contact-form select:focus {
     outline: none;
-    border-color: #3b82f6;
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #7fffd4; /* Aquamarine */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(127, 255, 212, 0.25);
 }
 
 .contact-form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #1e3a8a;
+    color: #0f4c5c; /* Dark Teal */
 }
 
 /* ==========================================================================
@@ -342,8 +342,8 @@ body {
     .btn-primary,
     .btn-secondary,
     .btn-outline {
-        border: 1px solid #1e3a8a;
-        color: #1e3a8a !important;
+        border: 1px solid #0f4c5c; /* Dark Teal */
+        color: #0f4c5c !important;
         background: none !important;
     }
 
@@ -359,6 +359,47 @@ body {
     footer,
     .cta-section {
         background: white !important;
-        color: #1e3a8a !important;
+        color: #0f4c5c !important;
     }
 }
+
+/* ==========================================================================
+   Tailwind Utility Overrides for Teal Theme
+   Map commonly used blue utilities to Dark Teal / Aquamarine
+   ========================================================================== */
+
+/* Backgrounds */
+.bg-blue-900 { background-color: #0f4c5c !important; }
+.bg-blue-800 { background-color: #0c3c49 !important; }
+.bg-blue-700 { background-color: #0c3c49 !important; }
+.bg-blue-50  { background-color: #e6fff6 !important; }
+.bg-blue-100 { background-color: #ccffee !important; }
+
+/* Text colors */
+.text-blue-900 { color: #0f4c5c !important; }
+.text-blue-800 { color: #0f4c5c !important; }
+.text-blue-700 { color: #0f4c5c !important; }
+.text-blue-600 { color: #0f4c5c !important; }
+.text-blue-300 { color: #7fffd4 !important; }
+.text-blue-200 { color: #aaffe7 !important; }
+.text-blue-100 { color: #ccffee !important; }
+
+/* Borders */
+.border-blue-800 { border-color: #0c3c49 !important; }
+.border-blue-100 { border-color: #ccffee !important; }
+
+/* Buttons and links hover shades mapped via existing component classes */
+
+/* Grays mapped to allowed palette */
+.bg-gray-50 { background-color: #ffffff !important; }
+.bg-gray-100 { background-color: #ffffff !important; }
+.text-gray-700, .text-gray-800, .text-gray-900 { color: #0f4c5c !important; }
+.border-gray-100, .border-gray-200, .border-gray-300 { border-color: #ccffee !important; }
+
+/* Gradient utility overrides (Tailwind v2 style) */
+.from-blue-900 { --tw-gradient-from: #0f4c5c !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(15,76,92,0)); }
+.via-blue-800 { --tw-gradient-stops: var(--tw-gradient-from), #0c3c49, var(--tw-gradient-to, rgba(12,60,73,0)); }
+.to-blue-700 { --tw-gradient-to: #0c3c49 !important; }
+
+/* Neutralize red utilities used (e.g., heart icon) */
+.text-red-500 { color: #7fffd4 !important; }

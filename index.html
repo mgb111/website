@@ -29,7 +29,6 @@
                 <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Home</a>
                 <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About</a>
                 <a href="services.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Services</a>
-                <a href="blog.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Blog</a>
                 <a href="contact.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Contact</a>
             </nav>
         </div>
@@ -371,42 +370,7 @@
         </section>
 
         
-        <section class="py-20 px-6 bg-white"> 
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">Latest from Our Blog</h2>
-                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">Insights and expertise from our immersive technology specialists</p>
-                </div>
-
-                <div id="blog-posts-container" class="grid md:grid-cols-3 gap-8">
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="blog.html" class="btn-outline">
-                        <i class="fas fa-book-open mr-2"></i>View All Articles
-                    </a>
-                </div>
-            </div>
-        </section>
-
-<script>
-fetch('blog.html')
-    .then(res => res.text())
-    .then(html => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const blogPosts = doc.querySelectorAll('.blog-post'); // Make sure your blog.html has elements with class 'blog-post'
-        const container = document.getElementById('blog-posts-container');
-        blogPosts.forEach((post, index) => {
-            if (index < 3) container.appendChild(post.cloneNode(true));
-        });
-    })
-    .catch(error => {
-        document.getElementById('blog-posts-container').innerHTML =
-            '<p class="text-red-500">Unable to load blog posts at the moment. Please try again later.</p>';
-        console.error('Error loading blog posts:', error);
-    });
-</script>
+        
 
         <section class="cta-section py-24 px-6 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')">
             <div class="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
@@ -456,7 +420,6 @@ fetch('blog.html')
                         <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
                         <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
                         <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition duration-300">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
