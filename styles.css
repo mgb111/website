@@ -122,16 +122,16 @@ body {
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #ffffff; /* White on dark */
+    color: #000000; /* Black by default */
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
 }
 
-/* Contextual overrides: readable titles on light backgrounds */
-.bg-white .section-title,
-.bg-blue-50 .section-title {
-    color: #000000; /* Black on light */
+/* Contextual overrides: titles on dark backgrounds */
+.bg-blue-900 .section-title,
+.bg-teal-secondary .section-title {
+    color: #ffffff; /* White on dark */
 }
 
 /* Ensure readable body/headings on light sections */
