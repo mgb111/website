@@ -492,6 +492,7 @@ body {
 .bg-blue-700 { background-color: #042A2B !important; }
 .bg-blue-50  { background-color: #e6fff6 !important; }
 .bg-blue-100 { background-color: #ccffee !important; }
+.bg-white    { background-color: #e6fff6 !important; }
 
 /* Text colors */
 .text-blue-900 { color: #063C3D !important; }
