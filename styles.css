@@ -33,9 +33,9 @@ html {
 .btn-secondary {
     display: inline-flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    color: #000000;
+    color: #ffffff;
     font-weight: 600;
     padding: 0.875rem 2rem;
     border-radius: 12px;
@@ -156,7 +156,7 @@ body {
 .section-title {
     font-size: 3rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -213,7 +213,7 @@ body {
 }
 
 .feature-card {
-    background: #063C3D; /* Dark Teal */
+    background: #0A5758; /* Muted Teal */
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 2.5rem;
@@ -230,7 +230,7 @@ body {
 }
 
 .project-card {
-    background: #063C3D; /* Dark Teal */
+    background: #0A5758; /* Muted Teal */
     backdrop-filter: blur(12px);
     border-radius: 20px;
     overflow: hidden;
@@ -245,7 +245,7 @@ body {
 }
 
 .industry-card {
-    background-color: #063C3D; /* Dark Teal */
+    background-color: #0A5758; /* Muted Teal */
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -265,14 +265,14 @@ body {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: #063C3D; /* Dark Teal */
-    color: #ffffff; /* Contrast on dark teal */
+    background-color: #042A2B; /* Darker Teal circle */
+    color: #ffffff; /* Contrast */
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }
 
 .blog-card {
-    background-color: #063C3D; /* Dark Teal */
+    background-color: #0A5758; /* Muted Teal */
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -285,8 +285,8 @@ body {
 }
 
 .testimonial-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0A5758; /* Muted Teal */
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
@@ -330,7 +330,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #063C3D; /* Dark Teal */
+    color: #ffffff; /* White labels */
 }
 
 /* ==========================================================================
@@ -500,12 +500,11 @@ body {
 .bg-blue-100 { background-color: #063C3D !important; }
 .bg-white    { background-color: #063C3D !important; }
 
-/* Text colors */
-.text-blue-900 { color: #063C3D !important; }
-.text-blue-800 { color: #063C3D !important; }
-.text-blue-700 { color: #063C3D !important; }
-.text-blue-600 { color: #063C3D !important; }
-.text-blue-500 { color: #063C3D !important; }
+.text-blue-900 { color: #ffffff !important; }
+.text-blue-800 { color: #ffffff !important; }
+.text-blue-700 { color: #ffffff !important; }
+.text-blue-600 { color: #ffffff !important; }
+.text-blue-500 { color: #ffffff !important; }
 .text-blue-300 { color: #7fffd4 !important; }
 .text-blue-200 { color: #aaffe7 !important; }
 .text-blue-100 { color: #ccffee !important; }
@@ -523,7 +522,7 @@ body {
 .bg-gray-50 { background-color: #063C3D !important; }
 .bg-gray-100 { background-color: #063C3D !important; }
 
-.text-gray-700, .text-gray-800, .text-gray-900 { color: #063C3D !important; }
+.text-gray-700, .text-gray-800, .text-gray-900 { color: #ffffff !important; }
 .border-gray-100, .border-gray-200, .border-gray-300 { border-color: #ccffee !important; }
 
 /* Gradient utility overrides (Tailwind v2 style) */
