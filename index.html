@@ -27,221 +27,95 @@
             </button>
             <nav id="navigation" class="hidden w-full md:flex md:w-auto md:space-x-6 mt-4 md:mt-0">
                 <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Home</a>
-                <a href="ar.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Augmented Reality</a>
-                <a href="vr.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Virtual Reality</a>
+                <a href="past-work.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Past Work</a>
                 <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About Us</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero relative flex items-center justify-center h-screen bg-cover bg-center text-center" style="background-image: url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 opacity-80"></div>
-            <div class="relative z-10 max-w-4xl px-8 py-16 text-white text-center">
-                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-up">majorbeam</h1>
-                <p class="text-2xl md:text-3xl text-blue-100 mb-10">Crafting Immersive XR & AI Experiences That Inspire</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="ar.html" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-100 transition">
-                        <i class="fas fa-eye mr-2"></i> Explore AR Solutions
-                    </a>
-                    <a href="contact.html" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-800 transition">
-                        <i class="fas fa-envelope mr-2"></i> Get in Touch
-                    </a>
+        <!-- AR: What we do (left) + GIF (right) -->
+        <section class="py-16 px-6 bg-white">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="section-title">Augmented Reality Solutions</h2>
+                    <p class="text-blue-800 mb-4">We create high‑impact AR that runs in the browser. From product try‑ons and interactive packaging to location‑based activations and event experiences.</p>
+                    <ul class="list-disc pl-5 text-blue-800 space-y-2">
+                        <li>WebAR product try‑ons and configurators</li>
+                        <li>AR packaging, QR activations, and microsites</li>
+                        <li>Marker/image tracking and plane detection</li>
+                        <li>Retail, OOH and experiential campaigns</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://media.giphy.com/media/3o7aD4j8bS9KQpX7qQ/giphy.gif" alt="AR demo" class="w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
-        <!-- Welcome to majorbeam (moved up) -->
-        <section class="py-20 px-6 bg-white"> 
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">Welcome to majorbeam</h2>
-                    <p class="text-lg text-blue-800 max-w-3xl mx-auto">We craft experiential marketing through AR and VR — from browser-based AR try‑ons to immersive VR brand worlds and event experiences — to help organizations communicate their value in new and engaging ways.</p>
+        <!-- AR: GIF (left) + What is AR list (right) -->
+        <section class="py-16 px-6 bg-blue-50">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div class="rounded-xl overflow-hidden shadow-lg order-1 md:order-none">
+                    <img src="https://media.giphy.com/media/xT1XGN9QO2ZQGx8aYw/giphy.gif" alt="AR explanation" class="w-full h-full object-cover">
                 </div>
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="feature-card">
-                        <div class="mb-6 text-center">
-                            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-900">
-                                <i class="fas fa-mobile-alt text-3xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-blue-900">Augmented Reality Experiences</h3>
-                        <p class="text-blue-800">WebAR try‑ons, AR packaging/QR activations, and retail/OOH AR that drive engagement.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="mb-6 text-center">
-                            <div class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-900">
-                                <i class="fas fa-video text-3xl"></i>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-blue-900">Virtual Reality Experiences</h3>
-                        <p class="text-blue-800">Immersive VR brand worlds, event experiences, and cinematic 360° narratives.</p>
-                    </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">What is AR and where is it applicable?</h3>
+                    <ul class="list-disc pl-5 text-blue-800 space-y-2">
+                        <li>E‑commerce: virtual try‑ons, product previews</li>
+                        <li>Packaging: scan to unlock stories, tutorials, rewards</li>
+                        <li>Events: interactive photo‑ops and brand games</li>
+                        <li>Education: 3D visualizations and guided learning</li>
+                        <li>Real estate and automotive: in‑place visualization</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Tagline + Quick CTAs (moved before Featured Projects) -->
-        <section class="py-16 px-6 bg-blue-900 text-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Experiential AR/VR for Bold Brands</h2>
-                    <p class="text-blue-100 text-lg max-w-3xl mx-auto">We design and deliver memorable product moments with WebAR activations and immersive VR brand worlds—minimalist, performant, and conversion-focused.</p>
+        <!-- VR: What we do (left) + GIF (right) -->
+        <section class="py-16 px-6 bg-white">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="section-title">Virtual Reality Solutions</h2>
+                    <p class="text-blue-800 mb-4">We design immersive VR worlds and cinematic 360° stories for events, showrooms, and training—built for presence and clarity.</p>
+                    <ul class="list-disc pl-5 text-blue-800 space-y-2">
+                        <li>VR brand worlds and product demos</li>
+                        <li>Event installations and headset experiences</li>
+                        <li>Interactive 360° narratives</li>
+                        <li>Training and simulation modules</li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="contact.html" class="btn-primary"><i class="fas fa-paper-plane mr-2"></i>Project Inquiry</a>
-                    <a href="contact.html" class="btn-secondary"><i class="fas fa-flask mr-2"></i>Book a Demo</a>
-                    <a href="contact.html" class="btn-outline"><i class="fas fa-rocket mr-2"></i>Get Started</a>
-                </div>
-            </div>
-        </section>
-
-
-        
-        
-
-
-
-        <!-- Featured Projects (Top) -->
-        <section class="py-24 px-6 bg-blue-50"> 
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl font-bold text-blue-900 mb-4">Featured Projects</h2>
-                    <p class="text-lg text-blue-800 max-w-2xl mx-auto">Discover our latest work delivering immersive AR and VR solutions</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="project-card group bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl transition">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="Screenshot (95).png" alt="Virtual Tour" class="w-full h-56 object-cover transition duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.aurigeneservices.com/virtual-tour-facilities/cdmo-lab-bangalore/" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">Immersive 360° Virtual Tour</h3>
-                        <p class="text-blue-800">Explore a state-of-the-art CDMO lab in an immersive virtual tour.</p>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl transition">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="Screenshot (99).png" alt="VR Showroom" class="w-full h-56 object-cover transition duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=dAs4vW5Kh6U" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">Immersive 360° Experience</h3>
-                        <p class="text-blue-800">A cinematic 360° video experience advancing sector storytelling.</p>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl transition">
-                        <div class="relative overflow-hidden rounded-xl mb-4">
-                            <img src="Screenshot (97).png" alt="Telangana Showcase" class="w-full h-56 object-cover transition duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=YeoUtUXy7TU" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">VR Showcase: Govt of Telangana</h3>
-                        <p class="text-blue-800">An impactful VR experience positioning investment potential.</p>
-                    </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://media.giphy.com/media/3o7aCZYjG7n1H7N0Ew/giphy.gif" alt="VR demo" class="w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
-
-
-        <!-- Brands we have collaborated with -->
-        <section id="brands" class="py-16 px-6 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">Brands we have collaborated with</h2>
-                    <p class="text-blue-800 mt-2">Trusted by leading organizations</p>
+        <!-- VR: GIF (left) + Applicable list (right) -->
+        <section class="py-16 px-6 bg-blue-50">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div class="rounded-xl overflow-hidden shadow-lg order-1 md:order-none">
+                    <img src="https://media.giphy.com/media/3o7aTskHEUdgCQAXde/giphy.gif" alt="VR explanation" class="w-full h-full object-cover">
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                    <img src="Nestle-Logo.jpg" alt="Nestlé" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="HINDUNILVR.NS_BIG-24495890.png" alt="Hindustan Unilever" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="MANKIND.NS_BIG-e2edbe6b.png" alt="Mankind Pharma" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="jk_tyre-logo_brandlogos.net_hpm4m.png" alt="JK Tyre" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="Aurigene Pharmaceutical Services Limited CDMO Logo-comp291134.webp" alt="Aurigene Pharmaceutical Services" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="GIM_Blue_PNG_Logo.png" alt="Goa Institute of Management" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
-                    <img src="telangana-govt_660_053114102100.webp" alt="Government of Telangana" class="h-12 md:h-14 object-contain opacity-80 hover:opacity-100 transition" />
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Where is VR most effective?</h3>
+                    <ul class="list-disc pl-5 text-blue-800 space-y-2">
+                        <li>Events and expos: captivating product storytelling</li>
+                        <li>Sales enablement: guided interactive demos</li>
+                        <li>Training: safe simulation of real‑world scenarios</li>
+                        <li>Tourism and real estate: virtual tours</li>
+                        <li>Education: immersive labs and explorations</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        
-<style>
-@keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.animate-fade-in-up {
-    animation: fade-in-up 1s ease-out;
-}
-</style>
-
-
-        <!-- Capabilities Overview -->
-        <section class="py-20 px-6 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="section-title">What We Build</h2>
-                    <p class="text-blue-800 max-w-3xl mx-auto">Custom AR and VR experiences—from WebAR try‑ons and packaging to VR brand worlds, booths, and interactive 360° narratives.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="feature-card hover-rise">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">Custom AR Development</h3>
-                        <p class="text-blue-800">WebAR activations, image/marker tracking, geo AR, product visualization.</p>
-                    </div>
-                    <div class="feature-card hover-rise">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">Custom VR Development</h3>
-                        <p class="text-blue-800">Interactive brand worlds, event installations, headset demos.</p>
-                    </div>
-                    <div class="feature-card hover-rise">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">App/Game Design</h3>
-                        <p class="text-blue-800">Lightweight mechanics, UX for immersion, performance tuning.</p>
-                    </div>
-                    <div class="feature-card hover-rise">
-                        <h3 class="text-xl font-semibold text-blue-900 mb-2">Hardware Integration</h3>
-                        <p class="text-blue-800">Kiosks, sensors, QR flows, and hands-free booth experiences.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-
-        
-
-        
-
-        
-        
-
-        
-            
-
-        
-        
-
-        <section class="cta-section py-24 px-6 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')">
-            <div class="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
-            <div class="max-w-4xl mx-auto relative z-10 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Create Immersive Experiences?</h2>
-                <p class="text-xl text-blue-100 mb-8">Let's discuss how our XR and AI solutions can transform your business</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="contact.html" class="btn-primary">
-                        <i class="fas fa-envelope mr-2"></i>Contact Us
-                    </a>
-                    <a href="services.html" class="btn-secondary">
-                        <i class="fas fa-info-circle mr-2"></i>Learn More
-                    </a>
-                </div>
+        <!-- Contact CTA -->
+        <section class="py-20 px-6 bg-blue-900 text-white text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Let's build your next immersive experience</h2>
+                <p class="text-blue-100 mb-8">Tell us your challenge and we’ll propose an elegant, performant AR/VR approach.</p>
+                <a href="contact.html" class="btn-primary"><i class="fas fa-envelope mr-2"></i>Contact Us</a>
             </div>
         </section>
     </main>
@@ -275,8 +149,8 @@
                     <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
                     <ul class="space-y-3">
                         <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="past-work.html" class="hover:text-white transition duration-300">Past Work</a></li>
                         <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
                         <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
                     </ul>
                 </div>
