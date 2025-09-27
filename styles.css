@@ -536,6 +536,24 @@ footer.bg-blue-900 {
     background-color: #000000 !important;
 }
 
+/* Hero intro aesthetic separation (same color, subtle borders/shadows) */
+.hero-intro {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) inset, 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.hero-intro::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 48px;
+    background: radial-gradient(120% 80% at 50% -20%, rgba(255,255,255,0.08) 0%, rgba(0,0,0,0.0) 60%);
+    pointer-events: none;
+}
 /* Scoped override: allow white tiles only for brand logos grid */
 .brands-logos .bg-white {
     background-color: #ffffff !important;
