@@ -536,6 +536,11 @@ footer.bg-blue-900 {
     background-color: #000000 !important;
 }
 
+/* Scoped override: allow white tiles only for brand logos grid */
+.brands-logos .bg-white {
+    background-color: #ffffff !important;
+}
+
 /* Neutralize red utilities used (e.g., heart icon) */
 .text-red-500 { color: #7fffd4 !important; }
 
