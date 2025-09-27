@@ -176,15 +176,21 @@ body {
     background-clip: text;
 }
 
-/* Ensure readable body/headings on light sections */
-.bg-white .text-blue-900, .bg-blue-50 .text-blue-900 { color: #000000 !important; }
-.bg-white .text-blue-800, .bg-blue-50 .text-blue-800 { color: #111111 !important; }
-.bg-white .text-blue-700, .bg-blue-50 .text-blue-700 { color: #222222 !important; }
+/* Ensure readable body/headings on dark sections (all primary sections are dark teal) */
+.bg-white .text-blue-900, .bg-blue-50 .text-blue-900 { color: #ffffff !important; }
+.bg-white .text-blue-800, .bg-blue-50 .text-blue-800 { color: #f5f5f5 !important; }
+.bg-white .text-blue-700, .bg-blue-50 .text-blue-700 { color: #e5e5e5 !important; }
 
 /* Contextual overrides: readable text on dark backgrounds */
 .bg-blue-900 .text-blue-900,
 .bg-blue-900 .text-blue-800,
-.bg-blue-900 .text-blue-700 {
+.bg-blue-900 .text-blue-700,
+.bg-blue-50  .text-blue-900,
+.bg-blue-50  .text-blue-800,
+.bg-blue-50  .text-blue-700,
+.bg-white    .text-blue-900,
+.bg-white    .text-blue-800,
+.bg-white    .text-blue-700 {
     color: #ffffff !important;
 }
 .bg-teal-secondary .text-blue-900,
@@ -207,7 +213,7 @@ body {
 }
 
 .feature-card {
-    background: #e6fff6; /* Aquamarine */
+    background: #063C3D; /* Dark Teal */
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 2.5rem;
@@ -224,7 +230,7 @@ body {
 }
 
 .project-card {
-    background: #e6fff6; /* Aquamarine */
+    background: #063C3D; /* Dark Teal */
     backdrop-filter: blur(12px);
     border-radius: 20px;
     overflow: hidden;
@@ -239,7 +245,7 @@ body {
 }
 
 .industry-card {
-    background-color: #e6fff6; /* Aquamarine */
+    background-color: #063C3D; /* Dark Teal */
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -259,14 +265,14 @@ body {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: #e6fff6; /* Light Aquamarine */
-    color: #063C3D; /* Dark Teal */
+    background-color: #063C3D; /* Dark Teal */
+    color: #ffffff; /* Contrast on dark teal */
     border-radius: 50%;
     margin-bottom: 1.5rem;
 }
 
 .blog-card {
-    background-color: #e6fff6; /* Aquamarine */
+    background-color: #063C3D; /* Dark Teal */
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -305,8 +311,8 @@ body {
     padding: 1rem;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
-    background-color: #ffffff; /* White */
-    color: #063C3D; /* Dark Teal */
+    background-color: #042A2B; /* Darker Teal input bg */
+    color: #ffffff; /* Text on dark input */
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -316,7 +322,7 @@ body {
 .contact-form select:focus {
     outline: none;
     border-color: #7fffd4; /* Aquamarine */
-    background-color: #ffffff;
+    background-color: #063C3D;
     box-shadow: 0 0 0 3px rgba(127, 255, 212, 0.25);
 }
 
@@ -490,9 +496,9 @@ body {
 .bg-blue-900 { background-color: #063C3D !important; }
 .bg-blue-800 { background-color: #042A2B !important; }
 .bg-blue-700 { background-color: #042A2B !important; }
-.bg-blue-50  { background-color: #e6fff6 !important; }
-.bg-blue-100 { background-color: #ccffee !important; }
-.bg-white    { background-color: #e6fff6 !important; }
+.bg-blue-50  { background-color: #063C3D !important; }
+.bg-blue-100 { background-color: #063C3D !important; }
+.bg-white    { background-color: #063C3D !important; }
 
 /* Text colors */
 .text-blue-900 { color: #063C3D !important; }
@@ -513,9 +519,9 @@ body {
 
 /* Buttons and links hover shades mapped via existing component classes */
 
-/* Map grays to aquamarine so no white backgrounds */
-.bg-gray-50 { background-color: #e6fff6 !important; }
-.bg-gray-100 { background-color: #ccffee !important; }
+/* Map grays to dark teal so no light backgrounds */
+.bg-gray-50 { background-color: #063C3D !important; }
+.bg-gray-100 { background-color: #063C3D !important; }
 
 .text-gray-700, .text-gray-800, .text-gray-900 { color: #063C3D !important; }
 .border-gray-100, .border-gray-200, .border-gray-300 { border-color: #ccffee !important; }
