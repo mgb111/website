@@ -375,6 +375,11 @@ body {
     width: 100%;
 }
 
+/* Hero subtitle sizing: approx. +20% */
+.hero-subtitle {
+    font-size: 1.2em;
+}
+
 /* Minimalist motion hovers */
 .hover-rise {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -404,7 +409,6 @@ body {
    ========================================================================== */
 
 @media (max-width: 768px) {
-    .hero-intro { aspect-ratio: 4 / 5; }
     .section-title {
         font-size: 2.5rem;
     }
@@ -550,12 +554,11 @@ footer.bg-blue-900 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) inset, 0 12px 40px rgba(0, 0, 0, 0.25);
     background-image: url('hero-image.webp');
-    background-size: contain; /* show full image without cropping */
+    background-size: cover; /* crop top/bottom as needed to fill viewport */
     background-position: center;
     background-repeat: no-repeat;
     background-color: #0A4B47; /* match site tint in letterbox areas */
-    /* Size hero based on site width (not full viewport height) */
-    aspect-ratio: 16 / 9; /* typical desktop ratio; avoids cropping with 'contain' */
+    min-height: 100vh; /* occupy full screen on load */
     display: flex;
     align-items: center;
 }
