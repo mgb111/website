@@ -558,7 +558,13 @@ footer.bg-blue-900 {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.45) 100%);
+    /* Teal-tinted overlay aligned with site palette (#0A4B47 → #06302E) */
+    background: linear-gradient(
+        180deg,
+        rgba(10, 75, 71, 0.70) 0%,      /* #0A4B47 */
+        rgba(6, 48, 46, 0.55) 40%,      /* #06302E */
+        rgba(10, 75, 71, 0.70) 100%     /* #0A4B47 */
+    );
     pointer-events: none;
 }
 .hero-intro::after {
