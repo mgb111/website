@@ -541,10 +541,10 @@ body {
 .via-blue-800 { --tw-gradient-stops: var(--tw-gradient-from), #06302E, var(--tw-gradient-to, rgba(6,48,46,0)); }
 .to-blue-700 { --tw-gradient-to: #06302E !important; }
 
-/* Ensure header/footer use dark teal */
+/* Force header/footer to black while keeping primary sections teal */
 header.bg-blue-900,
 footer.bg-blue-900 {
-    background-color: #0A4B47 !important;
+    background-color: #000000 !important;
 }
 
 /* Hero intro aesthetic separation (same color, subtle borders/shadows) */
