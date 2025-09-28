@@ -404,6 +404,7 @@ body {
    ========================================================================== */
 
 @media (max-width: 768px) {
+    .hero-intro { aspect-ratio: 4 / 5; }
     .section-title {
         font-size: 2.5rem;
     }
@@ -553,7 +554,8 @@ footer.bg-blue-900 {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #0A4B47; /* match site tint in letterbox areas */
-    min-height: 100vh; /* occupy full screen on load */
+    /* Size hero based on site width (not full viewport height) */
+    aspect-ratio: 16 / 9; /* typical desktop ratio; avoids cropping with 'contain' */
     display: flex;
     align-items: center;
 }
