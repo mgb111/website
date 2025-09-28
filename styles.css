@@ -372,6 +372,7 @@ body {
 .hero-intro .hero-content {
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 /* Minimalist motion hovers */
@@ -551,8 +552,10 @@ footer.bg-blue-900 {
     background-size: contain; /* show full image without cropping */
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #000; /* fill letterbox areas when using contain */
-    min-height: 60vh; /* ensure enough space to display full image */
+    background-color: #0A4B47; /* match site tint in letterbox areas */
+    min-height: 100vh; /* occupy full screen on load */
+    display: flex;
+    align-items: center;
 }
 .hero-intro::before {
     content: '';
