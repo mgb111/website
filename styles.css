@@ -369,6 +369,10 @@ body {
     background: radial-gradient(circle at 30% 70%, rgba(127, 255, 212, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
+.hero-intro .hero-content {
+    position: relative;
+    z-index: 1;
+}
 
 /* Minimalist motion hovers */
 .hover-rise {
@@ -543,6 +547,17 @@ footer.bg-blue-900 {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) inset, 0 12px 40px rgba(0, 0, 0, 0.25);
+    background-image: url('hero-image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none;
 }
 .hero-intro::after {
     content: '';
