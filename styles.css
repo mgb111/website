@@ -377,7 +377,8 @@ body {
 
 /* Hero subtitle sizing: approx. +20% */
 .hero-subtitle {
-    font-size: 1.2em;
+    font-size: 1.4em; /* larger than before */
+    font-weight: 700; /* bold */
 }
 
 /* Minimalist motion hovers */
