@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Cases - Major Beam</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="majorbean-logoform.png" />
+  <link rel="apple-touch-icon" href="majorbean-logoform.png" />
+</head>
+
+<body class="bg-gray-50 font-sans">
+  <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+      <div class="flex items-center">
+        <a href="index.html" class="flex items-center">
+          <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-12 w-12 object-contain" />
+          <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block" />
+        </a>
+      </div>
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+      <nav id="navigation" class="hidden w-full md:flex md:w-auto md:space-x-6 mt-4 md:mt-0">
+        <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Home</a>
+        <a href="past-work.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Past Work</a>
+        <a href="use-cases.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Use Cases</a>
+        <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">About Us</a>
+        <a href="contact.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page header -->
+    <section class="py-16 px-6 bg-white">
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900">Use Cases</h1>
+        <p class="text-blue-800 mt-4">Detailed, practical applications of AR and VR that drive measurable business outcomes.</p>
+      </div>
+    </section>
+
+    <!-- 360 Virtual Tours for Marketing -->
+    <section id="virtual-tours" class="py-16 px-6 bg-blue-50">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold text-blue-900 mb-3">360° Virtual Tours for Marketing</h2>
+          <p class="text-blue-800 mb-4">Create immersive walkthroughs of venues, showrooms, factories, and experiences to let audiences explore at their own pace from any device.</p>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Business impact</h3>
+          <ul class="list-disc pl-5 text-blue-800 space-y-2">
+            <li>Increase time-on-page and lead quality with interactive content</li>
+            <li>Showcase spaces/products remotely to global audiences</li>
+            <li>Embed hotspots for CTAs, forms, product info, and videos</li>
+            <li>Track interactions with analytics for campaign ROI</li>
+          </ul>
+          <div class="mt-6">
+            <a href="contact.html" class="btn-primary"><i class="fas fa-envelope mr-2"></i>Discuss a tour</a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="vr2.gif" alt="360° virtual tour preview" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- AR Try-Ons -->
+    <section id="ar-try-ons" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div class="rounded-xl overflow-hidden shadow-lg order-1 md:order-none">
+          <img src="ar1.gif" alt="AR try-on preview" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <h2 class="text-3xl font-extrabold text-blue-900 mb-3">AR Try‑Ons</h2>
+          <p class="text-blue-800 mb-4">Let shoppers preview wearables, cosmetics, eyewear, and accessories live through their camera—no app required.</p>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Business impact</h3>
+          <ul class="list-disc pl-5 text-blue-800 space-y-2">
+            <li>Reduce returns by setting accurate expectations</li>
+            <li>Boost conversion with real-time product visualization</li>
+            <li>Enable social sharing to amplify reach</li>
+            <li>Integrate with PDPs and carts for a smooth flow</li>
+          </ul>
+          <div class="mt-6">
+            <a href="contact.html" class="btn-primary"><i class="fas fa-envelope mr-2"></i>Enable try‑ons</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AR on Packaging in Retail -->
+    <section id="ar-packaging" class="py-16 px-6 bg-blue-50">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold text-blue-900 mb-3">AR on Packaging in Retail</h2>
+          <p class="text-blue-800 mb-4">Transform packaging into a digital touchpoint: unlock stories, tutorials, rewards, and community—scannable from any phone.</p>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Business impact</h3>
+          <ul class="list-disc pl-5 text-blue-800 space-y-2">
+            <li>Educate and delight at the shelf and post‑purchase</li>
+            <li>Run targeted, updatable campaigns without reprinting</li>
+            <li>Drive loyalty and CRM with gamified rewards</li>
+            <li>Attribute offline engagement with analytics</li>
+          </ul>
+          <div class="mt-6">
+            <a href="contact.html" class="btn-primary"><i class="fas fa-envelope mr-2"></i>Activate packaging</a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+          <img src="ar2.gif" alt="AR packaging preview" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Virtual Showrooms -->
+    <section id="virtual-showrooms" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div class="rounded-xl overflow-hidden shadow-lg order-1 md:order-none">
+          <img src="vr1.gif" alt="Virtual showroom preview" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <h2 class="text-3xl font-extrabold text-blue-900 mb-3">Virtual Showrooms</h2>
+          <p class="text-blue-800 mb-4">Showcase full product ranges in 3D, with configuration, scale references, and guided sales narratives accessible from the browser.</p>
+          <h3 class="text-xl font-semibold text-blue-900 mb-2">Business impact</h3>
+          <ul class="list-disc pl-5 text-blue-800 space-y-2">
+            <li>Shorten sales cycles with interactive demos</li>
+            <li>Localize content and pricing for different markets</li>
+            <li>Run remote walkthroughs for distributed teams</li>
+            <li>Integrate lead capture and analytics</li>
+          </ul>
+          <div class="mt-6">
+            <a href="contact.html" class="btn-primary"><i class="fas fa-envelope mr-2"></i>Build a showroom</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-900 text-blue-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 py-16">
+        <div>
+          <div class="flex items-center mb-6">
+            <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-12 w-12 object-contain" />
+            <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block" />
+          </div>
+          <p class="mb-6">Creating immersive experiences at the intersection of XR and AI technology to transform how businesses connect with their audiences.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-blue-300 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+            <a href="#" class="text-blue-300 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="#" class="text-blue-300 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-blue-300 hover:text-white"><i class="fab fa-youtube text-xl"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="past-work.html" class="hover:text-white">Past Work</a></li>
+            <li><a href="use-cases.html" class="hover:text-white">Use Cases</a></li>
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
+          <ul class="space-y-4">
+            <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i>79774710892</li>
+            <li class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-300"></i>manishb@majorbeam.com</li>
+            <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3 text-blue-300"></i>Vashi, Navi Mumbai, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="py-6 border-t border-blue-800 text-center">
+        <p>© 2025 Major Beam. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const navigation = document.getElementById('navigation');
+
+      mobileMenuButton.addEventListener('click', function () {
+        navigation.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!navigation.contains(event.target) && !mobileMenuButton.contains(event.target) && !navigation.classList.contains('hidden')) {
+          navigation.classList.add('hidden');
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          navigation.classList.remove('hidden');
+        } else {
+          navigation.classList.add('hidden');
+        }
+      });
+
+      if (window.innerWidth >= 768) {
+        navigation.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
