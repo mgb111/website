@@ -536,6 +536,9 @@ body {
 .text-gray-700, .text-gray-800, .text-gray-900 { color: #ffffff !important; }
 .border-gray-100, .border-gray-200, .border-gray-300 { border-color: #ccffee !important; }
 
+/* Keep white backgrounds specifically for brand logo tiles */
+.brands-logos .bg-white { background-color: #ffffff !important; }
+
 /* Gradient utility overrides (warmed) */
 .from-blue-900 { --tw-gradient-from: #0A4B47 !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(10,75,71,0)); }
 .via-blue-800 { --tw-gradient-stops: var(--tw-gradient-from), #06302E, var(--tw-gradient-to, rgba(6,48,46,0)); }
