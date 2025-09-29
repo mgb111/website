@@ -3,12 +3,12 @@
 
 function renderHeader() {
   return `
-    <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-md">
+    <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-xl">
       <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
         <div class="flex items-center">
           <a href="index.html" class="flex items-center">
-            <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-6 h-12 w-12 object-contain">
-            <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block">
+            <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
+            <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
           </a>
         </div>
         <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Open menu">
@@ -29,13 +29,12 @@ function renderFooter() {
   return `
     <footer class="bg-blue-900 text-blue-100">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-12 py-16">
+        <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-end">
           <div>
             <div class="flex items-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
-              <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block">
+              <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
             </div>
-            <p class="mb-6">Creating immersive experiences at the intersection of VR and AR technology to transform how businesses connect with their audiences.</p>
             <div class="flex space-x-4 hidden">
               <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
               <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
@@ -44,7 +43,7 @@ function renderFooter() {
             </div>
           </div>
 
-          <div>
+          <div class="md:text-right">
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul class="space-y-3">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
@@ -53,7 +52,7 @@ function renderFooter() {
             </ul>
           </div>
 
-          <div>
+          <div class="md:text-right">
             <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
             <ul class="space-y-4">
               <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i><span>79774710892</span></li>
@@ -63,7 +62,7 @@ function renderFooter() {
           </div>
         </div>
         <div class="py-6 border-t border-blue-800 text-center">
-          <p>© 2025 Major Beam. All rights reserved. | Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
+          <p>© 2025 majorbeam. All rights reserved. | Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
         </div>
       </div>
     </footer>
