@@ -29,8 +29,8 @@ function renderFooter() {
   return `
     <footer class="bg-blue-900 text-blue-100">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-end">
-          <div>
+        <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-center">
+          <div class="text-center">
             <div class="flex items-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
@@ -43,7 +43,7 @@ function renderFooter() {
             </div>
           </div>
 
-          <div class="md:text-right">
+          <div class="text-center">
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul class="space-y-3">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
@@ -52,7 +52,7 @@ function renderFooter() {
             </ul>
           </div>
 
-          <div class="md:text-right">
+          <div class="text-center">
             <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
             <ul class="space-y-4">
               <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i><span>79774710892</span></li>

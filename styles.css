@@ -503,6 +503,10 @@ body {
    Map commonly used blue utilities to Dark Teal / Aquamarine
    ========================================================================== */
 
+/* Custom small utilities */
+.leading-150 { line-height: 1.5 !important; }
+.mt-1_5em { margin-top: 1.5em !important; }
+
 /* Backgrounds (warmed) */
 .bg-blue-900 { background-color: #0A4B47 !important; }
 .bg-blue-800 { background-color: #06302E !important; }
