@@ -3,7 +3,7 @@
 
 function renderHeader() {
   return `
-    <header class="bg-blue-900 py-4 pr-4 pl-0 sticky top-0 z-50 shadow-xl">
+    <header class="bg-blue-900 py-5 pr-4 pl-0 sticky top-0 z-50 shadow-xl">
       <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
         <div class="flex items-center md:-ml-6">
           <a href="index.html" class="flex items-center">
@@ -30,6 +30,15 @@ function renderFooter() {
     <footer class="bg-blue-900 text-blue-100">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-center items-center">
+          <div class="text-left">
+            <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+            <ul class="space-y-3 inline-block text-left">
+              <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
+              <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
+              <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+          </div>
+
           <div class="text-center">
             <div class="flex items-center justify-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-8 w-8 object-contain align-middle">
@@ -43,16 +52,7 @@ function renderFooter() {
             </div>
           </div>
 
-          <div class="text-center">
-            <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-            <ul class="space-y-3 inline-block text-left">
-              <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
-              <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
-              <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="text-center">
+          <div class="text-center md:text-right">
             <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
             <ul class="space-y-4">
               <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i><span>79774710892</span></li>

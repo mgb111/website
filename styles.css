@@ -70,29 +70,29 @@ body {
 .btn-primary {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #0A4B47 0%, #0D5E59 100%);
+    background: linear-gradient(135deg, #000000 0%, #111111 100%);
     color: white;
     font-weight: 700;
     padding: 0.9rem 2rem;
     border-radius: 12px;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(10, 75, 71, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-size: 0.875rem;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #06302E 0%, #0A4B47 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 30px rgba(10, 75, 71, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
 .btn-primary-sm {
     display: inline-flex;
     align-items: center;
-    background-color: #0A4B47; /* Warmed Dark Teal */
+    background: linear-gradient(135deg, #000000 0%, #111111 100%);
     color: white;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -102,7 +102,7 @@ body {
 }
 
 .btn-primary-sm:hover {
-    background-color: #06302E; /* Warmed Darker Teal */
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
 }
 
 .btn-secondary {
