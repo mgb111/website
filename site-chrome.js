@@ -3,11 +3,11 @@
 
 function renderHeader() {
   return `
-    <header class="bg-blue-900 p-4 sticky top-0 z-50 shadow-xl">
+    <header class="bg-blue-900 py-4 pr-4 pl-0 sticky top-0 z-50 shadow-xl">
       <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
-        <div class="flex items-center">
+        <div class="flex items-center md:-ml-6">
           <a href="index.html" class="flex items-center">
-            <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
+            <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-10 w-10 object-contain">
             <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
           </a>
         </div>
@@ -32,7 +32,7 @@ function renderFooter() {
         <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-center">
           <div class="text-center">
             <div class="flex items-center mb-6">
-              <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
+              <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-10 w-10 object-contain">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
             </div>
             <div class="flex space-x-4 hidden">
