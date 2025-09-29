@@ -31,9 +31,9 @@ function renderFooter() {
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-center">
           <div class="text-center">
-            <div class="flex items-center mb-6">
-              <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-10 w-10 object-contain">
-              <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
+            <div class="flex items-center justify-center mb-6">
+              <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-10 w-10 object-contain align-middle">
+              <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block align-middle">
             </div>
             <div class="flex space-x-4 hidden">
               <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
@@ -45,7 +45,7 @@ function renderFooter() {
 
           <div class="text-center">
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-            <ul class="space-y-3">
+            <ul class="space-y-3 inline-block text-left">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
               <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
               <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
