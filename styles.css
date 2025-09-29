@@ -513,6 +513,16 @@ body {
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 12px 32px rgba(0, 0, 0, 0.35) !important;
 }
 
+/* Slight raise for hero content to move it up visually */
+.raise-up {
+    transform: translateY(-3vh);
+}
+@media (min-width: 768px) {
+    .raise-up {
+        transform: translateY(-5vh);
+    }
+}
+
 /* Backgrounds (warmed) */
 .bg-blue-900 { background-color: #0A4B47 !important; }
 .bg-blue-800 { background-color: #06302E !important; }
