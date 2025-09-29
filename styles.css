@@ -579,10 +579,6 @@ footer.bg-blue-900 {
 .hero-intro::after {
     display: none; /* remove bottom effect under hero image */
 }
-/* Scoped override: allow white tiles only for brand logos grid */
-.brands-logos .bg-white {
-{{ ... }}
-}
 
 /* Neutralize red utilities used (e.g., heart icon) */
 .text-red-500 { color: #7fffd4 !important; }
