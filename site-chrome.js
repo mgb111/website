@@ -35,7 +35,7 @@ function renderFooter() {
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block">
             </div>
-            <p class="mb-6">Creating immersive experiences at the intersection of XR and AI technology to transform how businesses connect with their audiences.</p>
+            <p class="mb-6">Creating immersive experiences at the intersection of VR and AR technology to transform how businesses connect with their audiences.</p>
             <div class="flex space-x-4">
               <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
               <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
