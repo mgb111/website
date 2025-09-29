@@ -30,24 +30,22 @@ function renderFooter() {
     <footer class="bg-blue-900 text-blue-100">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-3 gap-12 py-16">
-          <div>
             <div class="flex items-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-3 h-10 w-10 object-contain">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 mr-3 object-contain hidden sm:inline-block">
             </div>
             <p class="mb-6">Creating immersive experiences at the intersection of VR and AR technology to transform how businesses connect with their audiences.</p>
-            <div class="flex space-x-4">
-              <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
-              <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
-              <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-              <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
-            </div>
+                <div class="flex space-x-4 hidden">
+                  <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+                  <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                  <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                  <a href="#" class="text-blue-300 hover:text-white transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
+                </div>
           </div>
 
           <div>
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul class="space-y-3">
-              <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
               <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
               <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
