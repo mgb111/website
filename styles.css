@@ -518,8 +518,8 @@ body {
 .leading-120 { line-height: 1.2 !important; }
 .mt-1_5em { margin-top: 1.5em !important; }
 
-/* Consistent light-aqua lead text color */
-.lead-soft { color: #9fffb8 !important; }
+/* Consistent light-aqua lead text color (per request: #1ff4cd) */
+.lead-soft { color: #1ff4cd !important; }
 
 /* Extra deep card shadow */
 .shadow-3xl {
