@@ -29,8 +29,8 @@ function renderFooter() {
   return `
     <footer class="bg-blue-900 text-blue-100 leading-110">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-3 gap-12 py-16 md:justify-items-center items-center">
-          <div class="text-left">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 py-16 md:justify-items-center items-center">
+          <div class="text-left col-span-2 md:col-span-1">
             <div class="flex items-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-6 h-8 w-8 object-contain align-middle">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block align-middle">
