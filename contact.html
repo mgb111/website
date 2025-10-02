@@ -32,7 +32,7 @@
       <!-- Contact Form -->
       <div>
         <h2 class="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h2>
-        <form class="space-y-6">
+        <form id="contact-form" class="space-y-6">
           <div>
             <label class="block text-blue-800 mb-1" for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required>
@@ -49,7 +49,7 @@
             <label class="block text-blue-800 mb-1" for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us more..." class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required></textarea>
           </div>
-          <button type="submit" class="bg-blue-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition">Send Message</button>
+          <button type="submit" class="btn-primary rounded-full">Send Message</button>
         </form>
       </div>
 
@@ -84,6 +84,31 @@
 
   <!-- Shared Header/Footer Script -->
   <script src="site-chrome.js"></script>
+  <script>
+    // Intercept form submit and open user's email client with prefilled details
+    (function() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value || '';
+        const email = document.getElementById('email')?.value || '';
+        const subj = document.getElementById('subject')?.value || 'Contact from website';
+        const msg = document.getElementById('message')?.value || '';
+
+        const subject = encodeURIComponent(subj);
+        const bodyLines = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          '',
+          msg
+        ];
+        const body = encodeURIComponent(bodyLines.join('\n'));
+        const mailto = `mailto:manishb@majorbeam.com?subject=${subject}&body=${body}`;
+        window.location.href = mailto;
+      });
+    })();
+  </script>
 
 </body>
 </html>
