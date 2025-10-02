@@ -8,7 +8,7 @@ function renderHeader() {
         <div class="flex items-center md:-ml-6">
           <a href="index.html" class="flex items-center">
             <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-8 h-8 w-8 object-contain">
-            <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-8 md:h-10 object-contain hidden sm:inline-block">
+            <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block">
           </a>
         </div>
         <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Open menu">
