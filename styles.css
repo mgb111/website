@@ -515,6 +515,7 @@ body {
 /* Custom small utilities */
 .leading-150 { line-height: 1.5 !important; }
 .leading-110 { line-height: 1.1 !important; }
+.leading-120 { line-height: 1.2 !important; }
 .mt-1_5em { margin-top: 1.5em !important; }
 
 /* Extra deep card shadow */
@@ -524,11 +525,11 @@ body {
 
 /* Slight raise for hero content to move it up visually */
 .raise-up {
-    transform: translateY(-3vh);
+    transform: translateY(-4vh);
 }
 @media (min-width: 768px) {
     .raise-up {
-        transform: translateY(-5vh);
+        transform: translateY(-6vh);
     }
 }
 
