@@ -379,8 +379,15 @@ body {
 
 /* Hero subtitle sizing: approx. +20% */
 .hero-subtitle {
-    font-size: 1.4em; /* larger than before */
-    font-weight: 700; /* bold */
+    font-size: 1.1em; /* smaller for clearer hierarchy under H1 */
+    font-weight: 500; /* medium weight */
+}
+
+/* Small button utility for compact CTAs under hero */
+.btn-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+    border-radius: 10px !important;
 }
 
 /* Minimalist motion hovers */
