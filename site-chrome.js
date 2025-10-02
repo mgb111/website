@@ -5,7 +5,7 @@ function renderHeader() {
   return `
     <header class="bg-blue-900 py-5 pr-4 pl-0 sticky top-0 z-50 shadow-xl">
       <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
-        <div class="flex items-center ml-3 md:-ml-6">
+        <div class="flex items-center ml-3 md:-ml-8">
           <a href="index.html" class="flex items-center">
             <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-4 md:mr-4 h-8 w-8 object-contain">
             <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block">
