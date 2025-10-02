@@ -30,14 +30,14 @@ function renderFooter() {
     <footer class="bg-blue-900 text-blue-100 leading-110">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-12 py-16 md:justify-items-center items-center">
-          <div class="text-left col-span-2 md:col-span-1">
+          <div class="text-left col-span-2 md:col-span-1 order-1">
             <div class="flex items-center mb-6">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-6 h-8 w-8 object-contain align-middle">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block align-middle">
             </div>
           </div>
 
-          <div class="text-left">
+          <div class="text-left order-3 md:order-2">
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul class="space-y-3 inline-block text-left">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
@@ -46,7 +46,7 @@ function renderFooter() {
             </ul>
           </div>
 
-          <div class="text-left">
+          <div class="text-left order-2 md:order-3">
             <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
             <ul class="space-y-4">
               <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i><span>79774710892</span></li>
