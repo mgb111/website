@@ -48,15 +48,16 @@ function renderFooter() {
 
           <div class="text-left order-2 md:order-3">
             <h4 class="text-lg font-semibold mb-6 text-white">Contact Info</h4>
-            <ul class="space-y-4">
-              <li class="flex items-center"><i class="fas fa-phone mr-3 text-blue-300"></i><span>79774710892</span></li>
-              <li class="flex items-center"><i class="fas fa-envelope mr-3 text-blue-300"></i><span>manishb@majorbeam.com</span></li>
-              <li class="flex items-center"><i class="fas fa-map-marker-alt mr-3 text-blue-300"></i><span>Vashi, Navi Mumbai, India</span></li>
+            <ul class="space-y-3 inline-block text-left">
+              <li><span>79774710892</span></li>
+              <li><span>manishb@majorbeam.com</span></li>
+              <li><span>Vashi, Navi Mumbai, India</span></li>
             </ul>
           </div>
         </div>
         <div class="py-6 border-t border-blue-800 text-center">
-          <p>© 2025 majorbeam. All rights reserved. | Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
+          <p>© 2025 majorbeam. All rights reserved.</p>
+          <p>Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
         </div>
       </div>
     </footer>
