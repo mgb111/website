@@ -37,9 +37,9 @@ function renderFooter() {
             </div>
           </div>
 
-          <div class="text-left order-3 md:order-2">
+          <div class="text-right justify-self-end order-3 md:order-2 md:text-left md:justify-self-auto">
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
-            <ul class="space-y-3 inline-block text-left">
+            <ul class="space-y-3 inline-block text-right md:text-left">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Applications</a></li>
               <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
               <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
