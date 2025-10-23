@@ -35,20 +35,20 @@ function renderFooter() {
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-4 md:mr-4 h-8 w-8 object-contain align-middle">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block align-middle">
             </div>
-            <div class="flex items-center justify-center space-x-4 mt-3">
+            <div class="flex items-center justify-center space-x-6 mt-3">
               <a href="https://www.instagram.com/wearemajorbeam/" target="_blank" rel="noopener" aria-label="Instagram" class="text-blue-200 hover:text-white transition-colors duration-200">
-                <i class="fa-brands fa-instagram text-xl"></i>
+                <i class="fa-brands fa-instagram text-2xl"></i>
               </a>
               <a href="https://x.com/wearemajorbeam" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-blue-200 hover:text-white transition-colors duration-200">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
                   <path d="M18.244 2H21.5l-7.5 8.573L23.5 22h-7.31l-5.72-6.74L3.06 22H.5l8.04-9.19L.5 2h7.42l5.17 6.09L18.244 2zm-1.23 18h2.04L7.05 4H4.9l12.114 16z" />
                 </svg>
               </a>
               <a href="https://www.linkedin.com/company/majorbeam/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-blue-200 hover:text-white transition-colors duration-200">
-                <i class="fa-brands fa-linkedin-in text-xl"></i>
+                <i class="fa-brands fa-linkedin-in text-2xl"></i>
               </a>
               <a href="https://www.facebook.com/people/majorbeam/61581545441086/" target="_blank" rel="noopener" aria-label="Facebook" class="text-blue-200 hover:text-white transition-colors duration-200">
-                <i class="fa-brands fa-facebook-f text-xl"></i>
+                <i class="fa-brands fa-facebook-f text-2xl"></i>
               </a>
             </div>
           </div>
