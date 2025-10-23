@@ -29,11 +29,25 @@ function renderFooter() {
   return `
     <footer class="bg-blue-900 text-blue-100 leading-110">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-12 py-16 md:justify-items-center items-center">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-10 py-16 md:justify-items-center items-center">
           <div class="text-left col-span-2 md:col-span-1 order-1">
-            <div class="flex items-center mb-6">
+            <div class="flex items-center mb-4 -mt-1">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-4 md:mr-4 h-8 w-8 object-contain align-middle">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block align-middle">
+            </div>
+            <div class="flex items-center space-x-4 mt-3">
+              <a href="https://www.instagram.com/wearemajorbeam/" target="_blank" rel="noopener" aria-label="Instagram" class="text-blue-200 hover:text-white transition-colors duration-200">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </a>
+              <a href="https://x.com/wearemajorbeam" target="_blank" rel="noopener" aria-label="X (Twitter)" class="text-blue-200 hover:text-white transition-colors duration-200">
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/majorbeam/?viewAsMember=true" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-blue-200 hover:text-white transition-colors duration-200">
+                <i class="fa-brands fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="https://www.facebook.com/people/majorbeam/61581545441086/" target="_blank" rel="noopener" aria-label="Facebook" class="text-blue-200 hover:text-white transition-colors duration-200">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </a>
             </div>
           </div>
 
