@@ -30,12 +30,12 @@ function renderFooter() {
     <footer class="bg-blue-900 text-blue-100 leading-110">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-10 py-16 md:justify-items-center items-center">
-          <div class="text-left col-span-2 md:col-span-1 order-1">
-            <div class="flex items-center mb-4 -mt-1">
+          <div class="text-center col-span-2 md:col-span-1 order-1 justify-self-center">
+            <div class="flex items-center justify-center mb-4 -mt-1">
               <img src="majorbean-logoform.png" alt="majorbeam logo" class="mr-4 md:mr-4 h-8 w-8 object-contain align-middle">
               <img src="majorbeam logotype.png" alt="majorbeam logotype" class="h-7 md:h-10 object-contain inline-block align-middle">
             </div>
-            <div class="flex items-center space-x-4 mt-3">
+            <div class="flex items-center justify-center space-x-4 mt-3">
               <a href="https://www.instagram.com/wearemajorbeam/" target="_blank" rel="noopener" aria-label="Instagram" class="text-blue-200 hover:text-white transition-colors duration-200">
                 <i class="fa-brands fa-instagram text-xl"></i>
               </a>
