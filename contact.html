@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="majorbean-logoform.png" />
   <link rel="apple-touch-icon" href="majorbean-logoform.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body class="bg-gray-50 font-sans">
@@ -85,12 +86,19 @@
   <!-- Shared Header/Footer Script -->
   <script src="site-chrome.js"></script>
   <script>
-    // Intercept form submit and open user's email client with prefilled details
+    // Supabase + mailto contact handler
     (function() {
       const form = document.getElementById('contact-form');
-      if (!form) return;
-      form.addEventListener('submit', function(e) {
+      if (!form || typeof window.supabase === 'undefined') return;
+
+      const SUPABASE_URL = 'https://YOUR-PROJECT-REF.supabase.co'; // TODO: replace
+      const SUPABASE_ANON_KEY = 'YOUR-ANON-KEY'; // TODO: replace
+
+      const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+      form.addEventListener('submit', async function(e) {
         e.preventDefault();
+
         const name = document.getElementById('name')?.value || '';
         const email = document.getElementById('email')?.value || '';
         const subj = document.getElementById('subject')?.value || 'Contact from website';
@@ -105,7 +113,32 @@
         ];
         const body = encodeURIComponent(bodyLines.join('\n'));
         const mailto = `mailto:manishb@majorbeam.com?subject=${subject}&body=${body}`;
-        window.location.href = mailto;
+
+        try {
+          const { error } = await supabaseClient
+            .from('contacts')
+            .insert([
+              {
+                name,
+                email,
+                subject: subj,
+                message: msg,
+                source: 'website',
+              },
+            ]);
+
+          if (error) {
+            console.error('Supabase insert error:', error);
+            window.location.href = mailto;
+            return;
+          }
+
+          alert('Thank you! Your message has been sent.');
+          form.reset();
+        } catch (err) {
+          console.error('Unexpected Supabase error:', err);
+          window.location.href = mailto;
+        }
       });
     })();
   </script>
