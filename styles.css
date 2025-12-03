@@ -708,3 +708,46 @@ footer.bg-blue-900 {
 /* Map various tag badge utilities to aquamarine/teal */
 .bg-red-100, .bg-green-100, .bg-yellow-100, .bg-purple-100, .bg-pink-100, .bg-indigo-100 { background-color: #e6fff6 !important; }
 .text-red-800, .text-green-800, .text-yellow-800, .text-purple-800, .text-pink-800, .text-indigo-800 { color: #063C3D !important; }
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+    will-change: transform;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-width 0.3s ease-in-out;
+}
+
+body:hover .cursor-circle {
+    width: 60px;
+    height: 60px;
+    border-width: 1px;
+}
+
+a:hover ~ .custom-cursor .cursor-circle,
+.btn-primary:hover ~ .custom-cursor .cursor-circle {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+body {
+    cursor: none;
+}

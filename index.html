@@ -16,11 +16,14 @@
 </head>
 
 <body class="bg-gray-50 font-sans">
+    <div class="custom-cursor cursor-dot"></div>
+    <div class="custom-cursor cursor-circle"></div>
     <div id="site-header"></div>
 
     <main>
         <!-- Intro: We are majorbeam (left) + GIF (right) -->
         <section class="py-0 px-6 bg-blue-50 text-white hero-intro">
+            <div id="hero-3d-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
             <div class="max-w-7xl mx-auto text-center hero-content raise-up fade-in-on-load">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal leading-110 md:leading-normal tracking-tight">
                     <span class="block md:inline">We create brand impact&nbsp;& drive sales through</span><br class="hidden md:block">
@@ -188,6 +191,7 @@
 
     <div id="site-footer"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="site-chrome.js"></script>
 </body>
