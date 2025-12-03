@@ -199,3 +199,37 @@ function renderFooter() {
     init();
   }
 })();
+
+// Video thumbnail hover effect
+(function initVideoHover() {
+  function handleMouseOver(e) {
+    const card = e.currentTarget;
+    const img = card.querySelector('img');
+    if (img && img.dataset.gifSrc) {
+      img.dataset.staticSrc = img.src;
+      img.src = img.dataset.gifSrc;
+    }
+  }
+
+  function handleMouseOut(e) {
+    const card = e.currentTarget;
+    const img = card.querySelector('img');
+    if (img && img.dataset.staticSrc) {
+      img.src = img.dataset.staticSrc;
+    }
+  }
+
+  function init() {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', handleMouseOver);
+      card.addEventListener('mouseleave', handleMouseOut);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
