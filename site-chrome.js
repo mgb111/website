@@ -121,3 +121,81 @@ function renderFooter() {
     inject();
   }
 })();
+
+// Parallax scrolling for hero section
+(function initParallax() {
+  function parallax() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+      const scrollPosition = window.pageYOffset;
+      heroContent.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener('scroll', parallax);
+    });
+  } else {
+    window.addEventListener('scroll', parallax);
+  }
+})();
+
+// Fade-in animation on page load
+(function initFadeIn() {
+  function fadeIn() {
+    const elements = document.querySelectorAll('.fade-in-on-load');
+    elements.forEach(el => {
+      setTimeout(() => {
+        el.classList.add('is-visible');
+      }, 100);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fadeIn);
+  } else {
+    fadeIn();
+  }
+})();
+
+// Scroll-triggered fade-in animation
+(function initScrollFadeIn() {
+  function scrollFadeIn() {
+    const elements = document.querySelectorAll('.fade-in-on-scroll');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scrollFadeIn);
+  } else {
+    scrollFadeIn();
+  }
+})();
+
+// Initialize VanillaTilt.js
+(function initTilt() {
+  function init() {
+    VanillaTilt.init(document.querySelectorAll(".project-card"), {
+      max: 5,
+      speed: 400,
+      perspective: 1000,
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
