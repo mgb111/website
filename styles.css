@@ -63,21 +63,20 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #000000 0%, #111111 100%);
     color: white;
-    font-weight: 700;
-    padding: 0.9rem 2rem;
-    border-radius: 12px;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.2px;
     font-size: 0.875rem;
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary-sm {
@@ -233,8 +232,8 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-12px) rotateX(2deg);
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
 }
 
 .industry-card {
@@ -577,7 +576,7 @@ body {
 
 /* Extra deep card shadow */
 .shadow-3xl {
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 12px 32px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Slight raise for hero content to move it up visually */
@@ -649,7 +648,8 @@ footer.bg-blue-900 {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #0A4B47; /* match site tint in letterbox areas */
-    min-height: 100vh; /* occupy full screen on load */
+    padding-top: 8rem;
+    padding-bottom: 8rem;
     display: flex;
     align-items: center;
 }
