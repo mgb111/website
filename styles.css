@@ -205,36 +205,70 @@ body {
     box-shadow: 0 2px 10px rgba(159, 255, 184, 0.3);
 }
 
+/* Feature Cards */
 .feature-card {
-    background: #0D5E59; /* Warmed Muted Teal */
-    backdrop-filter: blur(10px);
+    background: #0D5E59;
+    padding: 2.5rem 2rem;
     border-radius: 16px;
-    padding: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    border-color: rgba(127, 255, 212, 0.3);
+    transform: translateY(-10px);
+    background: #0A5758;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
+.feature-card h3 {
+    color: #9fffb8; /* Light aquamarine for contrast */
+}
+
+/* Project Cards */
 .project-card {
-    background: #0D5E59; /* Warmed Muted Teal */
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
+    background: #0D5E59;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-12px) rotateX(2deg);
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card-content {
+    padding: 1.5rem;
+}
+
+.project-card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-content p {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.project-card-content a {
+    color: #9fffb8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-card-content a:hover {
+    text-decoration: underline;
 }
 
 .industry-card {
