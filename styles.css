@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* ==========================================================================
    Table of Contents
    ==========================================================================
@@ -209,110 +205,150 @@ body {
     box-shadow: 0 2px 10px rgba(159, 255, 184, 0.3);
 }
 
-/* Feature Cards */
 .feature-card {
-    background: #0D5E59;
-    padding: 2.5rem 2rem;
+    background: #0D5E59; /* Warmed Muted Teal */
+    backdrop-filter: blur(10px);
     border-radius: 16px;
+    padding: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    background: #0A5758;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.feature-card h3 {
-    color: #9fffb8; /* Light aquamarine for contrast */
-}
-
-/* Project Cards */
-.project-card {
-    background: #0D5E59;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.project-card-content {
-    padding: 1.5rem;
-}
-
-.project-card-content h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.project-card-content p {
-    margin-bottom: 1rem;
-    opacity: 0.8;
-}
-
-.project-card-content a {
-    color: #9fffb8;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.project-card-content a:hover {
-    text-decoration: underline;
-}
-
-/* AR/VR Sections */
-.ar-section img, .vr-section img {
-    transition: all 0.3s ease;
-}
-
-.ar-section img:hover, .vr-section img:hover {
-    transform: scale(1.05);
-}
-
-/* Brands Section */
-.brands-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.brands-logos img {
-    max-height: 60px;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.brands-logos img:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(135deg, #0A5758 0%, #063C3D 100%);
-    padding: 5rem 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
 }
 
-.cta-section h3 {
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgba(127, 255, 212, 0.3);
+}
+
+.project-card {
+    background: #0D5E59; /* Warmed Muted Teal */
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-12px) rotateX(2deg);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+}
+
+.industry-card {
+    background-color: #0D5E59; /* Warmed Muted Teal */
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 4.3 Industry Card Icon Container */
+.industry-card .icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #06302E; /* Warmed Darker Teal circle */
+    color: #ffffff; /* Contrast */
+    border-radius: 50%;
     margin-bottom: 1.5rem;
+}
+
+.blog-card {
+    background-color: #0D5E59; /* Warmed Muted Teal */
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card {
+    background-color: #0D5E59; /* Warmed Muted Teal */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   5. Form Styles
+   ========================================================================== */
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #042A2B; /* Darker Teal input bg */
+    color: #ffffff; /* Text on dark input */
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #7fffd4; /* Aquamarine */
+    background-color: #063C3D;
+    box-shadow: 0 0 0 3px rgba(127, 255, 212, 0.25);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #ffffff; /* White labels */
+}
+
+#contact-form input,
+#contact-form textarea {
+    color: #000000 !important;
+}
+
+/* ==========================================================================
+   6. Sections
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    background-image: url('/api/placeholder/1920/1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.cta-section {
+    position: relative;
+    background-image: url('/api/placeholder/1920/600');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 /* Secondary lighter teal background utility */
@@ -604,43 +640,35 @@ footer.bg-blue-900 {
 /* Hero intro aesthetic separation (same color, subtle borders/shadows) */
 .hero-intro {
     position: relative;
-    height: 100vh;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) inset, 0 12px 40px rgba(0, 0, 0, 0.25);
+    background-image: url('hero-image.webp');
+    background-size: cover; /* crop top/bottom as needed to fill viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0A4B47; /* match site tint in letterbox areas */
+    min-height: 100vh; /* occupy full screen on load */
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: url('hero-image.webp') no-repeat center center/cover;
 }
-
 .hero-intro::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 75, 71, 0.8);
+    inset: 0;
+    /* Teal-tinted overlay aligned with site palette (#0A4B47 → #06302E) */
+    background: linear-gradient(
+        180deg,
+        rgba(10, 75, 71, 0.85) 0%,      /* stronger #0A4B47 */
+        rgba(6, 48, 46, 0.70) 40%,      /* stronger #06302E */
+        rgba(10, 75, 71, 0.85) 100%     /* stronger #0A4B47 */
+    );
+    pointer-events: none;
 }
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 0 1rem;
+.hero-intro::after {
+    display: none; /* remove bottom effect under hero image */
 }
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.hero-content .lead-soft {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
 
 /* Neutralize red utilities used (e.g., heart icon) */
 .text-red-500 { color: #7fffd4 !important; }
