@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
     <link rel="icon" type="image/png" href="majorbean-logoform.png">
     <link rel="apple-touch-icon" href="majorbean-logoform.png">
 </head>
@@ -20,7 +21,7 @@
 
     <main>
         <!-- Intro: We are majorbeam (left) + GIF (right) -->
-        <section class="py-0 px-6 bg-blue-50 text-white hero-intro">
+        <section class="py-0 px-6 bg-blue-50 text-white hero-intro" data-animate-on-scroll>
             <div class="max-w-7xl mx-auto text-center hero-content raise-up">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal leading-110 md:leading-normal tracking-tight">
                     <span class="block md:inline">We create brand impact&nbsp;& drive sales through</span><br class="hidden md:block">
@@ -38,9 +39,35 @@
                     <a href="contact.html" class="btn-primary btn-sm"><i class="fas fa-envelope mr-2"></i>Contact Us to know more</a>
                 </div>
             </div>
+            <div id="hero-3d-container" class="hero-3d-container"></div>
+        </section>
+        
+        <!-- Live Demo: WebAR + 360° Virtual Tour -->
+        <section class="py-16 px-6 bg-white border-t border-b border-gray-200" data-animate-on-scroll>
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+                <div class="space-y-4">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3">Try It Right Now</h2>
+                    <p class="text-blue-800 max-w-xl">Point your phone at this page or tap the button below to launch a live WebAR avatar demo. This is the kind of experience we build for brands.</p>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-4">
+                        <a href="https://mgb111.github.io/ar-avatar/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                            <i class="fas fa-vr-cardboard mr-2"></i> Launch WebAR Demo
+                        </a>
+                        <p class="text-blue-800 text-sm max-w-xs">Open on your phone for the best experience. No app install required.</p>
+                    </div>
+                </div>
+                <div class="w-full h-64 md:h-80 rounded-2xl overflow-hidden shadow-3xl bg-blue-900 flex items-center justify-center">
+                    <iframe 
+                        src="https://aurorealty.com/portfolio-kohinoor/virtual-tour/" 
+                        title="360° Virtual Tour Preview" 
+                        class="w-full h-full border-0"
+                        loading="lazy"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
         </section>
         <!-- Augmented Reality -->
-        <section class="pt-24 pb-16 px-6 bg-white border-t border-b border-gray-200">
+        <section class="pt-24 pb-16 px-6 bg-white border-t border-b border-gray-200" data-animate-on-scroll>
             <div class="max-w-4xl mx-auto text-center">
                 <div class="text-center">
                     <h2 class="text-3xl md:text-4xl text-blue-900 mb-3" style="font-size: 120%; line-height: 1.5; margin-bottom: 2.5rem;">Augmented and Virtual Reality is a powerful medium for visual and spatial communication.<br> Our solutions result in:</h2>
@@ -51,7 +78,7 @@
             </div>
         </section>
 
-        <section class="py-16 px-6 bg-white border-t border-b border-gray-200">
+        <section class="py-16 px-6 bg-white border-t border-b border-gray-200" data-animate-on-scroll>
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <img src="AR-photo.png" alt="Augmented Reality showcase" class="w-full h-64 md:h-full object-cover rounded-xl">
@@ -67,7 +94,7 @@
         </section>
 
         <!-- Virtual Reality -->
-        <section class="py-16 px-6 bg-gray-50 border-t border-b border-gray-200">
+        <section class="py-16 px-6 bg-gray-50 border-t border-b border-gray-200" data-animate-on-scroll>
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
                 <div class="text-right order-2 md:order-1">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3 text-right">Virtual Reality</h2>
@@ -83,7 +110,7 @@
         </section>
 
         <!-- Past Work (featured) -->
-        <section class="py-24 px-6 bg-white border-t border-b border-gray-200">
+        <section class="py-24 px-6 bg-white border-t border-b border-gray-200" data-animate-on-scroll>
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="section-title">Past Work</h2>
@@ -137,7 +164,7 @@
         </section>
 
         <!-- Brands We've Collaborated With -->
-        <section class="py-16 bg-gray-50 border-t border-b border-gray-200 brands-logos">
+        <section class="py-16 bg-gray-50 border-t border-b border-gray-200 brands-logos" data-animate-on-scroll>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="section-title">Brands We've Collaborated With</h2>
@@ -178,7 +205,7 @@
         </section>
         
         <!-- Contact CTA below Brands -->
-        <section class="py-16 px-6 bg-blue-900 text-white text-center border-t border-b border-gray-200">
+        <section class="py-16 px-6 bg-blue-900 text-white text-center border-t border-b border-gray-200" data-animate-on-scroll>
             <div class="max-w-3xl mx-auto">
                 <h3 class="text-3xl font-bold leading-110 mb-3">Ready to experience next-level solutions?</h3>
                 <a href="contact.html" class="btn-primary mt-3"><i class="fas fa-envelope mr-2"></i>Click Here!</a>
@@ -188,6 +215,192 @@
 
     <div id="site-footer"></div>
 
+    <!-- Custom cursor elements -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Loader overlay -->
+    <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-inner">
+            <img src="majorbean-logoform.png" alt="majorbeam logo" class="loader-logo">
+            <p class="loader-text">Loading immersive experience...</p>
+        </div>
+    </div>
+
     <script src="site-chrome.js"></script>
+    <script>
+        (function () {
+            function initScrollAnimations() {
+                var elements = document.querySelectorAll('[data-animate-on-scroll]');
+                if (!('IntersectionObserver' in window) || !elements.length) return;
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-fadeInUp');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                elements.forEach(function (el) { observer.observe(el); });
+            }
+
+            function initHeroParallax() {
+                var hero = document.querySelector('.hero-intro');
+                if (!hero) return;
+                var content = hero.querySelector('.hero-content');
+                var threeContainer = document.getElementById('hero-3d-container');
+
+                hero.addEventListener('mousemove', function (e) {
+                    var rect = hero.getBoundingClientRect();
+                    var x = (e.clientX - rect.left) / rect.width - 0.5;
+                    var y = (e.clientY - rect.top) / rect.height - 0.5;
+
+                    var translateX = x * 20;
+                    var translateY = y * 10;
+
+                    if (content) {
+                        content.style.transform = 'translate3d(' + (-translateX) + 'px,' + (-translateY) + 'px,0)';
+                    }
+                    if (threeContainer) {
+                        threeContainer.style.transform = 'translate3d(' + (translateX * 0.6) + 'px,' + (translateY * 0.6) + 'px,0)';
+                    }
+                });
+            }
+
+            function initCustomCursor() {
+                var dot = document.getElementById('cursor-dot');
+                var ring = document.getElementById('cursor-ring');
+                if (!dot || !ring) return;
+
+                var cursorVisible = false;
+                var interactiveSelector = 'a, button, .btn-primary, .btn-primary-sm, .btn-secondary, .project-card';
+
+                function setPosition(e) {
+                    var x = e.clientX;
+                    var y = e.clientY;
+                    dot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+                    ring.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+                }
+
+                document.addEventListener('mousemove', function (e) {
+                    cursorVisible = true;
+                    dot.style.opacity = '1';
+                    ring.style.opacity = '1';
+                    setPosition(e);
+                });
+
+                document.addEventListener('mouseleave', function () {
+                    cursorVisible = false;
+                    dot.style.opacity = '0';
+                    ring.style.opacity = '0';
+                });
+
+                document.addEventListener('mouseover', function (e) {
+                    if (e.target.closest && e.target.closest(interactiveSelector)) {
+                        ring.classList.add('cursor-interactive');
+                    }
+                });
+
+                document.addEventListener('mouseout', function (e) {
+                    if (e.target.closest && e.target.closest(interactiveSelector)) {
+                        ring.classList.remove('cursor-interactive');
+                    }
+                });
+            }
+
+            function initLoader() {
+                var overlay = document.getElementById('loader-overlay');
+                if (!overlay) return;
+                window.addEventListener('load', function () {
+                    overlay.classList.add('loader-hide');
+                    setTimeout(function () {
+                        if (overlay && overlay.parentNode) {
+                            overlay.parentNode.removeChild(overlay);
+                        }
+                    }, 600);
+                });
+            }
+
+            function initHeroThree() {
+                if (typeof THREE === 'undefined') return;
+                var container = document.getElementById('hero-3d-container');
+                if (!container) return;
+
+                var width = container.clientWidth || 360;
+                var height = container.clientHeight || 240;
+
+                var scene = new THREE.Scene();
+                var camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 1000);
+                camera.position.z = 6;
+
+                var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+                renderer.setSize(width, height);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+                container.appendChild(renderer.domElement);
+
+                var geometry = new THREE.BoxGeometry(2, 1.1, 1.4);
+                var material = new THREE.MeshStandardMaterial({
+                    color: 0x7fffd4,
+                    metalness: 0.6,
+                    roughness: 0.2,
+                    emissive: 0x003333,
+                    emissiveIntensity: 0.5
+                });
+                var cube = new THREE.Mesh(geometry, material);
+                scene.add(cube);
+
+                var light = new THREE.PointLight(0xffffff, 1.5, 50);
+                light.position.set(4, 6, 8);
+                scene.add(light);
+
+                var ambient = new THREE.AmbientLight(0x304040, 0.8);
+                scene.add(ambient);
+
+                var targetRotationX = 0.3;
+                var targetRotationY = -0.5;
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    cube.rotation.x += (targetRotationX - cube.rotation.x) * 0.05;
+                    cube.rotation.y += (targetRotationY - cube.rotation.y) * 0.05;
+                    renderer.render(scene, camera);
+                }
+
+                animate();
+
+                function onResize() {
+                    if (!container) return;
+                    var w = container.clientWidth || width;
+                    var h = container.clientHeight || height;
+                    camera.aspect = w / h;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(w, h);
+                }
+
+                window.addEventListener('resize', onResize);
+
+                var hero = document.querySelector('.hero-intro');
+                if (hero) {
+                    hero.addEventListener('mousemove', function (e) {
+                        var rect = hero.getBoundingClientRect();
+                        var x = (e.clientX - rect.left) / rect.width - 0.5;
+                        var y = (e.clientY - rect.top) / rect.height - 0.5;
+                        targetRotationY = -0.5 + x * 0.9;
+                        targetRotationX = 0.3 + y * 0.6;
+                    });
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                initScrollAnimations();
+                initHeroParallax();
+                initCustomCursor();
+                initLoader();
+                initHeroThree();
+            });
+        })();
+    </script>
 </body>
 </html>
