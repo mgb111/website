@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss styles.css -o public/styles.css",
+    "build:css": "postcss styles.css -o public/styles.css",
+    "copy:assets": "copyfiles -u 1 \"*.html\" \"*.js\" \"*.png\" \"*.jpeg\" \"*.jpg\" \"*.gif\" \"*.webp\" \"*.avif\" \"*.jfif\" CNAME public",
+    "build": "npm run build:css && npm run copy:assets",
     "watch": "postcss styles.css -o public/styles.css --watch"
   },
   "keywords": [],
@@ -14,6 +16,7 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "copyfiles": "^2.4.1"
   }
 }

@@ -6,15 +6,5 @@
       "use": "@vercel/static-build",
       "config": { "distDir": "public" }
     }
-  ],
-  "routes": [
-    {
-      "src": "/styles.css",
-      "dest": "/public/styles.css"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
   ]
 }
