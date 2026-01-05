@@ -4,322 +4,367 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore majorbeam's XR and AR solutions for real estate, product visualization, marketing, and training. Immersive technology that drives results." />
   <title>Solutions - majorbeam</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="majorbean-logoform.png" />
   <link rel="apple-touch-icon" href="majorbean-logoform.png" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .solution-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .solution-image {
+      transition: transform 0.3s ease;
+    }
+
+    .solution-card:hover .solution-image {
+      transform: scale(1.05);
+    }
+
+    .details-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .details-content.active {
+      max-height: 600px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #1e40af;
+      color: white;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e3a8a;
+    }
+
+    .toggle-details {
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: color 0.2s ease;
+    }
+
+    .section-divider {
+      border-top: 2px solid #dbeafe;
+      margin: 4rem 0;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50">
   <div id="site-header"></div>
 
   <main>
-    <section class="py-16 px-6 bg-blue-50">
-      <div class="max-w-6xl mx-auto mb-10 text-center">
-        <h1 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3">Solutions</h1>
+    <section class="py-16 px-6 bg-gradient-to-br from-blue-50 to-blue-100">
+      <div class="max-w-6xl mx-auto mb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">Our Solutions</h1>
+        <p class="text-lg text-blue-800 max-w-3xl mx-auto">Cutting-edge XR, AR, and immersive technology solutions designed to transform your business</p>
       </div>
 
-      <!-- Spaces & Real Estate -->
-      <section aria-labelledby="spaces-real-estate-heading" class="max-w-6xl mx-auto mb-12">
-        <div class="flex items-baseline justify-between mb-4">
-          <h2 id="spaces-real-estate-heading" class="text-2xl font-bold text-blue-900">Spaces &amp; Real Estate</h2>
+      <section aria-labelledby="spaces-real-estate-heading" class="max-w-6xl mx-auto mb-16">
+        <div class="mb-8">
+          <h2 id="spaces-real-estate-heading" class="text-3xl font-bold text-blue-900 mb-2">Spaces &amp; Real Estate</h2>
+          <p class="text-blue-800">Immersive experiences that showcase properties and accelerate decision-making</p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- 360° RealView -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="360.gif" alt="360° virtual tour preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">360° RealView</h3>
-              <p class="text-blue-800 text-sm mb-3">Immersive 360° walkthroughs to showcase spaces and accelerate decisions.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Real estate developers &amp; agencies</li>
-                <li>Hospitality &amp; resorts</li>
-                <li>Retail &amp; cultural spaces</li>
-              </ul>
-              <div id="details-realview" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Convert interest into action with immersive 360° walkthroughs to showcase your space and accelerate decisions.</p>
-                <p class="text-xs font-medium text-blue-700 mb-1 uppercase tracking-wide">Also great for:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Industrial parks</li>
-                  <li>Educational institutions</li>
-                  <li>Cultural spaces</li>
-                </ul>
-              </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="360.gif" alt="360 degree virtual tour preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-realview">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">360° RealView</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Immersive 360° walkthroughs to showcase spaces and accelerate decisions.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Real estate developers</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Hospitality &amp; Resorts</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-realview">
+              <p class="mb-3">Convert interest into action with high-resolution walkthroughs that allow users to explore every corner of a property remotely.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-realview">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- XR SpaceFormer -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="vr1.gif" alt="XR SpaceFormer VR preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">XR SpaceFormer</h3>
-              <p class="text-blue-800 text-sm mb-3">Interactive 3D spaces and VR experiences to bring layouts and designs to life.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Real estate developers &amp; agencies</li>
-                <li>Architects &amp; interior designers</li>
-                <li>Retail &amp; industrial spaces</li>
-              </ul>
-              <div id="details-spaceformer" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Create customisable and interactive 3D spaces and manifest them in Virtual Reality, bringing clarity to design choices and hastening sales processes.</p>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="vr1.gif" alt="XR SpaceFormer VR preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-spaceformer">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">XR SpaceFormer</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Interactive 3D spaces and VR experiences to bring layouts and designs to life.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Architects &amp; Designers</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Industrial layout planning</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-spaceformer">
+              <p>Manifest designs in VR before construction begins. Highly effective for stakeholder approvals and complex spatial planning.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-spaceformer">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- AR Layout -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="layout.gif" alt="AR layout preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">AR Layout</h3>
-              <p class="text-blue-800 text-sm mb-3">Visualise interior layouts in real space to reduce guesswork and speed up decisions.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Interior designers &amp; studios</li>
-                <li>Real estate developers</li>
-                <li>Manufacturers &amp; retailers</li>
-              </ul>
-              <div id="details-arlayout" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Reduce guesswork, arrange layouts, and help clients visualise their final look in real space.</p>
-                <p class="text-xs font-medium text-blue-700 mb-1 uppercase tracking-wide">Also great for:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Interior product retailers</li>
-                </ul>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="layout.gif" alt="AR Layout preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-arlayout">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">AR Layout</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Visualise interior layouts in real space to reduce guesswork and speed up decisions.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Interior design studios</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Furniture retailers</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-arlayout">
+              <p>Help clients visualize furniture or equipment in their actual room using mobile AR, ensuring a perfect fit every time.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-arlayout">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Product Visualization -->
-      <section aria-labelledby="product-visualization-heading" class="max-w-6xl mx-auto mb-12">
-        <div class="flex items-baseline justify-between mb-4">
-          <h2 id="product-visualization-heading" class="text-2xl font-bold text-blue-900">Product Visualization</h2>
+      <div class="section-divider max-w-6xl mx-auto"></div>
+
+      <section aria-labelledby="product-visualization-heading" class="max-w-6xl mx-auto mb-16">
+        <div class="mb-8">
+          <h2 id="product-visualization-heading" class="text-3xl font-bold text-blue-900 mb-2">Product Visualization</h2>
+          <p class="text-blue-800">Interactive experiences that boost conversions and reduce returns</p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- AR TryOn -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="ar1.gif" alt="AR TryOn preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">AR TryOn</h3>
-              <p class="text-blue-800 text-sm mb-3">True-to-scale AR try-ons that build trust and turn curiosity into confident purchases.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Jewellery &amp; eyewear</li>
-                <li>Footwear &amp; apparel</li>
-              </ul>
-              <div id="details-tryon" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Improve conversions and reduce returns with true-to-scale AR try-ons that build instant trust and turn buyer curiosity to confidence.</p>
-              </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="ar1.gif" alt="AR TryOn preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-tryon">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">AR TryOn</h3>
+            <p class="text-blue-800 mb-4 flex-grow">True-to-scale AR try-ons that build trust and turn curiosity into purchases.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Jewellery &amp; Eyewear</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Fashion E-commerce</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-tryon">
+              <p>Reduce the 30% return rate common in e-commerce by giving users the confidence to see how products look on them.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-tryon">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- AR Product Catalogue -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="PC.gif" alt="AR Product Catalogue preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">AR Product Catalogue</h3>
-              <p class="text-blue-800 text-sm mb-3">A portable 3D showroom that replaces physical samples and communicates specs in real space.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Equipment suppliers</li>
-                <li>Tool &amp; fixture retailers</li>
-                <li>Individual SKUs</li>
-              </ul>
-              <div id="details-catalogue" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Reduce the need for physical samples and communicate specs, size and functionality in real space. Give sales teams a powerful 3D showroom in their pocket.</p>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="PC.gif" alt="AR Product Catalogue preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-catalogue">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">AR Product Catalogue</h3>
+            <p class="text-blue-800 mb-4 flex-grow">A portable 3D showroom that replaces physical samples for sales teams.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Heavy machinery suppliers</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>B2B Sales teams</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-catalogue">
+              <p>Carry your entire inventory in your pocket. Showcase full-scale machinery or delicate tools without shipping physical prototypes.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-catalogue">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- Configurator3D -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="configurator3d.gif" alt="Configurator3D preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">Configurator3D</h3>
-              <p class="text-blue-800 text-sm mb-3">High-fidelity, interactive 3D product configurators that run directly in the browser.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>D2C brands &amp; consumer electronics</li>
-                <li>Automotive &amp; EV manufacturers</li>
-                <li>Luxury accessories &amp; furniture</li>
-              </ul>
-              <div id="details-configurator3d" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Put the power of customization in your customers' hands with high-fidelity, interactive 3D models that live directly in the browserno apps required.</p>
-                <p class="text-xs font-medium text-blue-700 mb-1 uppercase tracking-wide">Also great for:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Real Estate (unit customizers)</li>
-                  <li>Industrial equipment &amp; machinery</li>
-                  <li>Fashion &amp; apparel brands</li>
-                  <li>Interactive product education</li>
-                  <li>Sales enablement tools</li>
-                </ul>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="configurator3d.gif" alt="Configurator3D preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-configurator3d">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">Configurator3D</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Interactive 3D product configurators that run directly in any browser.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Automotive &amp; EV</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Consumer Electronics</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-configurator3d">
+              <p>Allow customers to customize colors, features, and parts in real-time. No app downloads required—works on mobile and desktop.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-configurator3d">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Marketing & Engagement -->
-      <section aria-labelledby="marketing-engagement-heading" class="max-w-6xl mx-auto mb-12">
-        <div class="flex items-baseline justify-between mb-4">
-          <h2 id="marketing-engagement-heading" class="text-2xl font-bold text-blue-900">Marketing &amp; Engagement</h2>
+      <div class="section-divider max-w-6xl mx-auto"></div>
+
+      <section aria-labelledby="marketing-engagement-heading" class="max-w-6xl mx-auto mb-16">
+        <div class="mb-8">
+          <h2 id="marketing-engagement-heading" class="text-3xl font-bold text-blue-900 mb-2">Marketing &amp; Engagement</h2>
+          <p class="text-blue-800">Immersive campaigns that captivate audiences and amplify brand impact</p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- AR MagicEye -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="majorbeam.gif" alt="AR MagicEye preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">AR MagicEye</h3>
-              <p class="text-blue-800 text-sm mb-3">Bring static visuals to life and turn everyday touchpoints into interactive stories.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>FMCG packaging</li>
-                <li>Events &amp; experiences</li>
-                <li>Alcobev brands</li>
-              </ul>
-              <div id="details-magiceye" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Bring static visuals to life and boost engagement, product understanding, and purchase intent.</p>
-              </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="majorbeam.gif" alt="AR MagicEye preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-magiceye">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">AR MagicEye</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Bring static visuals to life and turn everyday touchpoints into stories.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>FMCG Packaging</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Event Invitations</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-magiceye">
+              <p>Scan a product label or a poster to trigger animations, hidden messages, or 3D brand mascots.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-magiceye">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- CinemaVR -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="Cinema VR.gif" alt="CinemaVR preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">CinemaVR</h3>
-              <p class="text-blue-800 text-sm mb-3">360° immersive video experiences that deepen engagement and brand recall.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>D2C brands &amp; startups</li>
-                <li>Enterprise PR &amp; CSR</li>
-                <li>Employer branding &amp; pitches</li>
-              </ul>
-              <div id="details-cinemavr" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Deepen audience engagement, enhance brand recall and communicate your unique story through unforgettable 360° immersive videos.</p>
-                <p class="text-xs font-medium text-blue-700 mb-1 uppercase tracking-wide">Also great for:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Investor pitches</li>
-                  <li>Brand anniversaries &amp; ESG narratives</li>
-                  <li>Immersive launches &amp; big moments</li>
-                </ul>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="Cinema VR.gif" alt="CinemaVR preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-cinemavr">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">CinemaVR</h3>
+            <p class="text-blue-800 mb-4 flex-grow">360° immersive video experiences that deepen engagement and recall.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Employer Branding</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>CSR Storytelling</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-cinemavr">
+              <p>Place your audience inside the story. Ideal for factory tours, impact videos, and "day-in-the-life" brand experiences.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-cinemavr">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
 
-          <!-- SpatialCGI (FOOH) -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="spatialcgi.gif" alt="SpatialCGI preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">SpatialCGI (FOOH)</h3>
-              <p class="text-blue-800 text-sm mb-3">Hyper-real CGI spectacles that blur the line between digital and physical worlds.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Social campaigns &amp; launches</li>
-                <li>Fashion &amp; retail stunts</li>
-                <li>FMCG brand moments</li>
-              </ul>
-              <div id="details-spatialcgi" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Blur the line between digital imagination and physical reality with hyper-realistic CGI spectacles designed to stop the scroll and spark global conversations.</p>
-                <p class="text-xs font-medium text-blue-700 mb-1 uppercase tracking-wide">Also great for:</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Iconic landmark takeovers</li>
-                  <li>Seasonal &amp; holiday campaigns</li>
-                  <li>Breaking the fourth wall in advertising</li>
-                  <li>Brand moments that demand attention</li>
-                  <li>Digital-first storytelling</li>
-                </ul>
-              </div>
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="spatialcgi.gif" alt="SpatialCGI preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-spatialcgi">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">SpatialCGI (FOOH)</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Hyper-real CGI spectacles that blur digital and physical worlds.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Viral social campaigns</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Product Launches</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-spatialcgi">
+              <p>Fake Out-of-Home (FOOH) ads that look like real-world spectacles. Perfect for generating mass social media buzz.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-spatialcgi">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Training -->
-      <section aria-labelledby="training-heading" class="max-w-6xl mx-auto mb-4">
-        <div class="flex items-baseline justify-between mb-4">
-          <h2 id="training-heading" class="text-2xl font-bold text-blue-900">Training</h2>
+      <div class="section-divider max-w-6xl mx-auto"></div>
+
+      <section aria-labelledby="training-operations-heading" class="max-w-6xl mx-auto mb-16">
+        <div class="mb-8">
+          <h2 id="training-operations-heading" class="text-3xl font-bold text-blue-900 mb-2">Training &amp; Operations</h2>
+          <p class="text-blue-800">Safe, scalable, and effective learning environments through simulation</p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <!-- QuickTrainXR -->
-          <article class="bg-white rounded-xl shadow p-6 flex flex-col justify-between">
-            <div>
-              <div class="mb-4 rounded-lg overflow-hidden">
-                <img src="training.gif" alt="QuickTrainXR training preview" class="w-full h-40 object-cover">
-              </div>
-              <h3 class="text-xl font-semibold text-blue-900 mb-2">QuickTrainXR</h3>
-              <p class="text-blue-800 text-sm mb-3">Immersive XR training to standardise SOPs, reduce errors, and enable safe practice.</p>
-              <p class="text-xs font-medium text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
-              <ul class="text-blue-800 text-sm space-y-1 mb-3">
-                <li>Manufacturing &amp; heavy industries</li>
-                <li>Pharma &amp; logistics</li>
-                <li>Energy &amp; complex operations</li>
-              </ul>
-              <div id="details-quicktrain" class="hidden mt-3 border-t border-blue-100 pt-3 text-sm text-blue-800">
-                <p class="mb-2">Train faster, onboard better, standardise SOPs, reduce errors, and enable safe practice for high-risk processes.</p>
-              </div>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          
+          <article class="solution-card bg-white rounded-xl shadow-md p-6 flex flex-col">
+            <div class="mb-4 rounded-lg overflow-hidden bg-gray-100">
+              <img src="training.gif" alt="XR Training preview" class="solution-image w-full h-48 object-cover" loading="lazy" />
             </div>
-            <div class="mt-4 flex items-center justify-between">
-              <button type="button" class="text-sm font-medium text-blue-700 hover:text-blue-900 toggle-details" data-target="details-quicktrain">View details</button>
-              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope mr-2"></i>Book a demo</a>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2">XR SkillMaster</h3>
+            <p class="text-blue-800 mb-4 flex-grow">Risk-free VR simulations for technical training and emergency protocols.</p>
+            <div class="mb-4">
+              <p class="text-xs font-bold text-blue-700 mb-2 uppercase tracking-wide">Ideal for</p>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Industrial Safety</span></li>
+                <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1 text-xs"></i><span>Healthcare training</span></li>
+              </ul>
+            </div>
+            <div class="details-content border-t border-blue-100 pt-3 text-sm text-blue-800" id="details-training">
+              <p>Train employees on high-risk equipment or safety procedures in a completely safe, repeatable virtual setting.</p>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between gap-3">
+              <button class="toggle-details text-sm font-medium text-blue-700 hover:text-blue-900" data-target="details-training">
+                <i class="fas fa-chevron-down mr-1"></i> View details
+              </button>
+              <a href="contact.html" class="btn-primary text-sm"><i class="fas fa-envelope"></i> Book demo</a>
             </div>
           </article>
         </div>
@@ -327,30 +372,39 @@
     </section>
   </main>
 
-  <div id="site-footer"></div>
+  <footer id="site-footer" class="bg-blue-900 text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <img src="majorbean-logoform.png" alt="majorbeam logo" class="h-12 mx-auto mb-4" />
+      <p class="mb-6 text-blue-200">Bringing stories to life in new dimensions.</p>
+      <div class="flex justify-center gap-6 mb-8 text-xl">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="text-sm text-blue-400">&copy; 2026 majorbeam. Based in Navi Mumbai, India.</p>
+    </div>
+  </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var buttons = document.querySelectorAll('.toggle-details');
-      buttons.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var targetId = btn.getAttribute('data-target');
-          var target = document.getElementById(targetId);
-          if (!target) return;
-          var isHidden = target.classList.contains('hidden');
-          if (isHidden) {
-            target.classList.remove('hidden');
-            btn.textContent = 'Hide details';
-          } else {
-            target.classList.add('hidden');
-            btn.textContent = 'View details';
-          }
-        });
+    // Logic to toggle "View Details" accordions
+    document.querySelectorAll('.toggle-details').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const content = document.getElementById(targetId);
+        const icon = button.querySelector('i');
+        
+        // Toggle the 'active' class which controls max-height in CSS
+        content.classList.toggle('active');
+        
+        // Update the button text and icon
+        if (content.classList.contains('active')) {
+          button.innerHTML = '<i class="fas fa-chevron-up mr-1"></i> Hide details';
+        } else {
+          button.innerHTML = '<i class="fas fa-chevron-down mr-1"></i> View details';
+        }
       });
     });
   </script>
-
-  <script src="site-chrome.js"></script>
 </body>
 
 </html>
