@@ -17,10 +17,18 @@
       var isAndroid = /Android/i.test(ua);
       var isChrome = /Chrome\//i.test(ua);
       if (isAndroid && isChrome) {
-        var sceneViewerUrl = 'https://arvr.google.com/scene-viewer/1.0' +
-          '?file=' + encodeURIComponent('https://pub-e46fd816b4ee497fb2f639f180c4df20.r2.dev/yarn_processing_machinery_unit.glb') +
-          '&mode=ar_preferred&title=' + encodeURIComponent('Yarn Processing Machinery');
-        window.location.href = sceneViewerUrl;
+        var fileUrl = 'https://pub-e46fd816b4ee497fb2f639f180c4df20.r2.dev/yarn_processing_machinery_unit.glb';
+        var query = 'file=' + encodeURIComponent(fileUrl) +
+          '&disable_occlusion=true&mode=ar_only&title=' + encodeURIComponent('Yarn Processing Machinery');
+
+        // Intent URL for Android Scene Viewer with occlusion disabled
+        var intentUrl = 'intent://arvr.google.com/scene-viewer/1.0?' + query +
+          '#Intent;scheme=https;package=com.google.ar.core;' +
+          'action=android.intent.action.VIEW;' +
+          'S.browser_fallback_url=' + encodeURIComponent('https://arvr.google.com/scene-viewer/1.0?' + query) +
+          ';end;';
+
+        window.location.href = intentUrl;
       }
     })();
   </script>
