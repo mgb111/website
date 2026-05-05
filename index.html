@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,225 +8,294 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="majorbean-logoform.png">
-    <link rel="apple-touch-icon" href="majorbean-logoform.png">
+    <style>
+        /* Hide global footer, we manually place it in the contact slab */
+        #site-footer { display: none; }
+        
+        /* Slab CSS */
+        html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; background: #0A4B47; overflow-x: hidden; }
+        
+        #scroll-spacers {
+            position: absolute; top: 0; left: 0; width: 100%; z-index: -1; pointer-events: none;
+        }
+        .spacer {
+            height: 100vh; scroll-snap-align: start; scroll-snap-stop: always;
+        }
+        
+        #slab-visuals {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10; pointer-events: none;
+        }
+        
+        .slab {
+            position: absolute; inset: 0; opacity: 0; transform: scale(1.05);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background-size: cover; background-position: center;
+        }
+        .slab::before {
+            content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); z-index: 1;
+        }
+        /* Dark backgrounds don't need overlay */
+        .slab.no-overlay::before { display: none; }
+        
+        .slab-content {
+            position: relative; z-index: 2; width: 100%; max-width: 80rem; padding: 2rem;
+        }
+        
+        /* Specific header offset since the header is sticky and takes up space */
+        .slab-content { padding-top: 6rem; }
+        
+        .slab.active {
+            opacity: 1; transform: scale(1); pointer-events: auto; z-index: 20;
+        }
+        .slab.outgoing {
+            opacity: 0; transform: scale(0.95); z-index: 15;
+        }
+        
+        /* Play Button Lightbox */
+        .play-btn {
+            width: 5rem; height: 5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s; margin: 2rem auto; cursor: pointer;
+        }
+        .play-btn:hover { background: rgba(255,255,255,0.4); transform: scale(1.1); }
+        .play-btn i { color: white; font-size: 1.5rem; margin-left: 0.25rem; }
+        
+        /* Overrides to match original text/colors on top of dark images */
+        .slab-content h1, .slab-content h2, .slab-content h3 { color: #ffffff !important; }
+        .slab-content p { color: #f5f5f5; }
+    </style>
 </head>
-
-<body class="bg-gray-50 font-sans">
+<body>
     <div id="site-header"></div>
-
-    <main>
-        <!-- Intro: We are majorbeam (left) + GIF (right) -->
-        <section class="py-0 px-6 bg-blue-50 text-white hero-intro">
-            <div class="max-w-7xl mx-auto text-center hero-content raise-up">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal leading-110 md:leading-normal tracking-tight">
-                    Be there. Without going there.
-                </h1>
-                <p class="lead-soft text-lg mt-12 md:mt-16 max-w-3xl mx-auto leading-120">
-                    majorbeam builds 360&deg; VR experiences that put buyers, donors, and partners inside your story; without a flight ticket.
-                </p>
-
-                <div class="mt-4 md:mt-6">
-                    <a href="#contact" class="btn-primary btn-sm"><i class="fas fa-envelope mr-2"></i>Contact Us to know more</a>
-                </div>
+    
+    <!-- 7 slabs total -->
+    <div id="scroll-spacers">
+        <div class="spacer" data-index="0"></div>
+        <div class="spacer" data-index="1"></div>
+        <div class="spacer" data-index="2"></div>
+        <div class="spacer" data-index="3"></div>
+        <div class="spacer" data-index="4"></div>
+        <div class="spacer" data-index="5"></div>
+        <div class="spacer" data-index="6"></div>
+    </div>
+    
+    <div id="slab-visuals">
+        <!-- Slab 0: Hero -->
+        <section class="slab active" style="background-image: url('hero-image.webp');">
+            <div class="slab-content text-center">
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">Be there.<br>Without going there.</h1>
+                <p class="text-xl max-w-2xl mx-auto mb-10 text-gray-200">majorbeam builds 360&deg; VR experiences that put buyers, donors, and partners inside your story; without a flight ticket.</p>
+                <a href="#contact" onclick="scrollToSlab(6)" class="btn-primary">Contact Us</a>
             </div>
-        </section>
-
-
-        <!-- Facility & Process Tours -->
-        <section class="py-20 px-6 bg-gray-50">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="factory-vr.jpg" alt="Facility & Process Tours" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg">
-                </div>
-                <div class="text-left">
-                    <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Facility & Process Tours</h2>
-                    <p class="text-blue-800 mb-6 max-w-3xl text-lg leading-relaxed">Let buyers walk your floor; at a trade show, in a meeting, or across the world. We capture your facility as a fully immersive 360&deg; VR experience, deployed on headsets at conferences or shared as a link in a sales conversation.</p>
-                    <p class="text-blue-800 text-lg leading-relaxed font-semibold">Clients: ITC Spices Factory &middot; Aurigene &middot; Aragen</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact & Advocacy Films -->
-        <section class="py-20 px-6 bg-white">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-1 md:order-2">
-                    <img src="impact-vr.jpg" alt="Impact & Advocacy Films" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg">
-                </div>
-                <div class="order-2 md:order-1 text-left">
-                    <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Impact & Advocacy Films</h2>
-                    <p class="text-blue-800 mb-6 max-w-3xl text-lg leading-relaxed">Put your donor or partner inside the community you serve. Our 360&deg; VR films create the kind of empathy that a slide deck never will; shown at events, board meetings, and fundraising pitches.</p>
-                    <p class="text-blue-800 text-lg leading-relaxed font-semibold">Clients: LGTVP India &middot; Govt of Telangana &middot; MPEDA</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Past Work (featured) -->
-        <section class="py-28 px-6 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">Past Work</h2>
-                </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="project-card group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                        <div class="relative overflow-hidden h-64">
-                            <img src="Screenshot (95).png" alt="Virtual Tour" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.aurigeneservices.com/virtual-tour-facilities/cdmo-lab-bangalore/" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-2">360&deg; Facility Tour &mdash; Aurigene</h3>
-                            <p class="text-blue-800 text-sm">An immersive virtual walkthrough of a state-of-the-art CDMO lab, used in B2B sales conversations with global pharma partners.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                        <div class="relative overflow-hidden h-64">
-                            <img src="Screenshot (99).png" alt="MPEDA" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=dAs4vW5Kh6U" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-2">MPEDA</h3>
-                            <p class="text-blue-800 text-sm">A 360&deg; VR film commissioned by the Marine Products Export Development Authority of India, unveiled at a national event with the Vice President of India &mdash; showcasing India's marine exports sector through an immersive, ground-level experience.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                        <div class="relative overflow-hidden h-64">
-                            <img src="itc-thumb.jpg" alt="ITC Spices Factory" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=ZMu2Y_pLPa8" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-2">ITC Spices Factory, Guntur</h3>
-                            <p class="text-blue-800 text-sm">A narrative-led 360&deg; VR film of ITC's spices processing facility &mdash; built as a virtual shop floor audit tool for international buyers. Used at B2B meetings and trade events to demonstrate operational excellence and compliance standards, without the logistics of a physical visit.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                        <div class="relative overflow-hidden h-64">
-                            <img src="Screenshot (97).png" alt="Govt of Telangana" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=YeoUtUXy7TU" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-2">VR Showcase &mdash; Govt of Telangana</h3>
-                            <p class="text-blue-800 text-sm">Screened annually at the World Economic Forum in Davos to position Telangana as a global investment destination.</p>
-                        </div>
-                    </div>
-
-                    <div class="project-card group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-gray-200 transition-all duration-300">
-                        <div class="relative overflow-hidden h-64">
-                            <img src="lgtvp-thumb.jpg" alt="LGTVP India, Palghar" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-500 opacity-0 group-hover:opacity-100">
-                                <a href="https://www.youtube.com/watch?v=YVd2-_gNk-0&amp;t=8s" class="btn-primary-sm" target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-semibold text-blue-900 mb-2">LGTVP India, Palghar</h3>
-                            <p class="text-blue-800 text-sm">A cinematic 360&deg; VR film for LGT Venture Philanthropy &mdash; placing investors directly inside the communities they fund in Palghar, Maharashtra. Built as a virtual site visit for the social sector, the film grounds impact investors in the lived reality of mothers and frontline workers, replacing a slide deck with something you can feel.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Brands Our Team Has Collaborated With -->
-        <section class="py-20 bg-gray-50 brands-logos">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="section-title">Brands Our Team Has Collaborated With</h2>
-                    <p class="text-lg text-blue-800 max-w-3xl mx-auto mt-4">Across our team's journey in immersive tech, we've contributed to projects for these esteemed organizations through past roles and partnerships.</p>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="HINDUNILVR.NS_BIG-24495890.png" alt="HUL Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="MANKIND.NS_BIG-e2edbe6b.png" alt="Mankind Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="telangana-govt_660_053114102100.webp" alt="Govt of Telangana Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="jk-tyre-logo1-scaled.webp" alt="JK Tyre Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="Nestle-Logo.jpg" alt="MPEDA Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="download.png" alt="Pernod Ricard Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="logo-1.png" alt="Coromandel Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="e1fe2334a159f143d827fb964219a454237bfb8dca568852113713164f767d50.webp" alt="Pernod Ricard Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="Aurigene Pharmaceutical Services Limited CDMO Logo-comp291134.webp" alt="Aurigene Logo" class="max-h-16 max-w-full">
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300 flex items-center justify-center h-28">
-                        <img src="GIM_Blue_PNG_Logo.png" alt="GIM Logo" class="max-h-16 max-w-full">
-                    </div>
-                </div>
         </section>
         
-        <!-- Meet majorbeam (About Us) -->
-        <section id="about" class="pt-20 pb-0 px-6 bg-white text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="section-title">Meet majorbeam</h2>
+        <!-- Slab 1: Facility Tours -->
+        <section class="slab" style="background-image: url('factory-vr.jpg');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Facility & Process Tours</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Let buyers walk your floor; at a trade show, in a meeting, or across the world. We capture your facility as a fully immersive 360&deg; VR experience.</p>
+                <button class="play-btn" onclick="openLightbox('ZMu2Y_pLPa8')"><i class="fas fa-play"></i></button>
+                <p class="text-sm font-semibold text-gray-300 uppercase tracking-widest mt-4">Clients: ITC Spices Factory &middot; Aurigene &middot; Aragen</p>
             </div>
         </section>
-
-        <!-- Co-founders -->
-        <section class="py-16 px-6 bg-blue-50">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-                <div class="feature-card text-left bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <img src="Manish.jpeg" alt="Manish Bhanushali" class="h-20 w-20 rounded-full mr-4 object-cover border-2 border-blue-100" />
+        
+        <!-- Slab 2: Impact Films -->
+        <section class="slab" style="background-image: url('impact-vr.jpg');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Impact & Advocacy Films</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Put your donor or partner inside the community you serve. Our 360&deg; VR films create the kind of empathy that a slide deck never will.</p>
+                <button class="play-btn" onclick="openLightbox('YVd2-_gNk-0')"><i class="fas fa-play"></i></button>
+                <p class="text-sm font-semibold text-gray-300 uppercase tracking-widest mt-4">Clients: LGTVP India &middot; Govt of Telangana &middot; MPEDA</p>
+            </div>
+        </section>
+        
+        <!-- Slab 3: Past Work -->
+        <section class="slab no-overlay" style="background-color: #063C3D;">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12">Past Work</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Aurigene -->
+                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
+                        <img src="Screenshot (95).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="Aurigene">
+                        <h3 class="text-xl font-bold mb-2">Aurigene CDMO</h3>
+                        <p class="text-gray-300 text-sm mb-4">An immersive virtual walkthrough of a state-of-the-art CDMO lab.</p>
+                        <a href="https://www.aurigeneservices.com/virtual-tour-facilities/cdmo-lab-bangalore/" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
+                    </div>
+                    <!-- MPEDA -->
+                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
+                        <img src="Screenshot (99).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="MPEDA">
+                        <h3 class="text-xl font-bold mb-2">MPEDA</h3>
+                        <p class="text-gray-300 text-sm mb-4">A 360&deg; VR film showcasing India's marine exports sector.</p>
+                        <a href="https://www.youtube.com/watch?v=dAs4vW5Kh6U" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
+                    </div>
+                    <!-- Govt of Telangana -->
+                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
+                        <img src="Screenshot (97).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="Govt of Telangana">
+                        <h3 class="text-xl font-bold mb-2">Govt of Telangana</h3>
+                        <p class="text-gray-300 text-sm mb-4">Screened annually at the World Economic Forum in Davos.</p>
+                        <a href="https://www.youtube.com/watch?v=YeoUtUXy7TU" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slab 4: Brands -->
+        <section class="slab no-overlay" style="background-color: #0A4B47;">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Brands Our Team Has Collaborated With</h2>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10">
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="HINDUNILVR.NS_BIG-24495890.png" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="MANKIND.NS_BIG-e2edbe6b.png" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="telangana-govt_660_053114102100.webp" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="Nestle-Logo.jpg" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="download.png" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="logo-1.png" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="e1fe2334a159f143d827fb964219a454237bfb8dca568852113713164f767d50.webp" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="Aurigene Pharmaceutical Services Limited CDMO Logo-comp291134.webp" class="max-h-12 max-w-full"></div>
+                    <div class="bg-white/10 border border-white/10 rounded-xl p-4 flex items-center justify-center h-24"><img src="GIM_Blue_PNG_Logo.png" class="max-h-12 max-w-full"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slab 5: Meet majorbeam -->
+        <section class="slab no-overlay" style="background-color: #06302E;">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12">Meet majorbeam</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-8 backdrop-blur text-left flex flex-col sm:flex-row items-center sm:items-start sm:space-x-6">
+                        <img src="Manish.jpeg" class="w-24 h-24 rounded-full object-cover border-2 border-teal-500 mb-4 sm:mb-0">
                         <div>
-                            <h3 class="text-xl font-semibold text-blue-900">Manish Bhanushali</h3>
-                            <p class="text-blue-800 text-sm font-medium">Co‑founder & Technology Lead</p>
+                            <h3 class="text-2xl font-bold mb-1">Manish Bhanushali</h3>
+                            <p class="text-teal-300 text-sm mb-4 uppercase tracking-wider">Co-founder & Tech Lead</p>
+                            <p class="text-gray-300 text-sm">Manish last worked at Jio Reality Labs, and has a decade of experience working in technical sales and 360&deg; media production.</p>
                         </div>
                     </div>
-                    <p class="text-blue-800 text-left leading-relaxed">Manish last worked at Jio Reality Labs, and has a decade of experience working in technical sales and 360&deg; media production.<br><br>He is constantly building towards an updated vision of how technology can inform, educate and entertain.</p>
-                </div>
-                <div class="feature-card text-left bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <img src="Amrita.jpeg" alt="Amrita Ramesh" class="h-20 w-20 rounded-full mr-4 object-cover border-2 border-blue-100" />
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-8 backdrop-blur text-left flex flex-col sm:flex-row items-center sm:items-start sm:space-x-6">
+                        <img src="Amrita.jpeg" class="w-24 h-24 rounded-full object-cover border-2 border-teal-500 mb-4 sm:mb-0">
                         <div>
-                            <h3 class="text-xl font-semibold text-blue-900">Amrita Ramesh</h3>
-                            <p class="text-blue-800 text-sm font-medium">Co‑founder & Creative Lead</p>
+                            <h3 class="text-2xl font-bold mb-1">Amrita Ramesh</h3>
+                            <p class="text-teal-300 text-sm mb-4 uppercase tracking-wider">Co-founder & Creative Lead</p>
+                            <p class="text-gray-300 text-sm">Amrita has a background in graphic design and visual communication. She is passionate about turning complex ideas into simple, memorable interactions.</p>
                         </div>
                     </div>
-                    <p class="text-blue-800 text-left leading-relaxed">Amrita has a background in graphic design and visual communication.<br><br>She is also passionate about language, psychology, and turning complex ideas into simple, memorable interactions.</p>
                 </div>
             </div>
         </section>
-
-        <!-- Contact CTA below Brands -->
-        <section id="contact" class="py-24 px-6 bg-blue-900 text-white text-center">
-            <div class="max-w-3xl mx-auto">
-                <h3 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">Have a facility or story that needs to be experienced?</h3>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:+917977410892" class="btn-primary inline-flex items-center"><i class="fas fa-phone mr-2"></i>Call +91 79774 10892</a>
-                    <a href="mailto:manishb@majorbeam.com" class="btn-primary inline-flex items-center"><i class="fas fa-envelope mr-2"></i>Email manishb@majorbeam.com</a>
+        
+        <!-- Slab 6: Contact CTA -->
+        <section class="slab no-overlay" style="background-color: #0A4B47; background-image: radial-gradient(circle at center, rgba(127,255,212,0.1) 0%, transparent 60%);">
+            <div class="slab-content text-center flex flex-col justify-between h-[80vh] md:h-[85vh]">
+                <div class="flex-grow flex flex-col justify-center">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-12">Have a facility or story that needs to be experienced?</h2>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <a href="tel:+917977410892" class="btn-primary"><i class="fas fa-phone mr-3"></i>+91 79774 10892</a>
+                        <a href="mailto:manishb@majorbeam.com" class="btn-secondary text-white border-white/50 hover:bg-white hover:text-black"><i class="fas fa-envelope mr-3"></i>manishb@majorbeam.com</a>
+                    </div>
+                </div>
+                
+                <!-- Minimal Footer inside the last slab -->
+                <div class="pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm mt-auto w-full">
+                    <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                        <img src="majorbean-logoform.png" class="h-6 w-6 opacity-70">
+                        <span>&copy; 2026 majorbeam. All rights reserved.</span>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="https://www.instagram.com/wearemajorbeam/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://x.com/wearemajorbeam" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-x-twitter text-xl"></i></a>
+                        <a href="https://www.linkedin.com/company/majorbeam/" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-linkedin-in text-xl"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-
+    </div>
+    
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" style="z-index: 100;" class="fixed inset-0 bg-black/95 items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl hover:text-teal-300 transition">&times;</button>
+        <div class="w-full max-w-5xl aspect-video px-4">
+            <iframe id="lightbox-iframe" class="w-full h-full rounded-xl border border-white/10" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+    </div>
+    
     <div id="site-footer"></div>
-
     <script src="site-chrome.js"></script>
+    
+    <script>
+        // Intersection Observer for Slabs
+        const spacers = document.querySelectorAll('.spacer');
+        const slabs = document.querySelectorAll('.slab');
+        let currentIndex = 0;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = parseInt(entry.target.getAttribute('data-index'));
+                    activateSlab(index);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        
+        spacers.forEach(spacer => observer.observe(spacer));
+        
+        function activateSlab(index) {
+            if (index === currentIndex) return;
+            
+            slabs.forEach((slab, i) => {
+                slab.classList.remove('active', 'outgoing');
+                if (i === currentIndex) {
+                    slab.classList.add('outgoing');
+                } else if (i === index) {
+                    slab.classList.add('active');
+                }
+            });
+            currentIndex = index;
+        }
+        
+        function scrollToSlab(index) {
+            if(spacers[index]) {
+                spacers[index].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Navigation link overrides via delegation
+        document.addEventListener('click', (e) => {
+            const link = e.target.closest('#navigation a');
+            if (link) {
+                const href = link.getAttribute('href');
+                if (href === 'index.html' || href === '#') { e.preventDefault(); scrollToSlab(0); }
+                else if (href.includes('#about')) { e.preventDefault(); scrollToSlab(5); }
+                else if (href.includes('#contact')) { e.preventDefault(); scrollToSlab(6); }
+            }
+        });
+        
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const iframe = document.getElementById('lightbox-iframe');
+        
+        function openLightbox(videoId) {
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightbox.classList.add('flex');
+            }, 10);
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                iframe.src = '';
+            }, 300);
+        }
+    </script>
 </body>
 </html>
