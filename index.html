@@ -16,11 +16,11 @@
         #site-footer { display: none; }
         
         /* Slab CSS */
-        html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
-        body { margin: 0; padding: 0; background: #0A4B47; overflow-x: hidden; }
+        html { scroll-snap-type: y mandatory; scroll-behavior: smooth; overflow-x: hidden; }
+        body { margin: 0; padding: 0; background: #0A4B47; }
         
         #scroll-spacers {
-            position: absolute; top: 0; left: 0; width: 100%; z-index: -1; pointer-events: none;
+            position: relative; width: 100%; z-index: -1; pointer-events: none;
         }
         .spacer {
             height: 100vh; scroll-snap-align: start; scroll-snap-stop: always;
