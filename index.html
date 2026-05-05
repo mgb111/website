@@ -247,10 +247,10 @@
     </div>
     
     <!-- Lightbox Overlay -->
-    <div id="lightbox" style="z-index: 100;" class="fixed inset-0 bg-black/95 items-center justify-center hidden opacity-0 transition-opacity duration-300">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl hover:text-teal-300 transition">&times;</button>
-        <div class="w-full max-w-5xl aspect-video px-4">
-            <iframe id="lightbox-iframe" class="w-full h-full rounded-xl border border-white/10" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div id="lightbox" style="z-index: 100;" class="fixed inset-0 bg-black items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" style="z-index: 101;" class="absolute top-6 right-6 w-12 h-12 bg-black/50 hover:bg-black text-white text-3xl rounded-full flex items-center justify-center transition backdrop-blur">&times;</button>
+        <div class="w-full h-full">
+            <iframe id="lightbox-iframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </div>
     
