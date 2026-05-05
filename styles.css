@@ -2,56 +2,62 @@
    Table of Contents
    ==========================================================================
 
-   1.  Base Styles
+   1.  Base Styles & Typography
    2.  Buttons
    3.  Section Titles
-   4.  Card Styles
-       4.1 Feature Cards
-       4.2 Project Cards
-       4.3 Industry Cards
-       4.4 Blog Cards
-       4.5 Testimonial Cards
+   4.  Card Styles (Glassmorphism & Modern Chic)
    5.  Form Styles
-   6.  Sections
-       6.1 Hero Section
-       6.2 CTA Section
+   6.  Sections & Layouts
    7.  Media Queries
-   8.  Animations
+   8.  Animations & Glows
    9.  Accessibility
-   10. Print Styles
+   10. Theme Overrides
 
    ========================================================================== */
 
 /* ==========================================================================
-   1. Base Styles
+   1. Base Styles & Typography
    ========================================================================== */
 
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: #ffffff;
-    font-weight: 600;
-    padding: 0.875rem 2rem;
-    border-radius: 12px;
-    border: 2px solid rgba(127, 255, 212, 0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-}
 body {
     font-family: 'Inter', sans-serif;
-    background: #0A4B47; /* Warmed Dark Teal */
+    background: #041b1a; /* Deep, almost black teal for a modern dark mode */
     color: #ffffff;
-    line-height: 1.7;
-    letter-spacing: -0.01em;
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+    overflow-x: hidden;
+}
+
+/* Add a global subtle ambient glow */
+body::before {
+    content: '';
+    position: fixed;
+    top: -20vh;
+    left: -20vw;
+    width: 60vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.08) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+}
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -20vh;
+    right: -20vw;
+    width: 70vw;
+    height: 70vh;
+    background: radial-gradient(circle, rgba(127, 255, 212, 0.05) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
 }
 
 /* ==========================================================================
@@ -61,85 +67,80 @@ body {
 .btn-primary {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #000000 0%, #111111 100%);
-    color: white;
+    background: linear-gradient(135deg, #00ffcc 0%, #00b38f 100%);
+    color: #00221c; /* Very dark contrast */
     font-weight: 700;
-    padding: 0.9rem 2rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
+    padding: 0.9rem 2.5rem;
+    border-radius: 9999px; /* Pill shape */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 30px rgba(0, 255, 204, 0.3);
     letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-20deg);
+    transition: 0.6s;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5);
+    background: linear-gradient(135deg, #33ffdb 0%, #00cc9e 100%);
+}
+
+.btn-primary:hover::after {
+    left: 150%;
 }
 
 .btn-primary-sm {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #000000 0%, #111111 100%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
+    border-radius: 9999px;
     transition: all 0.3s ease;
     text-decoration: none;
+    font-size: 0.85rem;
 }
 
 .btn-primary-sm:hover {
-    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(127, 255, 212, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.15);
 }
 
 .btn-secondary {
     display: inline-flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    background: transparent;
+    border: 1px solid rgba(127, 255, 212, 0.4);
+    color: #7fffd4;
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+    padding: 0.875rem 2.5rem;
+    border-radius: 9999px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-}
-
-.btn-outline {
-    display: inline-flex;
-    align-items: center;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    font-weight: 600;
-    padding: 0.875rem 2rem;
-    border-radius: 12px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-.btn-outline:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(127, 255, 212, 0.6);
-    color: white;
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    background: rgba(127, 255, 212, 0.1);
+    border-color: #7fffd4;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(127, 255, 212, 0.2);
 }
 
 /* ==========================================================================
@@ -147,532 +148,216 @@ body {
    ========================================================================== */
 
 .section-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    background: linear-gradient(135deg, #ffffff 30%, #a0ffdf 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: inline-block;
-    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
     line-height: 1.1;
 }
 
-/* Contextual overrides: titles on dark backgrounds */
+/* Override all background section title rules */
 .bg-blue-900 .section-title,
-.bg-teal-secondary .section-title {
-    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+.bg-teal-secondary .section-title,
+.bg-white .section-title,
+.bg-blue-50 .section-title,
+.bg-gray-50 .section-title {
+    background: linear-gradient(135deg, #ffffff 30%, #a0ffdf 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Ensure readable body/headings on dark sections (all primary sections are dark teal) */
-.bg-white .text-blue-900, .bg-blue-50 .text-blue-900 { color: #ffffff !important; }
-.bg-white .text-blue-800, .bg-blue-50 .text-blue-800 { color: #f5f5f5 !important; }
-.bg-white .text-blue-700, .bg-blue-50 .text-blue-700 { color: #e5e5e5 !important; }
-
-/* Contextual overrides: readable text on dark backgrounds */
-.bg-blue-900 .text-blue-900,
-.bg-blue-900 .text-blue-800,
-.bg-blue-900 .text-blue-700,
-.bg-blue-50  .text-blue-900,
-.bg-blue-50  .text-blue-800,
-.bg-blue-50  .text-blue-700,
-.bg-white    .text-blue-900,
-.bg-white    .text-blue-800,
-.bg-white    .text-blue-700 {
-    color: #ffffff !important;
-}
-.bg-teal-secondary .text-blue-900,
-.bg-teal-secondary .text-blue-800,
-.bg-teal-secondary .text-blue-700 {
-    color: #ffffff !important;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, #9fffb8 0%, #22ffbb 100%);
-    border-radius: 2px;
-    box-shadow: 0 2px 10px rgba(159, 255, 184, 0.3);
-}
+/* ==========================================================================
+   4. Card Styles (Glassmorphism & Modern Chic)
+   ========================================================================== */
 
 .feature-card {
-    background: #0D5E59; /* Warmed Muted Teal */
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 32px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
 }
 
 .feature-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    border-color: rgba(127, 255, 212, 0.3);
+    transform: translateY(-8px);
+    border-color: rgba(127, 255, 212, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(127, 255, 212, 0.03);
 }
 
 .project-card {
-    background: #0D5E59; /* Warmed Muted Teal */
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-card:hover {
-    transform: translateY(-12px) rotateX(2deg);
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(127, 255, 212, 0.3);
+    box-shadow: 0 30px 80px rgba(0, 255, 204, 0.15);
 }
 
-.industry-card {
-    background-color: #0D5E59; /* Warmed Muted Teal */
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.industry-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* 4.3 Industry Card Icon Container */
-.industry-card .icon-container {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    background-color: #06302E; /* Warmed Darker Teal circle */
-    color: #ffffff; /* Contrast */
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-}
-
-.blog-card {
-    background-color: #0D5E59; /* Warmed Muted Teal */
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card {
-    background-color: #0D5E59; /* Warmed Muted Teal */
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(12px);
-    text-align: center;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+.project-card img {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ==========================================================================
-   5. Form Styles
+   5. Sections & Layouts
    ========================================================================== */
 
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    background-color: #042A2B; /* Darker Teal input bg */
-    color: #ffffff; /* Text on dark input */
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
+/* Force all sections to respect the dark theme to emulate Flamapp's chic style */
+.bg-blue-50, .bg-gray-50, .bg-white, .bg-blue-900, .bg-teal-secondary {
+    background-color: transparent !important;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-    outline: none;
-    border-color: #7fffd4; /* Aquamarine */
-    background-color: #063C3D;
-    box-shadow: 0 0 0 3px rgba(127, 255, 212, 0.25);
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #ffffff; /* White labels */
-}
-
-#contact-form input,
-#contact-form textarea {
-    color: #000000 !important;
-}
-
-/* ==========================================================================
-   6. Sections
-   ========================================================================== */
-
-.hero {
+section {
     position: relative;
-    background-image: url('/api/placeholder/1920/1080');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    z-index: 10;
 }
 
-.cta-section {
-    position: relative;
-    background-image: url('/api/placeholder/1920/600');
-    background-size: cover;
-    background-position: center;
-    color: white;
+/* Alternating subtle backgrounds */
+section:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Secondary lighter teal background utility */
-.bg-teal-secondary { 
-    background: linear-gradient(135deg, #0A5758 0%, #063C3D 100%) !important;
-    position: relative;
-}
-
-.bg-teal-secondary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 70%, rgba(127, 255, 212, 0.1) 0%, transparent 50%);
-    pointer-events: none;
-}
-.hero-intro .hero-content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-}
-
-/* Hero subtitle sizing: approx. +20% */
-.hero-subtitle {
-    font-size: 1.1em; /* smaller for clearer hierarchy under H1 */
-    font-weight: 500; /* medium weight */
-}
-
-/* Small button utility for compact CTAs under hero */
-.btn-sm {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
-    border-radius: 10px !important;
-}
-
-/* Minimalist motion hovers */
-.hover-rise {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hover-rise:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-}
-.hover-underline {
-    position: relative;
-}
-.hover-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #7fffd4 0%, #00ffcc 100%);
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 2px;
-}
-.hover-underline:hover::after { width: 100%; }
-
-/* ==========================================================================
-   7. Media Queries
-   ========================================================================== */
-
- /* 13" laptops and similar (tuned for 1366x768 and 1280x800) */
- @media (max-width: 1366px) {
-     /* Slightly reduce the full-screen hero to avoid overflow and awkward folds */
-     .hero-intro {
-         min-height: 85vh;
-         background-position: center top;
-     }
-     .hero-intro .hero-content h1 {
-         font-size: 2.5rem !important;
-         line-height: 1.15 !important;
-     }
-     .hero-intro .lead-soft {
-         font-size: 1rem !important;
-     }
-     .raise-up {
-         transform: translateY(-2vh);
-     }
-
-     /* Narrow the very wide container to improve readability on small desktops */
-     .max-w-7xl {
-         max-width: 70rem !important; /* ~1120px */
-     }
-
-     /* Cap aggressive paddings to fit more content above the fold */
-     .py-24 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
-     .py-16 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-    .feature-card {
-        padding: 2rem;
-    }
-
-    .btn-primary, .btn-secondary, .btn-outline {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.8rem;
-    }
-
-    .industry-card .icon-container {
-        width: 64px;
-        height: 64px;
-    }
-    img.object-cover.rounded-xl { max-height: 22rem; }
-    .brands-logos .grid { gap: 1.25rem; }
- }
-
- /* Additional tightening for smaller desktops */
- @media (max-width: 1280px) {
-     .hero-intro { min-height: 78vh; }
-     .hero-intro .hero-content h1 { font-size: 2.25rem !important; }
-     .max-w-7xl { max-width: 64rem !important; } /* ~1024px */
-     img.object-cover.rounded-xl { max-height: 20rem; }
- }
-
- /* Original small-screen adjustments */
- @media (max-width: 768px) {
-     .section-title { font-size: 2.5rem; }
-     .section-title::after { width: 80px; }
-     .feature-card { padding: 2rem; }
-     .btn-primary, .btn-secondary, .btn-outline { padding: 0.75rem 1.5rem; font-size: 0.8rem; }
-     .industry-card .icon-container { width: 64px; height: 64px; }
-    
-    /* Relax full-screen hero on phones to avoid awkward vertical cropping */
-    .hero-intro {
-        min-height: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        background-position: center top;
-        align-items: flex-start;
-    }
-
-    .hero-intro .hero-content h1 {
-        font-size: 1.9rem !important;
-        line-height: 1.25 !important;
-    }
-
-    .hero-intro .lead-soft {
-        font-size: 0.95rem !important;
-    }
-
-    /* Slightly tighter vertical rhythm for stacked sections on mobile */
-    .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-    .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
- }
-
-/* ==========================================================================
-   8. Animations
-   ========================================================================== */
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fadeInUp {
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-/* ==========================================================================
-   9. Accessibility
-   ========================================================================== */
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* ==========================================================================
-   10. Print Styles
-   ========================================================================== */
-
-@media print {
-    .btn-primary,
-    .btn-secondary,
-    .btn-outline {
-        border: 1px solid #063C3D; /* Dark Teal */
-        color: #063C3D !important;
-        background: none !important;
-    }
-
-    .testimonial-card,
-    .feature-card,
-    .project-card,
-    .industry-card,
-    .blog-card {
-        box-shadow: none !important;
-        border: 1px solid #e5e7eb;
-    }
-
-    footer,
-    .cta-section {
-        background: white !important;
-        color: #063C3D !important;
-    }
-}
-
-/* ==========================================================================
-   Tailwind Utility Overrides for Teal Theme
-   Map commonly used blue utilities to Dark Teal / Aquamarine
-   ========================================================================== */
-
-/* Custom small utilities */
-.leading-150 { line-height: 1.5 !important; }
-.leading-110 { line-height: 1.1 !important; }
-.leading-120 { line-height: 1.2 !important; }
-.mt-1_5em { margin-top: 1.5em !important; }
-
-/* Consistent light-aqua lead text color (per request: #1ff4cd) */
-.lead-soft { color: #1ff4cd !important; }
-
-/* Extra deep card shadow */
-.shadow-3xl {
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 12px 32px rgba(0, 0, 0, 0.35) !important;
-}
-
-/* Slight raise for hero content to move it up visually */
-.raise-up {
-    transform: translateY(-4vh);
-}
-@media (min-width: 768px) {
-    .raise-up {
-        transform: translateY(-6vh);
-    }
-}
-
-/* Backgrounds (warmed) */
-.bg-blue-900 { background-color: #0A4B47 !important; }
-.bg-blue-800 { background-color: #06302E !important; }
-.bg-blue-700 { background-color: #06302E !important; }
-.bg-blue-50  { background-color: #0A4B47 !important; }
-.bg-blue-100 { background-color: #0A4B47 !important; }
-.bg-white    { background-color: #0A4B47 !important; }
-
-.text-blue-900 { color: #ffffff !important; }
-.text-blue-800 { color: #ffffff !important; }
-.text-blue-700 { color: #ffffff !important; }
-.text-blue-600 { color: #ffffff !important; }
-.text-blue-500 { color: #ffffff !important; }
-.text-blue-300 { color: #9fffb8 !important; }
-.text-blue-200 { color: #bbffe0 !important; }
-.text-blue-100 { color: #ddffea !important; }
-
-/* Borders (warmed) */
-.border-blue-800 { border-color: #06302E !important; }
-.border-blue-100 { border-color: #ddffea !important; }
-.border-blue-200 { border-color: #bbffe0 !important; }
-.border-blue-300 { border-color: #9fffb8 !important; }
-.border-blue-500 { border-color: #0A4B47 !important; }
-
-/* Buttons and links hover shades mapped via existing component classes */
-
-/* Map grays to dark teal so no light backgrounds */
-.bg-gray-50 { background-color: #063C3D !important; }
-.bg-gray-100 { background-color: #063C3D !important; }
-
-.text-gray-700, .text-gray-800, .text-gray-900 { color: #ffffff !important; }
-.border-gray-100, .border-gray-200, .border-gray-300 { border-color: #ccffee !important; }
-
-/* Keep white backgrounds specifically for brand logo tiles */
-.brands-logos .bg-white { background-color: #ffffff !important; }
-
-/* Gradient utility overrides (warmed) */
-.from-blue-900 { --tw-gradient-from: #0A4B47 !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(10,75,71,0)); }
-.via-blue-800 { --tw-gradient-stops: var(--tw-gradient-from), #06302E, var(--tw-gradient-to, rgba(6,48,46,0)); }
-.to-blue-700 { --tw-gradient-to: #06302E !important; }
-
-/* Force header/footer to black while keeping primary sections teal */
-header.bg-blue-900,
-footer.bg-blue-900 {
-    background-color: #000000 !important;
-}
-
-/* Hero intro aesthetic separation (same color, subtle borders/shadows) */
+/* The Hero */
 .hero-intro {
     position: relative;
-    overflow: hidden;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25) inset, 0 12px 40px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     background-image: url('hero-image.webp');
-    background-size: cover; /* crop top/bottom as needed to fill viewport */
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-color: #0A4B47; /* match site tint in letterbox areas */
-    min-height: 100vh; /* occupy full screen on load */
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
+
 .hero-intro::before {
     content: '';
     position: absolute;
     inset: 0;
-    /* Teal-tinted overlay aligned with site palette (#0A4B47 → #06302E) */
     background: linear-gradient(
         180deg,
-        rgba(10, 75, 71, 0.85) 0%,      /* stronger #0A4B47 */
-        rgba(6, 48, 46, 0.70) 40%,      /* stronger #06302E */
-        rgba(10, 75, 71, 0.85) 100%     /* stronger #0A4B47 */
+        rgba(4, 27, 26, 0.5) 0%,
+        #041b1a 100%
     );
     pointer-events: none;
 }
-.hero-intro::after {
-    display: none; /* remove bottom effect under hero image */
+
+/* Large image blocks in the solution sections */
+.grid img.rounded-2xl {
+    border-radius: 28px !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.grid img.rounded-2xl:hover {
+    transform: scale(1.03);
 }
 
-/* Neutralize red utilities used (e.g., heart icon) */
-.text-red-500 { color: #7fffd4 !important; }
+/* Brands section cards */
+.brands-logos .bg-white {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 20px !important;
+}
+.brands-logos .bg-white:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
 
-/* Map various tag badge utilities to aquamarine/teal */
-.bg-red-100, .bg-green-100, .bg-yellow-100, .bg-purple-100, .bg-pink-100, .bg-indigo-100 { background-color: #e6fff6 !important; }
-.text-red-800, .text-green-800, .text-yellow-800, .text-purple-800, .text-pink-800, .text-indigo-800 { color: #063C3D !important; }
+/* Contact / Final CTA */
+#contact {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 255, 204, 0.05) 100%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Universal Text Overrides for Dark Mode */
+h1, h2, h3, h4, p, a, span, li, div {
+    color: #ffffff;
+}
+
+p.text-blue-800, p.text-blue-900, h2.text-blue-900, h3.text-blue-900, .text-blue-700 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+h2.text-blue-900, h3.text-blue-900 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   6. Header and Footer Tweaks
+   ========================================================================== */
+
+header.bg-blue-900 {
+    background: rgba(4, 27, 26, 0.7) !important;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer.bg-blue-900 {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 4rem;
+}
+
+/* ==========================================================================
+   7. Typography Overrides
+   ========================================================================== */
+
+.hero-intro h1 {
+    font-size: 5.5rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.04em !important;
+    background: linear-gradient(180deg, #ffffff 0%, #a0ffdf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.05 !important;
+}
+
+@media (max-width: 1024px) {
+    .hero-intro h1 { font-size: 4rem !important; }
+}
+
+@media (max-width: 768px) {
+    .hero-intro h1 { font-size: 3.2rem !important; }
+    .section-title { font-size: 2.2rem; }
+}
+
+.lead-soft {
+    font-size: 1.25rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* Raise up tweak */
+.raise-up {
+    transform: translateY(-8vh);
+}
+
+/* General utilities */
+.text-red-500 { color: #00ffcc !important; }
