@@ -73,7 +73,6 @@ function renderFooter() {
         </div>
         <div class="py-6 border-t border-blue-800 text-center">
           <p>© 2025 majorbeam. All rights reserved.</p>
-          <p>Built with <i class="fas fa-heart text-red-500"></i> for immersive experiences</p>
         </div>
       </div>
     </footer>
