@@ -17,8 +17,7 @@ function renderHeader() {
         <nav id="navigation" class="hidden w-full md:flex md:w-auto md:space-x-6 mt-4 md:mt-0">
           <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Home</a>
           <a href="use-cases.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Solutions</a>
-          <a href="about.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About Us</a>
-          <a href="contact.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Contact</a>
+          <a href="index.html#about" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About Us</a>
         </nav>
       </div>
     </header>
@@ -57,8 +56,7 @@ function renderFooter() {
             <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul class="space-y-3 inline-block text-right md:text-left">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Solutions</a></li>
-              <li><a href="about.html" class="hover:text-white transition duration-300">About Us</a></li>
-              <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+              <li><a href="index.html#about" class="hover:text-white transition duration-300">About Us</a></li>
             </ul>
           </div>
 
