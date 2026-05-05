@@ -36,10 +36,11 @@
             pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: center;
             background-size: cover; background-position: center;
         }
+        /* All images get exactly 50% darkness for text readability */
         .slab::before {
             content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1;
         }
-        /* Dark backgrounds don't need overlay */
+        /* Solid dark backgrounds don't need overlay */
         .slab.no-overlay::before { display: none; }
         
         .slab-content {
@@ -53,11 +54,11 @@
             opacity: 0; transform: scale(0.95); z-index: 15;
         }
         
-        /* Play Button Lightbox */
+        /* Play Button */
         .play-btn {
             width: 5rem; height: 5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s; margin: 2rem auto; cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s; margin: 2rem auto; cursor: pointer; text-decoration: none;
         }
         .play-btn:hover { background: rgba(255,255,255,0.4); transform: scale(1.1); }
         .play-btn i { color: white; font-size: 1.5rem; margin-left: 0.25rem; }
@@ -127,7 +128,7 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">MPEDA</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A 360&deg; VR film commissioned by the Marine Products Export Development Authority of India, unveiled at a national event with the Vice President of India &mdash; showcasing India's marine exports sector through an immersive, ground-level experience.</p>
-                <button class="play-btn" onclick="openLightbox('dAs4vW5Kh6U')"><i class="fas fa-play"></i></button>
+                <a href="https://www.youtube.com/watch?v=dAs4vW5Kh6U" target="_blank" class="play-btn inline-flex"><i class="fas fa-play"></i></a>
             </div>
         </section>
 
@@ -136,7 +137,7 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">ITC Spices Factory, Guntur</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A narrative-led 360&deg; VR film of ITC's spices processing facility &mdash; built as a virtual shop floor audit tool for international buyers. Used at B2B meetings and trade events to demonstrate operational excellence and compliance standards, without the logistics of a physical visit.</p>
-                <button class="play-btn" onclick="openLightbox('ZMu2Y_pLPa8')"><i class="fas fa-play"></i></button>
+                <a href="https://www.youtube.com/watch?v=ZMu2Y_pLPa8" target="_blank" class="play-btn inline-flex"><i class="fas fa-play"></i></a>
             </div>
         </section>
 
@@ -145,7 +146,7 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">VR Showcase &mdash; Govt of Telangana</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Screened annually at the World Economic Forum in Davos to position Telangana as a global investment destination.</p>
-                <button class="play-btn" onclick="openLightbox('YeoUtUXy7TU')"><i class="fas fa-play"></i></button>
+                <a href="https://www.youtube.com/watch?v=YeoUtUXy7TU" target="_blank" class="play-btn inline-flex"><i class="fas fa-play"></i></a>
             </div>
         </section>
 
@@ -154,7 +155,7 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">LGTVP India, Palghar</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A cinematic 360&deg; VR film for LGT Venture Philanthropy &mdash; placing investors directly inside the communities they fund in Palghar, Maharashtra. Built as a virtual site visit for the social sector, the film grounds impact investors in the lived reality of mothers and frontline workers, replacing a slide deck with something you can feel.</p>
-                <button class="play-btn" onclick="openLightbox('YVd2-_gNk-0')"><i class="fas fa-play"></i></button>
+                <a href="https://www.youtube.com/watch?v=YVd2-_gNk-0" target="_blank" class="play-btn inline-flex"><i class="fas fa-play"></i></a>
             </div>
         </section>
         
@@ -162,16 +163,16 @@
         <section class="slab no-overlay" style="background-color: #0A4B47;">
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Brands Our Team Has Collaborated With</h2>
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12 max-w-6xl mx-auto">
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="HINDUNILVR.NS_BIG-24495890.png" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="MANKIND.NS_BIG-e2edbe6b.png" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="telangana-govt_660_053114102100.webp" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="Nestle-Logo.jpg" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="download.png" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="logo-1.png" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="e1fe2334a159f143d827fb964219a454237bfb8dca568852113713164f767d50.webp" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="Aurigene Pharmaceutical Services Limited CDMO Logo-comp291134.webp" class="max-h-16 max-w-full"></div>
-                    <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center justify-center h-28 hover:bg-white/10 transition-colors"><img src="GIM_Blue_PNG_Logo.png" class="max-h-16 max-w-full"></div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mt-12 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="HINDUNILVR.NS_BIG-24495890.png" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="MANKIND.NS_BIG-e2edbe6b.png" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="telangana-govt_660_053114102100.webp" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="Nestle-Logo.jpg" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="download.png" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="logo-1.png" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="e1fe2334a159f143d827fb964219a454237bfb8dca568852113713164f767d50.webp" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="Aurigene Pharmaceutical Services Limited CDMO Logo-comp291134.webp" class="max-h-16 max-w-full"></div>
+                    <div class="bg-white rounded-xl p-4 flex items-center justify-center h-28 shadow-lg hover:-translate-y-1 transition-transform duration-300"><img src="GIM_Blue_PNG_Logo.png" class="max-h-16 max-w-full"></div>
                 </div>
             </div>
         </section>
@@ -201,14 +202,11 @@
             </div>
         </section>
         
-        <!-- Slab 10: Contact CTA -->
-        <section class="slab no-overlay" style="background-image: url('contact-vr.jpg');">
-            <!-- Specific overlay for contact page to make text pop -->
-            <div class="absolute inset-0 bg-black/50 z-0"></div>
-            
+        <!-- Slab 10: Contact CTA (Removed .no-overlay to ensure 50% darkness) -->
+        <section class="slab" style="background-image: url('contact-vr.jpg');">
             <div class="slab-content text-center flex flex-col justify-between h-[85vh] relative z-10">
                 <div class="flex-grow flex flex-col justify-center items-center max-w-4xl mx-auto w-full">
-                    <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white leading-tight">Ready to step <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-blue-400">inside?</span></h2>
+                    <h2 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white leading-tight">Ready to Step Up</h2>
                     <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">Whether you have a facility to showcase or an impact story to tell, let's create something unforgettable together.</p>
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-2xl mx-auto">
@@ -244,14 +242,6 @@
                 </div>
             </div>
         </section>
-    </div>
-    
-    <!-- Lightbox Overlay -->
-    <div id="lightbox" style="z-index: 100;" class="fixed inset-0 bg-black items-center justify-center hidden opacity-0 transition-opacity duration-300">
-        <button onclick="closeLightbox()" style="z-index: 101;" class="absolute top-6 right-6 w-12 h-12 bg-black/50 hover:bg-black text-white text-3xl rounded-full flex items-center justify-center transition backdrop-blur">&times;</button>
-        <div class="w-full h-full">
-            <iframe id="lightbox-iframe" class="w-full h-full" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
     </div>
     
     <script src="site-chrome.js"></script>
@@ -293,39 +283,6 @@
             if(spacers[index]) {
                 spacers[index].scrollIntoView({ behavior: 'smooth' });
             }
-        }
-        
-        // Navigation link overrides via delegation
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('#navigation a');
-            if (link) {
-                const href = link.getAttribute('href');
-                if (href === 'index.html' || href === '#') { e.preventDefault(); scrollToSlab(0); }
-                else if (href.includes('#about')) { e.preventDefault(); scrollToSlab(9); }
-                else if (href.includes('#contact')) { e.preventDefault(); scrollToSlab(10); }
-            }
-        });
-        
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const iframe = document.getElementById('lightbox-iframe');
-        
-        function openLightbox(videoId) {
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-            lightbox.classList.remove('hidden');
-            setTimeout(() => {
-                lightbox.classList.remove('opacity-0');
-                lightbox.classList.add('flex');
-            }, 10);
-        }
-        
-        function closeLightbox() {
-            lightbox.classList.add('opacity-0');
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
-                iframe.src = '';
-            }, 300);
         }
     </script>
 </body>
