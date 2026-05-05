@@ -18,6 +18,7 @@ function renderHeader() {
           <a href="index.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Home</a>
           <a href="use-cases.html" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Solutions</a>
           <a href="index.html#about" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">About Us</a>
+          <a href="index.html#contact" class="block md:inline-block py-2 px-4 text-white hover:text-blue-200 font-medium transition duration-300">Contact</a>
         </nav>
       </div>
     </header>
@@ -57,6 +58,7 @@ function renderFooter() {
             <ul class="space-y-3 inline-block text-right md:text-left">
               <li><a href="use-cases.html" class="hover:text-white transition duration-300">Solutions</a></li>
               <li><a href="index.html#about" class="hover:text-white transition duration-300">About Us</a></li>
+              <li><a href="index.html#contact" class="hover:text-white transition duration-300">Contact</a></li>
             </ul>
           </div>
 
