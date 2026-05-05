@@ -42,11 +42,11 @@
             content: '';
             position: absolute;
             bottom: 0; right: 0;
-            width: 240px; height: 240px;
-            backdrop-filter: blur(40px) saturate(0%);
-            -webkit-backdrop-filter: blur(40px) saturate(0%);
-            mask-image: radial-gradient(circle at bottom right, black 40%, transparent 80%);
-            -webkit-mask-image: radial-gradient(circle at bottom right, black 40%, transparent 80%);
+            width: 120px; height: 120px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            mask-image: radial-gradient(circle at bottom right, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(circle at bottom right, black 30%, transparent 70%);
             z-index: 5;
             pointer-events: none;
         }
@@ -261,6 +261,9 @@
             </div>
         </section>
     </div>
+    
+    <!-- Persistent Watermark/Logo over the smudge -->
+    <img src="majorbean-logoform.png" alt="majorbeam" class="fixed bottom-6 right-6 w-12 h-12 object-contain z-50 opacity-90 pointer-events-none drop-shadow-md">
     
     <script src="site-chrome.js"></script>
     
