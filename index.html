@@ -73,7 +73,7 @@
 <body>
     <div id="site-header"></div>
     
-    <!-- 7 slabs total -->
+    <!-- 11 slabs total -->
     <div id="scroll-spacers">
         <div class="spacer" data-index="0"></div>
         <div class="spacer" data-index="1"></div>
@@ -82,6 +82,10 @@
         <div class="spacer" data-index="4"></div>
         <div class="spacer" data-index="5"></div>
         <div class="spacer" data-index="6"></div>
+        <div class="spacer" data-index="7"></div>
+        <div class="spacer" data-index="8"></div>
+        <div class="spacer" data-index="9"></div>
+        <div class="spacer" data-index="10"></div>
     </div>
     
     <div id="slab-visuals">
@@ -90,7 +94,7 @@
             <div class="slab-content text-center">
                 <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-8">Be there.<br>Without going there.</h1>
                 <p class="text-xl max-w-2xl mx-auto mb-10 text-gray-200">majorbeam builds 360&deg; VR experiences that put buyers, donors, and partners inside your story; without a flight ticket.</p>
-                <a href="#contact" onclick="scrollToSlab(6)" class="btn-primary">Contact Us</a>
+                <a href="#contact" onclick="scrollToSlab(10)" class="btn-primary">Contact Us</a>
             </div>
         </section>
         
@@ -99,7 +103,6 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Facility & Process Tours</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Let buyers walk your floor; at a trade show, in a meeting, or across the world. We capture your facility as a fully immersive 360&deg; VR experience.</p>
-                <button class="play-btn" onclick="openLightbox('ZMu2Y_pLPa8')"><i class="fas fa-play"></i></button>
                 <p class="text-sm font-semibold text-gray-300 uppercase tracking-widest mt-4">Clients: ITC Spices Factory &middot; Aurigene &middot; Aragen</p>
             </div>
         </section>
@@ -109,42 +112,56 @@
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Impact & Advocacy Films</h2>
                 <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Put your donor or partner inside the community you serve. Our 360&deg; VR films create the kind of empathy that a slide deck never will.</p>
-                <button class="play-btn" onclick="openLightbox('YVd2-_gNk-0')"><i class="fas fa-play"></i></button>
                 <p class="text-sm font-semibold text-gray-300 uppercase tracking-widest mt-4">Clients: LGTVP India &middot; Govt of Telangana &middot; MPEDA</p>
             </div>
         </section>
         
-        <!-- Slab 3: Past Work -->
-        <section class="slab no-overlay" style="background-color: #063C3D;">
+        <!-- Slab 3: Past Work - Aurigene -->
+        <section class="slab" style="background-image: url('Screenshot\\ (95).png');">
             <div class="slab-content text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-12">Past Work</h2>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Aurigene -->
-                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
-                        <img src="Screenshot (95).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="Aurigene">
-                        <h3 class="text-xl font-bold mb-2">Aurigene CDMO</h3>
-                        <p class="text-gray-300 text-sm mb-4">An immersive virtual walkthrough of a state-of-the-art CDMO lab.</p>
-                        <a href="https://www.aurigeneservices.com/virtual-tour-facilities/cdmo-lab-bangalore/" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
-                    </div>
-                    <!-- MPEDA -->
-                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
-                        <img src="Screenshot (99).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="MPEDA">
-                        <h3 class="text-xl font-bold mb-2">MPEDA</h3>
-                        <p class="text-gray-300 text-sm mb-4">A 360&deg; VR film showcasing India's marine exports sector.</p>
-                        <a href="https://www.youtube.com/watch?v=dAs4vW5Kh6U" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
-                    </div>
-                    <!-- Govt of Telangana -->
-                    <div class="bg-black/30 border border-white/10 rounded-2xl p-6 backdrop-blur text-left">
-                        <img src="Screenshot (97).png" class="w-full h-40 object-cover rounded-xl mb-4" alt="Govt of Telangana">
-                        <h3 class="text-xl font-bold mb-2">Govt of Telangana</h3>
-                        <p class="text-gray-300 text-sm mb-4">Screened annually at the World Economic Forum in Davos.</p>
-                        <a href="https://www.youtube.com/watch?v=YeoUtUXy7TU" target="_blank" class="text-teal-300 hover:text-teal-100 text-sm font-bold">View Project &rarr;</a>
-                    </div>
-                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">360&deg; Facility Tour &mdash; Aurigene</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">An immersive virtual walkthrough of a state-of-the-art CDMO lab, used in B2B sales conversations with global pharma partners.</p>
+                <a href="https://www.aurigeneservices.com/virtual-tour-facilities/cdmo-lab-bangalore/" target="_blank" class="play-btn inline-flex"><i class="fas fa-play"></i></a>
+            </div>
+        </section>
+
+        <!-- Slab 4: Past Work - MPEDA -->
+        <section class="slab" style="background-image: url('Screenshot\\ (99).png');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">MPEDA</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A 360&deg; VR film commissioned by the Marine Products Export Development Authority of India, unveiled at a national event with the Vice President of India &mdash; showcasing India's marine exports sector through an immersive, ground-level experience.</p>
+                <button class="play-btn" onclick="openLightbox('dAs4vW5Kh6U')"><i class="fas fa-play"></i></button>
+            </div>
+        </section>
+
+        <!-- Slab 5: Past Work - ITC Spices -->
+        <section class="slab" style="background-image: url('itc-thumb.jpg');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">ITC Spices Factory, Guntur</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A narrative-led 360&deg; VR film of ITC's spices processing facility &mdash; built as a virtual shop floor audit tool for international buyers. Used at B2B meetings and trade events to demonstrate operational excellence and compliance standards, without the logistics of a physical visit.</p>
+                <button class="play-btn" onclick="openLightbox('ZMu2Y_pLPa8')"><i class="fas fa-play"></i></button>
+            </div>
+        </section>
+
+        <!-- Slab 6: Past Work - Govt of Telangana -->
+        <section class="slab" style="background-image: url('Screenshot\\ (97).png');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">VR Showcase &mdash; Govt of Telangana</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">Screened annually at the World Economic Forum in Davos to position Telangana as a global investment destination.</p>
+                <button class="play-btn" onclick="openLightbox('YeoUtUXy7TU')"><i class="fas fa-play"></i></button>
+            </div>
+        </section>
+
+        <!-- Slab 7: Past Work - LGTVP India -->
+        <section class="slab" style="background-image: url('lgtvp-thumb.jpg');">
+            <div class="slab-content text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">LGTVP India, Palghar</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-4 text-gray-200">A cinematic 360&deg; VR film for LGT Venture Philanthropy &mdash; placing investors directly inside the communities they fund in Palghar, Maharashtra. Built as a virtual site visit for the social sector, the film grounds impact investors in the lived reality of mothers and frontline workers, replacing a slide deck with something you can feel.</p>
+                <button class="play-btn" onclick="openLightbox('YVd2-_gNk-0')"><i class="fas fa-play"></i></button>
             </div>
         </section>
         
-        <!-- Slab 4: Brands -->
+        <!-- Slab 8: Brands -->
         <section class="slab no-overlay" style="background-color: #0A4B47;">
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Brands Our Team Has Collaborated With</h2>
@@ -162,7 +179,7 @@
             </div>
         </section>
         
-        <!-- Slab 5: Meet majorbeam -->
+        <!-- Slab 9: Meet majorbeam -->
         <section class="slab no-overlay" style="background-color: #06302E;">
             <div class="slab-content text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-12">Meet majorbeam</h2>
@@ -187,7 +204,7 @@
             </div>
         </section>
         
-        <!-- Slab 6: Contact CTA -->
+        <!-- Slab 10: Contact CTA -->
         <section class="slab no-overlay" style="background-color: #0A4B47; background-image: radial-gradient(circle at center, rgba(127,255,212,0.1) 0%, transparent 60%);">
             <div class="slab-content text-center flex flex-col justify-between h-[80vh] md:h-[85vh]">
                 <div class="flex-grow flex flex-col justify-center">
@@ -270,8 +287,8 @@
             if (link) {
                 const href = link.getAttribute('href');
                 if (href === 'index.html' || href === '#') { e.preventDefault(); scrollToSlab(0); }
-                else if (href.includes('#about')) { e.preventDefault(); scrollToSlab(5); }
-                else if (href.includes('#contact')) { e.preventDefault(); scrollToSlab(6); }
+                else if (href.includes('#about')) { e.preventDefault(); scrollToSlab(9); }
+                else if (href.includes('#contact')) { e.preventDefault(); scrollToSlab(10); }
             }
         });
         
