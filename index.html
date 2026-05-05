@@ -34,7 +34,15 @@
             position: absolute; inset: 0; opacity: 0; transform: scale(1.05);
             transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
             pointer-events: none; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background-size: 0 0; background-position: center; overflow: hidden;
+        }
+        .slab::after {
+            content: ''; position: absolute; inset: 0;
+            background-image: inherit;
             background-size: cover; background-position: center;
+            transform: scale(1.6666);
+            z-index: 0;
+            pointer-events: none;
         }
         
         .slab-content {
